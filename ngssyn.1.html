@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Ilya Sher" />
+  <meta name="date" content="2015-01-01" />
+  <title>NGSSYN(1) NGS User Manual</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">NGSSYN(1) NGS User Manual</h1>
+<h2 class="author">Ilya Sher</h2>
+<h3 class="date">2015</h3>
+</div>
+<h1 id="name">NAME</h1>
+<p>ngssyn - Next Generation Shell language syntax</p>
+<h1 id="description">DESCRIPTION</h1>
+<p>NGS has two syntaxes.</p>
+<p>The <strong>command syntax</strong> covers the tasks of running programs and i/o redirection, mainly for good interactive (and simple scripting) experience. It resembles closely the syntax of <code>bash</code>. Example: <code>ls a.txt</code></p>
+<p>The <strong>code syntax</strong> is for everything else, giving access to a complete, &quot;normal&quot; programming language. Example: <code>1 + 2 * 3</code>.</p>
+<p>See <strong>command syntax</strong> and <strong>code syntax</strong> descriptions below.</p>
+<h2 id="command-syntax">Command syntax</h2>
+<pre><code>ls
+ls $my_file
+ls $*my_files</code></pre>
+<p>This is the syntax at the top level of your file or when you start an interactive shell. Additionally, when in <strong>code syntax</strong> you can embed <strong>command syntax</strong> within <code>$(...)</code> and several other constructs.</p>
+<h2 id="code-syntax">Code syntax</h2>
+<pre><code>{
+    type T
+    # unrelated
+    for(i;10) dump(i)
+}</code></pre>
+<p>This is the syntax inside <code>{...}</code>. Additionally, when in <strong>command syntax</strong> you can switch to <strong>code syntax</strong> using keywords such as <code>if</code>, for example in <code>if e1 e2</code> both <code>e1</code> and <code>e2</code> are expcted to be in <strong>code syntax</strong>.</p>
+<h2 id="commands-separators">Commands separators</h2>
+<p>In both syntaxes, commands are separated by a new line or by <code>;</code> (semicolon).</p>
+<h2 id="comments">Comments</h2>
+<pre><code># comment at the beginning of line
+some code # comments after code are not implemented yet</code></pre>
+<h2 id="truth-falsehood">Truth / Falsehood</h2>
+<p>In <code>if</code>, <code>while</code>, etc. conditions if given expression that is not a <code>Bool</code> (i.e. not <code>true</code> or <code>false</code>), it is converted to <code>Bool</code> by applying the <code>Bool()</code> method to it. Built in conversion is as follows:</p>
+<p>False: null, 0, empty string, empty array, empty hash.<br />
+True: everything else.<br />
+Not implemented yet: truth of real numbers</p>
+<p>Defining truth for your types:</p>
+<pre><code>{
+    type T
+    F init(t:T) t.wheels_count = 0
+    F Bool(t:T) t.wheels_count &gt;= 4
+}</code></pre>
+<h2 id="command-syntax---...">Command syntax - <code>{...}</code></h2>
+<pre><code>{ my_code }
+ls ${ name = &quot;${prefix}${main}${suffix}&quot;; name }</code></pre>
+<p>Embed / switch to <strong>code syntax</strong>.</p>
+<h2 id="code-syntax---...">Code syntax - <code>{...}</code></h2>
+<p><code>{ ... }</code> groups expressions. This is called a <strong>code block</strong>. Usually used in constructs such as <code>if</code>, <code>while</code>, etc.</p>
+<pre><code>if a == b {
+    x = x + 1
+    y = y + x
+}
+# Single expression does not need {...} where a code block is expected.
+z = if a 7 8</code></pre>
+<p><code>{ ... }</code> syntax is used for literal hash (see <code>Hash</code> type):</p>
+<pre><code>inner_hash = {&quot;b&quot;: 2}
+h = {&quot;a&quot;: 1, **inner_hash, &quot;c&quot;: 3}
+# h is now {&quot;a&quot;: 1, &quot;b&quot;: 2, &quot;c&quot;: 3}</code></pre>
+<p><code>{ ... }</code> creates anonymous function with three optional parameters <code>A</code>, <code>B</code> and <code>C</code> all defaulting to <code>null</code>.</p>
+<pre><code>[1, 2, 3].map({ A * 2 + 1})
+# 3, 5, 7
+
+# Same as
+[1, 2, 3].map(F(A=null, B=null, C=null) { A * 2 + 1 })
+# 3, 5, 7</code></pre>
+<h2 id="code-syntax---...-1">Code syntax - <code>[...]</code></h2>
+<p>Literal array (<code>Arr</code> type):</p>
+<pre><code>inner_arr = [2,3]
+arr = [1, *inner_arr, 4]
+# arr is now [1, 2, 3, 4]</code></pre>
+<h2 id="command-and-code-syntax---assignment">Command and code syntax - assignment</h2>
+<pre><code>var_name=expression
+var_name = expression</code></pre>
+<h2 id="command-and-code-syntax---f">Command and code syntax - <code>F</code></h2>
+<pre><code>F myfunc(required_arg, optional_arg=default_value, *rest_args, **rest_kw_args) {
+    ...
+
+    if e1 { return e2 }
+
+    # syntactic sugar, same as above
+    e1 returns e2
+
+    ...
+}</code></pre>
+<p><code>*rest_args</code> gets any excessive positional arguments (or <code>[]</code>, the empty array if there are none)<br />
+<code>*rest_kw_args</code> gets all passed keyword arguments (or <code>{}</code>, the empty hash if there are none)</p>
+<h2 id="code-syntax---...-x-...-or-y-or-z">Code syntax - <code>... X ...</code> (or <code>Y</code> or <code>Z</code>)</h2>
+<pre><code>[1, 2, 3].map(X*3)
+# 3, 6, 9
+
+# Same as
+[1, 2, 3].map(F(x=null, y=null, z=null) x * 3)
+# 3, 6, 9
+
+F mymath(a,b,c) a*b+c
+[1, 2, 3].map(mymath(X, 2, 3))
+# 5, 7, 9</code></pre>
+<p>Any mention of <code>X</code>, <code>Y</code> or <code>Z</code> wraps the closest function call (to which the <code>X</code>, <code>Y</code> or <code>Z</code> is an argument) with anonymous function with three optional parameters <code>X</code>, <code>Y</code> and <code>Z</code> all defaulting to <code>null</code>. Since operators are essentailly functions with two arguments so the example above works.</p>
+<h2 id="command-and-code-syntax---function-call">Command and code syntax - function call</h2>
+<pre><code>myfunc(required_arg, optional_arg=myval, *rest_args, **rest_kw_args)</code></pre>
+<p><code>*rest_args</code> - pass additional positional arguments<br />
+<code>*rest_kw_args</code> - pass additional keyword arguments</p>
+<h2 id="code-syntax---trythrowcatch">Code syntax - try/throw/catch</h2>
+<pre><code>try {
+    # Try to execude this code - start
+    ...
+
+    if e1 { throw e2 }
+
+    # syntactic sugar, same as above
+    e1 throws e2
+    ...
+    # Try to execude this code - end
+}
+catch(e:E1) { result1 }
+catch(e:E2) { result2 }
+...</code></pre>
+<p>Try to execute the code. If no exception occurs, return the value of the code. If an error of type <code>E1</code> occurs, execute <code>result1</code>. If an error of type <code>E2</code> occurs, execute <code>result2</code> and so on.</p>
+<pre><code>try {
+    code
+}</code></pre>
+<p>If there are no <code>catch</code> clauses following the <code>try</code>, if any exception occurs in the <em>code</em>, the result of the <code>try</code> expression is <code>null</code>. Example:</p>
+<pre><code>v = try myhash[&#39;maybe-such-key-exists&#39;][&#39;and-then-some&#39;]</code></pre>
+<h2 id="command-and-code-syntax---loops">Command and code syntax - loops</h2>
+<pre><code>for(i=0; i&lt;n; i=i+1) { code }
+
+# This is syntax sugar and works exactly as above
+for(i;n) { code }
+
+while cond_expr {
+    # following loop controls work in for too
+
+    if e1 { continue }
+
+    # syntactic sugar, same as above
+    e1 continues
+
+    if e2 { break }
+    # syntactic sugar, same as above
+    e2 breaks
+
+}</code></pre>
+<h2 id="command-and-code-syntax---switch-match-cond">Command and code syntax - switch, match, cond</h2>
+<pre><code>switch value_expr {
+    expr1 code1
+    expr2 code2
+    ...
+}
+
+# Example:
+r = switch 1 {
+    1  2
+    10 20
+}
+# r is now 2</code></pre>
+<p>Evaluates code1 if <code>value_expr == expr1</code>, code2 if <code>value_expr==expr2</code> and so on. <code>value_expr</code> is computed only once.</p>
+<pre><code>match value_expr {
+    expr1 code1
+    expr2 code2
+    ...
+}</code></pre>
+<p>Similar to <code>switch</code> but the code is evaluated when <code>match(value_expr, exprN)</code> is true.</p>
+<pre><code>cond {
+    expr1 code1
+    expr2 code2
+    ...
+
+}
+
+# Example:
+r = cond {
+    a == b  1
+    b == c  2
+}</code></pre>
+<p>Similar to <code>switch</code> but the code is evaluated when <code>exprN</code> is true.</p>
+<p><code>switch</code>, <code>match</code> and <code>cond</code> do <em>not</em> have C-style fall-through semantics. They behave like there is a &quot;break&quot; after each <code>codeN</code>.</p>
+<p><code>eswitch</code>, <code>ematch</code> and <code>econd</code> work the same but if none of the clauses is matched (and no code is evaluated) the <code>SwitchFail</code> exception is thrown.</p>
+<h2 id="code-syntax---collector-syntactic-sugar">Code syntax - collector syntactic sugar</h2>
+<pre><code># Example 1
+collector
+    [1,2,3,4,5].each(F(elt) {
+        collect(elt)
+        if elt &gt; 2 collect(elt * 2)
+    })</code></pre>
+<p>The expression evaluates to the array <strong>[1,2,3,6,4,8,5,10]</strong>.</p>
+<pre><code># Example 2, from stdlib
+F flatten(arr:Arr)
+    collector
+        arr.each(F(subarr) {
+            subarr.each(collect)
+        })</code></pre>
+<p>See <strong>stdlib.ngs</strong> for more <code>collector</code> usage examples.</p>
+<ul>
+<li><code>collector ... collect(x) ...</code> is equivalent to <code>collector([], F(collect) { ... collect(x) ... })</code>.</li>
+<li><code>collector/expr ... collect(x) ...</code> is equivalent to <code>collector(expr, F(collect) { ... collect(x) ... })</code>.</li>
+</ul>
+<p>Sample definition for <code>Arr</code> (array) collector from <strong>stdlib.ngs</strong>:</p>
+<pre><code>F collector(a:Arr, code:Fun) {
+    code(F(elt) a.push(elt))
+    a
+}</code></pre>
+</body>
+</html>

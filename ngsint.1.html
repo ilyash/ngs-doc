@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Ilya Sher" />
+  <meta name="date" content="2016-01-01" />
+  <title>NGSLANG(1) NGS User Manual</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">NGSLANG(1) NGS User Manual</h1>
+<h2 class="author">Ilya Sher</h2>
+<h3 class="date">2016</h3>
+</div>
+<h1 id="name">NAME</h1>
+<p>ngsint - Next Generation Shell language internals.</p>
+<h1 id="architecture-overview">ARCHITECTURE OVERVIEW</h1>
+<p>NGS consists of three main parts:</p>
+<ul>
+<li>Language core, written in C</li>
+<li>Language standard library that extends NGS, written in NGS</li>
+<li>Shell, written in NGS (not done yet)</li>
+</ul>
+<h2 id="minimal-language-core">Minimal language core</h2>
+<p>Language core should be as minimalistic as possible: language parsing, compilation, vm and a bit of run-time. I assume optimizations which might be done later will collide with this principle.</p>
+<p>In order to allow the core to be small, C functions have relatively thin wrappers. C functions that have wrappers that only convert input and output data types are exposed as NGS' <code>c_...</code> functions (for example <code>c_read</code>, <code>c_write</code>, <code>c_kill</code>). These are used in standard library which wraps these functions to make them more high-level and more practical to use.When <code>c_...</code> exposed, argument names should match the ones specified in <code>man</code> for that C function.</p>
+<p>For good example of exposing and wrapping <code>c_...</code> functions see <code>autoload/Thread.ngs</code> which wraps <code>c_pthread_attr_t</code>, <code>c_pthread_attr_init</code>, <code>c_pthread_create</code> and <code>c_pthread_join</code>.</p>
+<h1 id="garbage-collection">GARBAGE COLLECTION</h1>
+<p>To minimize my efforts I use external library ( http://www.hboehm.info/gc/ ) for garbage collection. Please use <code>NGS_MALLOC</code> for your objects and <code>NGS_MALLOC_ATOMIC</code> in cases when your data can not contain pointers to another <code>NGS_MALLOC</code>ed structures.</p>
+<h1 id="compilation">COMPILATION</h1>
+<p>(WIP)</p>
+<p>NGS parses the sources to AST and then compiles to bytecode. Compilation is done in <code>compile.c</code>. Functions of interest:</p>
+<h2 id="compile">compile()</h2>
+<pre><code>char *compile(ast_node *node, char *source_file_name, size_t *len)</code></pre>
+<ul>
+<li><code>ast_node *node</code> - top-level AST node</li>
+<li><code>char *source_file_name</code> - name of the compiled file</li>
+</ul>
+<h1 id="bytecode">BYTECODE</h1>
+<p>(WIP)</p>
+<p><code>BYTECODE_HANDLE</code> typedef'ed struct. Although reading/writing bytecode to a file is not implemented yet, bytecode layout in memory was designed to be easy to write to or read from a file.</p>
+<p><code>ngs_add_bytecode_section(bytecode, BYTECODE_SECTION_TYPE_..., l, buf)</code> function</p>
+<h1 id="vm">VM</h1>
+<p>NGS runs a <a href="https://en.wikipedia.org/wiki/Stack_machine">stack-based VM</a>.</p>
+<p><code>VM</code> typedef'ed struct represents the VM.</p>
+<p><code>CTX</code> typedef'ed struct represents an ngs-thread of execution. Currently only one ngs-thread runs per thread. This might change in future if green threads are implemented.</p>
+<p>The unusual solution is that call frames are not allocated on the stack. It simplifies creating of closures later as stack data should not be copied to heap when a closure is created.</p>
+<h1 id="adding-new-built-in-type">ADDING NEW BUILT-IN TYPE</h1>
+<p>This is procedure for adding ordinary (such as for <code>DIR</code> type used in <code>opendir()</code> and friends) built-in (native) type</p>
+<p>In <code>obj.h</code> - add something along these lines:</p>
+<pre><code>typedef struct {
+    OBJECT base;         // must be present and must be the first member of the structure
+    VALUE my_field_1;    // free style fields here and below
+    VALUE my_field_2;
+    size_t my_data_len;
+    char *my_data;
+} MY_OBJECT;</code></pre>
+<p>On <code>obj.h</code> - add your type in the <code>IMMEDIATE_TYPE</code> enum:</p>
+<pre><code>...
+T_MYTYPE = (INT_ON_LINE_ABOVE_PLUS_ONE &lt;&lt; 8) + T_OBJ
+...</code></pre>
+<p>On <code>obj.h</code> - add your <code>IS_...</code> macro.</p>
+<pre><code>#define IS_MYTYPE(v) ((((v).num &amp; TAG_AND) == 0) &amp;&amp; OBJ_TYPE_NUM(v) == T_MYTYPE)</code></pre>
+<p>In <code>obj.c</code> - add <code>make_...()</code> function similar to:</p>
+<pre><code>VALUE make_mytype(...) {
+    VALUE v;
+    DIR_OBJECT *tmp = NGS_MALLOC(sizeof(*tmp));
+    tmp-&gt;base.type.num = T_MYTYPE;
+    ...
+    return v;
+}</code></pre>
+<p>On <code>obj.h</code> - add <code>make_...()</code> function declaration similar to:</p>
+<pre><code>VALUE make_mytype(...);</code></pre>
+<p>In <code>vm.h</code> - in typedef <code>VM</code> add</p>
+<pre><code>NGS_TYPE *MyType;</code></pre>
+<p>In <code>vm.c</code> - add</p>
+<pre><code>MK_BUILTIN_TYPE(MyType, T_MYTYPE);</code></pre>
+<h1 id="adding-new-built-in-function">ADDING NEW BUILT-IN FUNCTION</h1>
+<p>Typical native built-in function in <code>vm.c</code> looks like this:</p>
+<pre><code>METHOD_RESULT your_function_name METHOD_PARAMS {
+    ... Use argv[] arguments ...
+    METHOD_RETURN(ret);
+}</code></pre>
+<p>TODO</p>
+</body>
+</html>

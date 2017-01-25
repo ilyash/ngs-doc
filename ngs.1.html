@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Ilya Sher" />
+  <meta name="date" content="2015-01-01" />
+  <title>NGS(1) NGS User Manual</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title">NGS(1) NGS User Manual</h1>
+<h2 class="author">Ilya Sher</h2>
+<h3 class="date">2015</h3>
+</div>
+<h1 id="name">NAME</h1>
+<p>ngs - Next Generation Shell.</p>
+<h1 id="synopsis">SYNOPSIS</h1>
+<p><strong>ngs</strong> <em>script_name.ngs</em></p>
+<p><strong>ngs</strong> [<strong>-e</strong>|<strong>-E</strong>|<strong>-p</strong>|<strong>-pi</strong>|<strong>-pj</strong>] <em>expression</em></p>
+<h1 id="description">DESCRIPTION</h1>
+<p><strong>ngs</strong> is a Next Generation Shell. It has two main parts: the language and the interactive shell.</p>
+<p>This project contains the language part which is under development. The interactive part will be dealt with later. This manual covers both implemented and unimplemented parts.</p>
+<h1 id="options">OPTIONS</h1>
+<p>Given <em>script_name</em> runs the script.</p>
+<p>Using <em>expression</em> is equivalent to running a script that consists of <code>{</code> <em>expression</em> <code>}</code>.</p>
+<p><strong>-e</strong> evaluates the <em>expression</em>.</p>
+<p><strong>-E</strong> prevents loading of <strong>stdlib.ngs</strong> and evaluates the <em>expression</em>.</p>
+<p><strong>-p</strong> prints the resulting <em>expression</em> value in a human readable NGS format.</p>
+<p><strong>-pi</strong> prints <code>inspect(...)</code> (detailed information) of the resulting <em>expression</em> value.</p>
+<p><strong>-pj</strong> prints the resulting <em>expression</em> value as JSON.</p>
+<h2 id="motivation">MOTIVATION</h2>
+<p>NGS tries to fill the void between classical shells such as <strong>bash</strong> and general-purpose programming languages such as <strong>Ruby</strong>, <strong>Python</strong>, <strong>Perl</strong>, <strong>Go</strong>. The shells are domain-specific languages but the domain has changed so classical shells are not optimal for today's tasks. General-purpose languages on the other hand are not domain-specific so they are not good as shells and too verbose for system tasks scripting, not a good fit.</p>
+<h1 id="exit-status">EXIT STATUS</h1>
+<p>The exit code is whatever the running code (<em>script_name</em> or <em>expression</em>) returns using the following conversions:</p>
+<ul>
+<li><code>Int</code> (integer) - used directly as exit code (modulo 256). For example, <code>ngs -E 10</code> returns exit code 10.</li>
+<li><code>Bool</code> (boolean) - <code>true</code> results 0, <code>false</code> results 1.</li>
+<li><code>T</code> (a user-defined type) - The exit code can be customized by <code>to_exit_code(x:T)</code> method.</li>
+<li>Anything else, including user-defined types without <code>to_exit_code(x:T)</code> method will result 0.</li>
+</ul>
+<p>In case of an uncaught exception, the exit code is 1.</p>
+<h1 id="environment">ENVIRONMENT</h1>
+<ul>
+<li><code>DEBUG</code> - when non-empty string, switches on <code>debug</code> method output (default is off). It's recommended to use <code>debug(&quot;my debug info&quot;)</code> in your scripts for easily be turning on/off.</li>
+<li><code>NGS_BOOTSTRAP</code> points to the bootstrap NGS file. On NGS startup this file is always run. Defaults to first of:
+<ul>
+<li><code>$HOME/.bootstrap.ngs</code></li>
+<li><code>/etc/ngs/bootstrap.ngs</code></li>
+<li><code>/var/lib/ngs/bootstrap.ngs</code></li>
+<li><code>/usr/share/ngs/bootstrap.ngs</code></li>
+</ul></li>
+<li><code>NGS_BOOTSTRAP_DEBUG</code> - if defined, show <strong>bootstrap.ngs</strong> debugging information.</li>
+<li><code>NGS_DIR</code> (defaults to <code>/usr/share/ngs</code>) - location of <strong>stdlib.ngs</strong> file and the <strong>autoload</strong> directory. Files are automatically loaded from this directory when an undefined global variable is used.</li>
+</ul>
+<h1 id="files">FILES</h1>
+<h2 id="bootstrap.ngs">bootstrap.ngs</h2>
+<p>Typically located in <code>NGS_DIR</code>. Responsible for bootstrapping NGS.</p>
+<ul>
+<li>Loads <strong>stdlib.ngs</strong> if needed.</li>
+<li>Runs the script specified in the command line or exectes <em>expression</em> according to swithces.</li>
+<li>Prints <em>expression</em> value if needed.</li>
+</ul>
+<h2 id="stdlib.ngs">stdlib.ngs</h2>
+<p>Located in <code>NGS_DIR</code>. Standard library. Defines many methods and autoloading behaviour.</p>
+<h1 id="see-also">SEE ALSO</h1>
+<table>
+<tbody>
+<tr class="odd">
+<td><a href="ngslang.1.html">ngslang(1)</a></td>
+<td>NGS language tutorial</td>
+</tr>
+<tr class="even">
+<td><a href="ngssyn.1.html">ngssyn(1)</a></td>
+<td>NGS language syntax</td>
+</tr>
+<tr class="odd">
+<td><a href="types.html" class="uri">types.html</a></td>
+<td>NGS language pre-defined types</td>
+</tr>
+<tr class="even">
+<td><a href="methods.html" class="uri">methods.html</a></td>
+<td>NGS language pre-defined methods</td>
+</tr>
+</tbody>
+</table>
+<h1 id="thanks">THANKS</h1>
+<p>Thanks to Guy Egozy, Avishai Ish-Shalom and other friends for ideas and feedback.</p>
+</body>
+</html>
