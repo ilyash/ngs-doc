@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- types start -->
+	<h1>Types</h1>
+		<section class="type">
+			<h2 id="type-Any" class="type-header">Any<a class="type-link" title="Permalink to this type" href="#type-Any">¶</a></h2>
+			<section class="type-content">
+				All instances in NGS are of type Any. F(x) ... is same as F(x:Any) ...
+					<!-- type methods start -->
+					<h3>Methods</h3>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							Inequality operator
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							Non-sameness operator
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(x:Any, cb:Fun)</a>
+							<section class="type-method-impl-desc">
+							Each operator.
+							Same as calling x.each(cb)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(start:Any, end:Any)</a>
+							<section class="type-method-impl-desc">
+							ExclusiveRange constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(start:Any, end:Any)</a>
+							<section class="type-method-impl-desc">
+							InclusiveRange constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-NormalTypeInstance-Str-Any">Any(obj:NormalTypeInstance, attr:Str, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set Normal type (a type that is typically defined by user) instance attribute. Throws AttrNotFound.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Str-Any">Any(h:Hash, attr:Str, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set hash key.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Process-Str-Any">Any(p:Process, attr:Str, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set process "stdout"
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Process-Str-Any">Any(p:Process, attr:Str, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set process "stderr"
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(x:Any, mapper:Fun)</a>
+							<section class="type-method-impl-desc">
+							Map operator.
+							Same as calling x.map(mapper)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-NormalTypeInstance-Any">Any(nti:NormalTypeInstance, k:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, k:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-NormalTypeInstance-Any-Any">Any(nti:NormalTypeInstance, k:Any, v:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any-Any">Any(h:Hash, k:Any, v:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Null-Any">Any(a:Null, b:Any)</a>
+							<section class="type-method-impl-desc">
+							Comparison to null
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Null">Any(a:Any, b:Null)</a>
+							<section class="type-method-impl-desc">
+							Comparison to null
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							Sameness comparison.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(x:Any, predicate:Fun)</a>
+							<section class="type-method-impl-desc">
+							Filter operator.
+							Same as calling x.filter(predicate)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, k:Any)</a>
+							<section class="type-method-impl-desc">
+							Get hash value by key. Throws KeyNotFound.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-HashLike-Any">Any(hl:HashLike, k:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Int-Any">Any(arr:Arr, idx:Int, v:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any-Any">Any(h:Hash, k:Any, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set hash value.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-ArrLike-Int-Any">Any(al:ArrLike, idx:Int, x:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-HashLike-Any-Any">Any(hl:HashLike, k:Any, v:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(x:Any, f:Fun)</a>
+							<section class="type-method-impl-desc">
+							Call operator.
+							Same as calling f(x)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(something:Any, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Check whether all elements in arr satisfy the given predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Check whether all key-value pairs in Hash satisfy the given predicate
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(something:Any, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Check whether there is any element in arr that satisfies the given predicate.
+							TODO: Make it work on anything with each() method
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Box-Any">Any(b:Box, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Test Box value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any-Closure">Any(option:Str, value:Any, f:Closure)</a>
+							<section class="type-method-impl-desc">
+							Sets ARGV matching option.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Arr">Any(condition:Any, *args:Arr)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(actual:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any-Any-Any-Any-Any">Any(actual:Any, expected:Any, comparison:Any, display_comparison:Any, title:Any, ok_prefix:Any='')</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any-Any">Any(actual:Any, expected:Any, title:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Process-Int-Any">Any(p:Process, expected:Int, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any-Any">Any(actual:Any, expected:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(actual:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Arr-Any">Any(actual:Any, expected:Arr, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Hash-Any">Any(actual:Any, expected:Hash, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any-Any">Any(actual:Any, expected:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Process-Any-Any">Any(p:Process, expected:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(p:Any, title:Any='Path exists')</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any-Any-Any">Any(h:Str, title:Any='Resolve host', times:Any=45, sleep:Any=2)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(actual:Any, title:Any=null)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-NativeMethod-Any">Any(m:NativeMethod, datum:Any)</a>
+							<section class="type-method-impl-desc">
+							Set native method attributes. Should be a Hash.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Closure-Any">Any(c:Closure, datum:Any)</a>
+							<section class="type-method-impl-desc">
+							Set closure attributes. Should be a Hash.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Type-Any">Any(t:Type, datum:Any)</a>
+							<section class="type-method-impl-desc">
+							Set Type attributes. Usually a Hash with "doc" key.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Convert to Bool
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Convert anything to Box
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(container:Any, k:Any)</a>
+							<section class="type-method-impl-desc">
+							Convert container value indexed by the given key to a Box
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-c_pthread_attr_t-Closure-Any">Any(attr:c_pthread_attr_t, start_routine:Closure, arg:Any)</a>
+							<section class="type-method-impl-desc">
+							Call PTHREAD_CREATE(3). Not recommended for direct calls, use Thread type instead.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Return-Any">Any(r:Return, v:Any=null)</a>
+							<section class="type-method-impl-desc">
+							Implements calling of Return type instances
+							like the finish(i) call in the example below
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Calculate cell display width - any Str()-able instance
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(k:Str, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set configuration. To be used with config(k:Str).
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Count number of items that satisfy the predicate.
+							TODO: Make it work on anything with each() method.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Count number of key-value pairs in Hash that satisfy the predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, k:Any)</a>
+							<section class="type-method-impl-desc">
+							Delete hash key. No exception is thrown if key is not found, the deletion is just skipped then.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-NormalTypeInstance-Any-Any">Any(i:NormalTypeInstance, k:Any, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set an attribute in an instance if it's not already set
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any-Any">Any(arr:Arr, k:Any, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set an attribute on instances if it's not already set
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any-Any">Any(h:Hash, k:Any, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Set an key in a Hash if it's not already set
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-FullBox-Any">Any(fb:FullBox, x:Any)</a>
+							<section class="type-method-impl-desc">
+							Do nothing
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-EmptyBox-Any">Any(eb:EmptyBox, x:Any)</a>
+							<section class="type-method-impl-desc">
+							Wrap x in a Box
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(a:Arr, exit_code:Any=1)</a>
+							<section class="type-method-impl-desc">
+							Write messages in a to standard error and exit
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(s:Str, exit_code:Any=1)</a>
+							<section class="type-method-impl-desc">
+							Write message in s to standard error and exit
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(dirname:Str, subtype:Any=false)</a>
+							<section class="type-method-impl-desc">
+							List directory contents. Warning: "." and ".." are included.
+							Throws DirFail when directory can not be listed.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Fun-Any">Any(dirname:Str, cb:Fun, subtype:Any=false)</a>
+							<section class="type-method-impl-desc">
+							List directory contents and call cb with Path() of each found item. Warning: "." and ".." are included.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any">Any(something:Eachable, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(obj:Any)</a>
+							<section class="type-method-impl-desc">
+							Low-level data structure dump. Used for debugging NGS itself.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Echo non-string. Converts x to string first, using Str()
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(obj:Any)</a>
+							<section class="type-method-impl-desc">
+							Encode JSON (serialize a data structure to JSON)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any">Any(something:Eachable, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter something to an Arr (array) of values using predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter hash. Build new hash with kev-value pairs selected by predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-FullBox-Any">Any(fb:FullBox, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Test FullBox value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-EmptyBox-Any">Any(eb:EmptyBox, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Do nothing
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter hash by keys
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter hash by values
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Int-Any">Any(arr:Arr, idx:Int, dflt:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any-Any">Any(h:Hash, k:Any, dflt:Any)</a>
+							<section class="type-method-impl-desc">
+							Get hash value by key or dflt if it does not exist
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, k:Any)</a>
+							<section class="type-method-impl-desc">
+							Get hash value by key or null if it does not exist
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-FullBox-Any">Any(fb:FullBox, dflt:Any=null)</a>
+							<section class="type-method-impl-desc">
+							Get FullBox value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-EmptyBox-Any">Any(eb:EmptyBox, dflt:Any)</a>
+							<section class="type-method-impl-desc">
+							Get EmptyBox value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(pattern:Str, start_dir:Any='.')</a>
+							<section class="type-method-impl-desc">
+							Work in progress, do not use!
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(container:Any, element:Any)</a>
+							<section class="type-method-impl-desc">
+							Exactly same as "element in container". It's just more convenient in specific cases.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Calculate hash value. Same function that Hash uses internally. Currently Fowler-Noll-Vo (FNV) hash function.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Hash">Any(x:Any, h:Hash)</a>
+							<section class="type-method-impl-desc">
+							Check key presence in a Hash
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Arr">Any(x:Any, arr:Arr)</a>
+							<section class="type-method-impl-desc">
+							Checks whether element x is in array arr
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Find index of first value that satisfies the predicate.
+							TODO: Make it work on anything with each() method.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Find all indexes of values that satisfy the predicate
+							TODO: Make it work on anything with each() method
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-IndexNotFound-Str-Any-Any">Any(e:IndexNotFound, message:Str, container:Any, key:Any)</a>
+							<section class="type-method-impl-desc">
+							IndexNotFound exception constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hook-Any">Any(hook:Hook, combiner:Any=<em>(a function)</em>)</a>
+							<section class="type-method-impl-desc">
+							Hook constructor.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Range-Any-Any-Any">Any(r:Range, start:Any, end:Any, step:Any=1)</a>
+							<section class="type-method-impl-desc">
+							Range constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-FullBox-Any">Any(b:FullBox, val:Any)</a>
+							<section class="type-method-impl-desc">
+							FullBox constructor. Saves val into .val
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-MatchFail-Str-Any-Any">Any(mf:MatchFail, msg:Str, container:Any, pattern:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-SubSeq-Any">Any(s:SubSeq, val:Any)</a>
+							<section class="type-method-impl-desc">
+							SubSec construcor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-ResDef-Any-Hash">Any(rd:ResDef, anchor:Any, props:Hash)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-ResDef-Any">Any(rd:ResDef, anchor:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-ConstIter-Any">Any(i:ConstIter, val:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-KV-Any-Any">Any(kv:KV, k:Any, v:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Table-Any">Any(t:Table, name:Any=null)</a>
+							<section class="type-method-impl-desc">
+							Initialize rows to an empty array
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Table-Any-Arr">Any(t:Table, name:Any, rows_hashes:Arr)</a>
+							<section class="type-method-impl-desc">
+							Create named table containing provided rows
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Thread-Fun-Any">Any(t:Thread, f:Fun, arg:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-TextCollector-Any-Any-Any">Any(t:TextCollector, pfx:Any='', pfx_inc:Any='	', heading_level:Any=1)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(val:Any)</a>
+							<section class="type-method-impl-desc">
+							Inspect any value.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Type">Any(obj:Any, t:Type)</a>
+							<section class="type-method-impl-desc">
+							Check whether obj is of type t. Uses same function that is used for matching arguments with method parameters when calling a method.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							"is not" operator. Exactly same as "not(a is b)".
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Int-Fun">Any(base:Any, n:Int, mapper:Fun)</a>
+							<section class="type-method-impl-desc">
+							Map when there is one more than one element. If there is exactly one element, it's left as is
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(val:Any, mapper:Fun)</a>
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							Map val only when val is false in boolean context. Otherwise return the original val.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(val:Any, mapper:Fun)</a>
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							Map val only when val is true in boolean context. Otherwise return the original val.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							Used by match EXPR { ... } construct.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Box-Any">Any(b:Box, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Test Box value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Boolean negation for non-boolean values. Converts to boolean first.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(a:Any, b:Any)</a>
+							<section class="type-method-impl-desc">
+							"not in" operator. Exactly same as "not(a in b)"
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(predicate:Any, mapper:Fun)</a>
+							<section class="type-method-impl-desc">
+							Transform mapper to handle only items matching predicate. Non-matching items will be returned as is.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(s:Str, subtype:Any=false)</a>
+							<section class="type-method-impl-desc">
+							Path constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(val:Any)</a>
+							<section class="type-method-impl-desc">
+							Convenience method for creating MustPfx
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(anything:Any)</a>
+							<section class="type-method-impl-desc">
+							Convert anything to a predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, v:Any)</a>
+							<section class="type-method-impl-desc">
+							Append item to an array.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Stats-Any">Any(s:Stats, k:Any)</a>
+							<section class="type-method-impl-desc">
+							Increment the named counter
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Int">Any(something:Any, n:Int)</a>
+							<section class="type-method-impl-desc">
+							Pick n elements from something. Uniqueness of picked elements is not guaranteed.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Int">Any(something:Any, n:Int)</a>
+							<section class="type-method-impl-desc">
+							Pick n random unique elements from something
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any-Fun">Any(something:Eachable, start:Any, f:Fun)</a>
+							<section class="type-method-impl-desc">
+							Combine items to a single value using the supplied binary function
+							First f is applied to start and the first element of something
+							then on each step f is applied to previous result and next element
+							of something.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Table-Any">Any(t:Table, k:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any">Any(something:Eachable, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter something to an Arr (array) of values using predicate
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Any">Any(dst:Any, src:Any)</a>
+							<section class="type-method-impl-desc">
+							DISCOURAGED. Replace one object with another. dst and src must be of the same type.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any-Any">Any(something:Eachable, src:Any, dst:Any)</a>
+							<section class="type-method-impl-desc">
+							Replace all occurrences of src with dst
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Int-Any-Fun-Any-Any-Any-Fun-Fun-Any-Fun">Any(times:Int=60, sleep:Any=1, logger:Fun=<em>(a function)</em>, success_predicate:Any=<em>(a function)</em>, catch_exceptions:Any=true, title:Any='&lt;retry&gt;', progress_cb:Fun=<em>(a function)</em>, success_cb:Fun=<em>(a function)</em>, fail_cb:Any=null, body:Fun=<em>(a function)</em>)</a>
+							<section class="type-method-impl-desc">
+							Retry. Executes given "body" "times" times. Throws RetryFail if all calls fail and fail_cb is not provided.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(val:Any)</a>
+							<section class="type-method-impl-desc">
+							Don't use, subject to change, including name
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Str-Any">Any(obj:Any, attr:Str, val:Any)</a>
+							<section class="type-method-impl-desc">
+							Sets the given attribute to the given value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Int-Any">Any(idx:Int, val:Any)</a>
+							<section class="type-method-impl-desc">
+							Do not use directly! Set global variable by index.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(val:Any)</a>
+							<section class="type-method-impl-desc">
+							Convenience method for creating MustSfx
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, dflt:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(a:Arr, delim:Any)</a>
+							<section class="type-method-impl-desc">
+							TODO. Is it used even?
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Int">Any(x:Any, target_width:Int)</a>
+							<section class="type-method-impl-desc">
+							Convert anything to Str of a given width
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Int">Any(x:Any, width:Int)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(something:Any)</a>
+							<section class="type-method-impl-desc">
+							Calculate sum of the elements
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any">Any(something:Eachable, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Fun">Any(val:Any, cb:Fun)</a>
+							<section class="type-method-impl-desc">
+							Call cb with val
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any">Any(something:Eachable, predicate:Any)</a>
+							<section class="type-method-impl-desc">
+							Find the only element that satisfies the predicate.
+							Throws TheOneFail exception if there are no elements that satisfy the predicate or if there is more than one element that satisfies the predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Eachable-Any-Fun-Fun-Fun">Any(something:Eachable, predicate:Any, body:Fun, found_more:Fun=<em>(a function)</em>, found_none:Fun=<em>(a function)</em>)</a>
+							<section class="type-method-impl-desc">
+							Find the only element that satisfies the predicate and execute given code with the value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any">Any(name:Str, doc:Any)</a>
+							<section class="type-method-impl-desc">
+							Create a new type. Do not use directly. Use "type MyType".
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any-Type">Any(t:Str, doc:Any, parent:Type)</a>
+							<section class="type-method-impl-desc">
+							Type constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Str-Any-Arr">Any(t:Str, doc:Any, parents:Arr)</a>
+							<section class="type-method-impl-desc">
+							Type constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any">Any(x:Any)</a>
+							<section class="type-method-impl-desc">
+							Returns type of the given instance
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Hash">Any(data:Any, hints:Hash)</a>
+							<section class="type-method-impl-desc">
+							Not implemented yet
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, elt:Any)</a>
+							<section class="type-method-impl-desc">
+							Prepend one element to the given array
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Arr-Any">Any(arr:Arr, without_elt:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter out all occurrences of specific value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any">Any(h:Hash, without_k:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter out specific key
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Hash-Any-Any">Any(h:Hash, without_k:Any, without_v:Any)</a>
+							<section class="type-method-impl-desc">
+							Filter out specific key-value pair
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-ref-link" title="See method" href="methods.html#impl-Any-Any-Type">Any(something:Any, t:Type)</a>
+							<section class="type-method-impl-desc">
+							Match a type. Same as "something is t".
+							</section>
+							</section>
+					<!-- type methods end -->
+			</section>
+		</section>
+	<!-- types end -->
+</body>
+</html>
