@@ -10,11 +10,20 @@
 		<section class="type">
 			<h2 id="type-EmptyArrayFail" class="type-header">EmptyArrayFail<a class="type-link" title="Permalink to this type" href="#type-EmptyArrayFail">¶</a></h2>
 			<section class="type-content">
+				Represents an error of using an empty array for an operation that requires at least one element in the array.
 				<h3 id="type-EmptyArrayFail-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-IndexNotFound">IndexNotFound</a>
+							 - 
+							Represents an error of out-of-bounds array index.
 						</li>
 				</ul>
+				<h3 id="type-EmptyArrayFail-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">a = []
+echo(shift(a))
+# ... Exception of type EmptyArrayFail ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

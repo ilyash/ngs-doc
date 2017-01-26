@@ -10,11 +10,20 @@
 		<section class="type">
 			<h2 id="type-KeyNotFound" class="type-header">KeyNotFound<a class="type-link" title="Permalink to this type" href="#type-KeyNotFound">¶</a></h2>
 			<section class="type-content">
+				Represents an error of accessing non-existent key in a hash.
 				<h3 id="type-KeyNotFound-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-LookupFail">LookupFail</a>
+							 - 
+							Represents an error of accessing non-existent element of a collection.
 						</li>
 				</ul>
+				<h3 id="type-KeyNotFound-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">h = {}
+echo(h["a"])
+# ... Exception of type KeyNotFound ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

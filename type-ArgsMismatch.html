@@ -10,11 +10,20 @@
 		<section class="type">
 			<h2 id="type-ArgsMismatch" class="type-header">ArgsMismatch<a class="type-link" title="Permalink to this type" href="#type-ArgsMismatch">¶</a></h2>
 			<section class="type-content">
+				Represents calling failure due to arguments vs parameters mismatch.
 				<h3 id="type-ArgsMismatch-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-CallFail">CallFail</a>
+							 - 
+							Represents calling failure.
 						</li>
 				</ul>
+				<h3 id="type-ArgsMismatch-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">f = F(x) "blah"
+f(10, 20)
+# ... Exception of type ArgsMismatch ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

@@ -10,11 +10,23 @@
 		<section class="type">
 			<h2 id="type-AttrNotFound" class="type-header">AttrNotFound<a class="type-link" title="Permalink to this type" href="#type-AttrNotFound">¶</a></h2>
 			<section class="type-content">
+				Represents an error of reading non-existent attribute of an object.
 				<h3 id="type-AttrNotFound-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-LookupFail">LookupFail</a>
+							 - 
+							Represents an error of accessing non-existent element of a collection.
 						</li>
 				</ul>
+				<h3 id="type-AttrNotFound-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{
+  type T
+  t.a = 1
+  echo(t.b)
+}
+# ... Exception of type AttrNotFound ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

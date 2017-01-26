@@ -10,11 +10,20 @@
 		<section class="type">
 			<h2 id="type-UndefinedLocalVar" class="type-header">UndefinedLocalVar<a class="type-link" title="Permalink to this type" href="#type-UndefinedLocalVar">¶</a></h2>
 			<section class="type-content">
+				Represents an error of reading undefined local variable.
 				<h3 id="type-UndefinedLocalVar-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-Exception">Exception</a>
+							 - 
+							Represents exceptional situaution. All thrown things shouhld inherit Exception.
 						</li>
 				</ul>
+				<h3 id="type-UndefinedLocalVar-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">F f() {echo(a); a=1}
+f()
+# ... Exception of type UndefinedLocalVar ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

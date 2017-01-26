@@ -10,6 +10,27 @@
 		<section class="type">
 			<h2 id="type-Return" class="type-header">Return<a class="type-link" title="Permalink to this type" href="#type-Return">¶</a></h2>
 			<section class="type-content">
+				Return instance types, when thrown, will exit the call frame where they were created.
+				<h3 id="type-Return-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{
+    F find_the_one(haystack:Arr, needle) {
+        ret_from_find_the_one = Return()
+        echo(ret_from_find_the_one)
+        haystack.each(F(elt) {
+                elt == needle throws ret_from_find_the_one("Found it!")
+        })
+        "Not found"
+    }
+    echo([10,20].find_the_one(20))
+    echo([10,20].find_the_one(30))
+}
+# Output:
+#   &lt;Return closure=&lt;Closure find_the_one at 1.ngs:2&gt; depth=7 val=null&gt;
+#   Found it!
+#   &lt;Return closure=&lt;Closure find_the_one at 1.ngs:2&gt; depth=7 val=null&gt;
+#   Not found</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">

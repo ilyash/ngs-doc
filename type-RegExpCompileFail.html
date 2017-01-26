@@ -10,11 +10,19 @@
 		<section class="type">
 			<h2 id="type-RegExpCompileFail" class="type-header">RegExpCompileFail<a class="type-link" title="Permalink to this type" href="#type-RegExpCompileFail">¶</a></h2>
 			<section class="type-content">
+				Represents a regulat expression compilation error.
 				<h3 id="type-RegExpCompileFail-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-Error">Error</a>
+							 - 
+							Represents an error. Usually more specific error types are used.
 						</li>
 				</ul>
+				<h3 id="type-RegExpCompileFail-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">"aaa" ~ /+/
+# ... Exception of type RegExpCompileFail ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

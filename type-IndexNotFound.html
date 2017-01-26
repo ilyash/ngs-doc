@@ -10,11 +10,20 @@
 		<section class="type">
 			<h2 id="type-IndexNotFound" class="type-header">IndexNotFound<a class="type-link" title="Permalink to this type" href="#type-IndexNotFound">¶</a></h2>
 			<section class="type-content">
+				Represents an error of out-of-bounds array index.
 				<h3 id="type-IndexNotFound-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-LookupFail">LookupFail</a>
+							 - 
+							Represents an error of accessing non-existent element of a collection.
 						</li>
 				</ul>
+				<h3 id="type-IndexNotFound-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">a = [10,20,30]
+echo(a[100])
+# ... Exception of type IndexNotFound ...</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">

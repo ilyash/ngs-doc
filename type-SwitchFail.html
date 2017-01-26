@@ -10,11 +10,24 @@
 		<section class="type">
 			<h2 id="type-SwitchFail" class="type-header">SwitchFail<a class="type-link" title="Permalink to this type" href="#type-SwitchFail">¶</a></h2>
 			<section class="type-content">
+				Represents missing appropriate eswitch/econd/ematch clause.
 				<h3 id="type-SwitchFail-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-Error">Error</a>
+							 - 
+							Represents an error. Usually more specific error types are used.
 						</li>
 				</ul>
+				<h3 id="type-SwitchFail-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{
+    eswitch 10 {
+        1 "a"
+        2 "b"
+    }
+}
+# ... Exception of type SwitchFail ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

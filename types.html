@@ -18,6 +18,7 @@
 		<section class="type">
 			<h2 id="type-ArgsMismatch" class="type-header"><a class="type-details-link" href="type-ArgsMismatch.html#type-ArgsMismatch">ArgsMismatch</a></h2>
 			<section class="type-content">
+				Represents calling failure due to arguments vs parameters mismatch.
 			</section>
 		</section>
 		<section class="type">
@@ -45,6 +46,7 @@
 		<section class="type">
 			<h2 id="type-AttrNotFound" class="type-header"><a class="type-details-link" href="type-AttrNotFound.html#type-AttrNotFound">AttrNotFound</a></h2>
 			<section class="type-content">
+				Represents an error of reading non-existent attribute of an object.
 			</section>
 		</section>
 		<section class="type">
@@ -114,6 +116,7 @@
 		<section class="type">
 			<h2 id="type-CallFail" class="type-header"><a class="type-details-link" href="type-CallFail.html#type-CallFail">CallFail</a></h2>
 			<section class="type-content">
+				Represents calling failure.
 			</section>
 		</section>
 		<section class="type">
@@ -147,6 +150,7 @@
 		<section class="type">
 			<h2 id="type-CompileFail" class="type-header"><a class="type-details-link" href="type-CompileFail.html#type-CompileFail">CompileFail</a></h2>
 			<section class="type-content">
+				Represents a compilation error.
 			</section>
 		</section>
 		<section class="type">
@@ -179,16 +183,19 @@
 		<section class="type">
 			<h2 id="type-DivisionByZero" class="type-header"><a class="type-details-link" href="type-DivisionByZero.html#type-DivisionByZero">DivisionByZero</a></h2>
 			<section class="type-content">
+				Represents an error of dividing by zero.
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-DlopenFail" class="type-header"><a class="type-details-link" href="type-DlopenFail.html#type-DlopenFail">DlopenFail</a></h2>
 			<section class="type-content">
+				Represents failure to open dynamically loaded library (feature is a work in progress).
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-DontKnowHowToCall" class="type-header"><a class="type-details-link" href="type-DontKnowHowToCall.html#type-DontKnowHowToCall">DontKnowHowToCall</a></h2>
 			<section class="type-content">
+				Represents calling failure when it is not known how to call the given object.
 			</section>
 		</section>
 		<section class="type">
@@ -200,6 +207,7 @@
 		<section class="type">
 			<h2 id="type-EmptyArrayFail" class="type-header"><a class="type-details-link" href="type-EmptyArrayFail.html#type-EmptyArrayFail">EmptyArrayFail</a></h2>
 			<section class="type-content">
+				Represents an error of using an empty array for an operation that requires at least one element in the array.
 			</section>
 		</section>
 		<section class="type">
@@ -211,11 +219,13 @@
 		<section class="type">
 			<h2 id="type-Error" class="type-header"><a class="type-details-link" href="type-Error.html#type-Error">Error</a></h2>
 			<section class="type-content">
+				Represents an error. Usually more specific error types are used.
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-Exception" class="type-header"><a class="type-details-link" href="type-Exception.html#type-Exception">Exception</a></h2>
 			<section class="type-content">
+				Represents exceptional situaution. All thrown things shouhld inherit Exception.
 			</section>
 		</section>
 		<section class="type">
@@ -264,6 +274,7 @@
 		<section class="type">
 			<h2 id="type-GlobalNotFound" class="type-header"><a class="type-details-link" href="type-GlobalNotFound.html#type-GlobalNotFound">GlobalNotFound</a></h2>
 			<section class="type-content">
+				Represents an error of accessing undefined global variable.
 			</section>
 		</section>
 		<section class="type">
@@ -299,6 +310,7 @@
 		<section class="type">
 			<h2 id="type-ImplNotFound" class="type-header"><a class="type-details-link" href="type-ImplNotFound.html#type-ImplNotFound">ImplNotFound</a></h2>
 			<section class="type-content">
+				Represents calling failure when arguments do not match any method implementation.
 			</section>
 		</section>
 		<section class="type">
@@ -309,6 +321,7 @@
 		<section class="type">
 			<h2 id="type-IndexNotFound" class="type-header"><a class="type-details-link" href="type-IndexNotFound.html#type-IndexNotFound">IndexNotFound</a></h2>
 			<section class="type-content">
+				Represents an error of out-of-bounds array index.
 			</section>
 		</section>
 		<section class="type">
@@ -320,11 +333,13 @@
 		<section class="type">
 			<h2 id="type-InternalError" class="type-header"><a class="type-details-link" href="type-InternalError.html#type-InternalError">InternalError</a></h2>
 			<section class="type-content">
+				Represents an error which is likely to be NGS implementation bug.
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-InvalidArgument" class="type-header"><a class="type-details-link" href="type-InvalidArgument.html#type-InvalidArgument">InvalidArgument</a></h2>
 			<section class="type-content">
+				Represents an error of calling a method with incorrect argument.
 			</section>
 		</section>
 		<section class="type">
@@ -335,6 +350,7 @@
 		<section class="type">
 			<h2 id="type-KeyNotFound" class="type-header"><a class="type-details-link" href="type-KeyNotFound.html#type-KeyNotFound">KeyNotFound</a></h2>
 			<section class="type-content">
+				Represents an error of accessing non-existent key in a hash.
 			</section>
 		</section>
 		<section class="type">
@@ -361,6 +377,7 @@
 		<section class="type">
 			<h2 id="type-LookupFail" class="type-header"><a class="type-details-link" href="type-LookupFail.html#type-LookupFail">LookupFail</a></h2>
 			<section class="type-content">
+				Represents an error of accessing non-existent element of a collection.
 			</section>
 		</section>
 		<section class="type">
@@ -518,6 +535,7 @@
 		<section class="type">
 			<h2 id="type-RegExpCompileFail" class="type-header"><a class="type-details-link" href="type-RegExpCompileFail.html#type-RegExpCompileFail">RegExpCompileFail</a></h2>
 			<section class="type-content">
+				Represents a regulat expression compilation error.
 			</section>
 		</section>
 		<section class="type">
@@ -549,6 +567,7 @@
 		<section class="type">
 			<h2 id="type-Return" class="type-header"><a class="type-details-link" href="type-Return.html#type-Return">Return</a></h2>
 			<section class="type-content">
+				Return instance types, when thrown, will exit the call frame where they were created.
 			</section>
 		</section>
 		<section class="type">
@@ -571,6 +590,7 @@
 		<section class="type">
 			<h2 id="type-StackDepthFail" class="type-header"><a class="type-details-link" href="type-StackDepthFail.html#type-StackDepthFail">StackDepthFail</a></h2>
 			<section class="type-content">
+				Represents stack overflow error.
 			</section>
 		</section>
 		<section class="type">
@@ -603,6 +623,7 @@
 		<section class="type">
 			<h2 id="type-SwitchFail" class="type-header"><a class="type-details-link" href="type-SwitchFail.html#type-SwitchFail">SwitchFail</a></h2>
 			<section class="type-content">
+				Represents missing appropriate eswitch/econd/ematch clause.
 			</section>
 		</section>
 		<section class="type">
@@ -650,6 +671,7 @@
 		<section class="type">
 			<h2 id="type-UndefinedLocalVar" class="type-header"><a class="type-details-link" href="type-UndefinedLocalVar.html#type-UndefinedLocalVar">UndefinedLocalVar</a></h2>
 			<section class="type-content">
+				Represents an error of reading undefined local variable.
 			</section>
 		</section>
 		<section class="type">

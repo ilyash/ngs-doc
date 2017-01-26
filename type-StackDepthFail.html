@@ -10,11 +10,19 @@
 		<section class="type">
 			<h2 id="type-StackDepthFail" class="type-header">StackDepthFail<a class="type-link" title="Permalink to this type" href="#type-StackDepthFail">¶</a></h2>
 			<section class="type-content">
+				Represents stack overflow error.
 				<h3 id="type-StackDepthFail-parents" class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-ref-link" title="See type" href="types.html#type-CallFail">CallFail</a>
+							 - 
+							Represents calling failure.
 						</li>
 				</ul>
+				<h3 id="type-StackDepthFail-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">F f(x:Int) f(x+1)f(0)
+# ... Exception of type StackDepthFail ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->
