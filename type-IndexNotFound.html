@@ -8,14 +8,21 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-IndexNotFound" class="type-header">IndexNotFound<a class="type-link" title="Permalink to this type" href="#type-IndexNotFound">¶</a></h2>
+			<h2 id="type-IndexNotFound" class="type-header">IndexNotFound</h2>
 			<section class="type-content">
 				Represents an error of out-of-bounds array index.
-				<h3 id="type-IndexNotFound-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-LookupFail">LookupFail</a>
+						<li><a class="type-details-link" href="type-LookupFail.html">LookupFail</a>
 							 - 
 							Represents an error of accessing non-existent element of a collection.
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-EmptyArrayFail.html">EmptyArrayFail</a>
+							 - 
+							Represents an error of using an empty array for an operation that requires at least one element in the array.
 						</li>
 				</ul>
 				<h3 id="type-IndexNotFound-example" class="example-header">Example</h3>
@@ -27,7 +34,7 @@ echo(a[100])
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-IndexNotFound-Str-Any-Any">init(e:IndexNotFound, message:Str, container:Any, key:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-init-IndexNotFound-Str-Any-Any.html">init</a>(e:<a class="type-details-link" href="type-IndexNotFound.html">IndexNotFound</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>, container:<a class="type-details-link" href="type-Any.html">Any</a>, key:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							IndexNotFound exception constructor
 							</section>

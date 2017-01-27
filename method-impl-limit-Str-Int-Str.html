@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-limit" class="method-header">limit<a class="section-link" title="Permalink to this definition" href="#method-limit">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">limit(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>='')</h3>
+				<section class="method-impl-content">
+				Truncate a string if necessary so it would have maximum n characters (currently bytes).
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L2234" style="source-link">stdlib.ngs:2234</a></section>
+				<h4 class="param-header">s</h4>
+				<section class="method-param-content">
+				The string to (possibly) truncate.
+				</section>
+				<h4 class="param-header">n</h4>
+				<section class="method-param-content">
+				Maximum characters
+				</section>
+				<h4 class="param-header">marker</h4>
+				<section class="method-param-content">
+				The truncation marker
+				</section>
+				<h4 id="impl-limit-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Either s or new Str of length n
+				</section>
+				<h4 id="impl-limit-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">"abc".limit(5, "...")     # "abc"
+"abcdef".limit(5, "...")  # "ab..."
+"abcdef".limit(2)         # "ab"</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- types start -->
+	<h1>Types</h1>
+		<section class="type">
+			<h2 id="type-Eachable1" class="type-header">Eachable1</h2>
+			<section class="type-content">
+				Eachable which each() calls the callback with one argument
+				<h3 class="type-parents-header">Parent types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-Eachable.html">Eachable</a>
+							 - 
+							Parent type of all types that have each() method
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-Arr.html">Arr</a>
+							 - 
+							Array type
+						</li>
+						<li><a class="type-details-link" href="type-ArrLike.html">ArrLike</a>
+						</li>
+						<li><a class="type-details-link" href="type-Int.html">Int</a>
+							 - 
+							Integer type. On 64 bit platforms it's a 61 bit signed integer
+						</li>
+						<li><a class="type-details-link" href="type-Range.html">Range</a>
+						</li>
+						<li><a class="type-details-link" href="type-Str.html">Str</a>
+							 - 
+							String type
+						</li>
+				</ul>
+					<!-- type methods start -->
+					<h3>Methods</h3>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-all-Eachable1-Any.html">all</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Check whether all elements in arr satisfy the given predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-any-Eachable1-Any.html">any</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Check whether there is any element in arr that satisfies the given predicate.
+							TODO: Make it work on anything with Eachable2 too.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-drop_while-Eachable1-Any.html">drop_while</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-filter-Eachable1-Any.html">filter</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Filter something to an Arr (array) of values using predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-filter-Eachable1.html">filter</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>)
+							<section class="type-method-impl-desc">
+							Filter nulls out.
+							DEPRECATED, USE something.without(null) INSTEAD.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-none-Eachable1-Fun.html">none</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Check that there is no element in e that satisfies the given predicate. Exactly same as not(any(arr, predicate)) .
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-reduce-Eachable1-Any-Fun.html">reduce</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, start:<a class="type-details-link" href="type-Any.html">Any</a>, f:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Combine items to a single value using the supplied binary function
+							First f is applied to start and the first element of something
+							then on each step f is applied to previous result and next element
+							of something.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-replace-Eachable1-Any-Any.html">replace</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, src:<a class="type-details-link" href="type-Any.html">Any</a>, dst:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Replace all occurrences of src with dst
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-take_while-Eachable1-Any.html">take_while</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL! Do not use!
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-the_one-Eachable1-Any.html">the_one</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Find the only element that satisfies the predicate.
+							Throws TheOneFail exception if there are no elements that satisfy the predicate or if there is more than one element that satisfies the predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-the_one-Eachable1-Any-Fun-Fun-Fun.html">the_one</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>, body:<a class="type-details-link" href="type-Fun.html">Fun</a>, found_more:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, found_none:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
+							<section class="type-method-impl-desc">
+							Find the only element that satisfies the predicate and execute given code with the value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-the_one-Eachable1.html">the_one</a>(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>)
+							<section class="type-method-impl-desc">
+							Extract the only element.
+							Throws TheOneFail exception if there are no elements or if there is more than one element.
+							</section>
+							</section>
+					<!-- type methods end -->
+			</section>
+		</section>
+	<!-- types end -->
+</body>
+</html>

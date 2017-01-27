@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-retry" class="method-header">retry<a class="section-link" title="Permalink to this definition" href="#method-retry">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">retry(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Any.html">Any</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>='&lt;retry&gt;', progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)</h3>
+				<section class="method-impl-content">
+				Retry. Executes given "body" "times" times. Throws RetryFail if all calls fail and fail_cb is not provided.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L3756" style="source-link">stdlib.ngs:3756</a></section>
+				<h4 class="param-header">times</h4>
+				<section class="method-param-content">
+				Limit of times to run "body"
+				</section>
+				<h4 class="param-header">sleep</h4>
+				<section class="method-param-content">
+				Either sleep in seconds between tries or Iter that returns successive sleep times in seconds
+				</section>
+				<h4 class="param-header">logger</h4>
+				<section class="method-param-content">
+				Function to use to log attempts, caught body exceptions and sleep times. Defaults to stdlib's debug.
+				</section>
+				<h4 class="param-header">success_predicate</h4>
+				<section class="method-param-content">
+				CANDIDATE FOR REMOVAL. Run against body results to. Says whether the attempt succeeded. Defaults to Bool.
+				</section>
+				<h4 class="param-header">catch_exceptions</h4>
+				<section class="method-param-content">
+				Catch exceptions that might occur in body and treat them as if body returned failure.
+				</section>
+				<h4 class="param-header">title</h4>
+				<section class="method-param-content">
+				Prefix strings sent to logger with this string. Defaults to "&lt;retry&gt;".
+				</section>
+				<h4 class="param-header">progress_cb</h4>
+				<section class="method-param-content">
+				Called before each attempt with (1) current attempt number and (2) limit of attempts ("times"). Defaults to do nothing.
+				</section>
+				<h4 class="param-header">success_cb</h4>
+				<section class="method-param-content">
+				Called when body succeeds with the result that comes from body. Defaults to identity function.
+				</section>
+				<h4 class="param-header">fail_cb</h4>
+				<section class="method-param-content">
+				If passed, called if all attempts fail. Defaults to null.
+				</section>
+				<h4 id="impl-retry-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Any. Result of success_cb or result of fail_cb.
+				</section>
+				<h4 id="impl-retry-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">page = retry(times=10, sleep=ExpBackIter(), body={ `curl "http://flaky-site.com"` })</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

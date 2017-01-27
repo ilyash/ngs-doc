@@ -8,14 +8,59 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Error" class="type-header">Error<a class="type-link" title="Permalink to this type" href="#type-Error">¶</a></h2>
+			<h2 id="type-Error" class="type-header">Error</h2>
 			<section class="type-content">
 				Represents an error. Usually more specific error types are used.
-				<h3 id="type-Error-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Exception">Exception</a>
+						<li><a class="type-details-link" href="type-Exception.html">Exception</a>
 							 - 
 							Represents exceptional situaution. All thrown things shouhld inherit Exception.
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-CallFail.html">CallFail</a>
+							 - 
+							Represents calling failure.
+						</li>
+						<li><a class="type-details-link" href="type-CException.html">CException</a>
+							 - 
+							Base type for exceptions arising from errors returned by calling C functions
+						</li>
+						<li><a class="type-details-link" href="type-CompileFail.html">CompileFail</a>
+							 - 
+							Represents a compilation error.
+						</li>
+						<li><a class="type-details-link" href="type-DlopenFail.html">DlopenFail</a>
+							 - 
+							Represents failure to open dynamically loaded library (feature is a work in progress).
+						</li>
+						<li><a class="type-details-link" href="type-InternalError.html">InternalError</a>
+							 - 
+							Represents an error which is likely to be NGS implementation bug.
+						</li>
+						<li><a class="type-details-link" href="type-InvalidArgument.html">InvalidArgument</a>
+							 - 
+							Represents an error of calling a method with incorrect argument.
+						</li>
+						<li><a class="type-details-link" href="type-LookupFail.html">LookupFail</a>
+							 - 
+							Represents an error of accessing non-existent element of a collection.
+						</li>
+						<li><a class="type-details-link" href="type-RegExpCompileFail.html">RegExpCompileFail</a>
+							 - 
+							Represents a regulat expression compilation error.
+						</li>
+						<li><a class="type-details-link" href="type-RetryFail.html">RetryFail</a>
+							 - 
+							Represents failure on all retries
+						</li>
+						<li><a class="type-details-link" href="type-SwitchFail.html">SwitchFail</a>
+							 - 
+							Represents missing appropriate eswitch/econd/ematch clause.
+						</li>
+						<li><a class="type-details-link" href="type-TestFail.html">TestFail</a>
 						</li>
 				</ul>
 			</section>

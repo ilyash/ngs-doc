@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-resolve_instruction_pointer" class="method-header">resolve_instruction_pointer<a class="section-link" title="Permalink to this definition" href="#method-resolve_instruction_pointer">¶</a></h2>
+			<section class="method-impl">
+			<h3 id="impl-resolve_instruction_pointer-Int" class="method-impl-header">resolve_instruction_pointer(ip:<a class="type-details-link" href="type-Int.html">Int</a>)<a class="method-impl-details-link" href="method-impl-resolve%255Finstruction%255Fpointer-Int.html">resolve_instruction_pointer</a></h3>
+				<section class="method-impl-content">
+				Resolves Instruction Pointer to source location
+				<h4 class="param-header">ip</h4>
+				<section class="method-param-content">
+				Result of calling Backtrace(). Backtrace().frames[0].ip for example.
+				</section>
+				<h4 id="impl-resolve_instruction_pointer-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Hash with keys: file, first_line, first_column, last_line, last_column, ip
+				</section>
+				<h4 id="impl-resolve_instruction_pointer-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">resolve_instruction_pointer(Backtrace().frames[0].ip)
+# {ip=4770, file=/etc/ngs/bootstrap.ngs, first_line=245, first_column=1, last_line=245, last_column=34}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

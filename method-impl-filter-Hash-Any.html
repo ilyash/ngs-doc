@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-filter" class="method-header">filter<a class="section-link" title="Permalink to this definition" href="#method-filter">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">filter(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Filter hash. Build new hash with kev-value pairs selected by predicate.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L1604" style="source-link">stdlib.ngs:1604</a></section>
+				<h4 class="param-header">h</h4>
+				<section class="method-param-content">
+				Source hash
+				</section>
+				<h4 class="param-header">predicate</h4>
+				<section class="method-param-content">
+				Test function to be called with one key and one value at a time
+				</section>
+				<h4 id="impl-filter-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">{'a': 1, 'b': 2}.filter(F(k, v) k == 'a')  # {'a': 1}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

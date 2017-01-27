@@ -8,7 +8,7 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Hash" class="type-header">Hash<a class="type-link" title="Permalink to this type" href="#type-Hash">¶</a></h2>
+			<h2 id="type-Hash" class="type-header">Hash</h2>
 			<section class="type-content">
 				Hash type. Maps unique keys to their values. 
 				Key-Value pairs are stored and iterated in insertion order.
@@ -19,11 +19,11 @@
 				Hash values are compared using internal is_equal() function which can not be overwritten. 
 				Both hash() and is_equal() currently handle only Int, Str and arbitrary objects. 
 				Comparison of arbitrary objects is done by comparing their addresses in memory.
-				<h3 id="type-Hash-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Eachable">Eachable</a>
+						<li><a class="type-details-link" href="type-Eachable2.html">Eachable2</a>
 							 - 
-							Parent type of all types that have each() method
+							Eachable which each() calls the callback with two arguments
 						</li>
 				</ul>
 				<h3 id="type-Hash-example" class="example-header">Example</h3>
@@ -51,305 +51,305 @@ echo(x)
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-+-Hash-Hash">+(a:Hash, b:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-%252B-Hash-Hash.html">+</a>(a:<a class="type-details-link" href="type-Hash.html">Hash</a>, b:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Add Hashes. Builds new hash with key-value pairs from both a and b. If same key is present in both a and b, the value from b is used.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-Hash-Str">.(h:Hash, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-Hash-Str.html">.</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get hash key.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.=-Hash-Str-Any">.=(h:Hash, attr:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-Hash-Str-Any.html">.=</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set hash key.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-::-Hash-Any">::(h:Hash, k:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%253A%253A-Hash-Any.html">::</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-::=-Hash-Any-Any">::=(h:Hash, k:Any, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%253A%253A%253D-Hash-Any-Any.html">::=</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-==-Hash-Hash">==(a:Hash, b:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-%253D%253D-Hash-Hash.html">==</a>(a:<a class="type-details-link" href="type-Hash.html">Hash</a>, b:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Compare two Hashes. Hashes must have same keys with same values in same order to return true.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Hash-Any">[](h:Hash, k:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Hash-Any.html">[]</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Get hash value by key. Throws KeyNotFound.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]=-Hash-Any-Any">[]=(h:Hash, k:Any, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Hash-Any-Any.html">[]=</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set hash value.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-all-Hash-Any">all(h:Hash, predicate:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-all-Hash-Any.html">all</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Check whether all key-value pairs in Hash satisfy the given predicate
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Arr-Hash">Arr(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-Arr-Hash.html">Arr</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Make Arr from Hash. Each key/value pair becomes two-items array:
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-assert_hash_keys_values-Any-Hash-Any">assert_hash_keys_values(actual:Any, expected:Hash, title:Any=null)</a>
+							<a class="method-impl-details-link" href="method-impl-assert_hash_keys_values-Any-Hash-Any.html">assert_hash_keys_values</a>(actual:<a class="type-details-link" href="type-Any.html">Any</a>, expected:<a class="type-details-link" href="type-Hash.html">Hash</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=null)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-cmp-Hash-Hash">cmp(a:Hash, b:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-cmp-Hash-Hash.html">cmp</a>(a:<a class="type-details-link" href="type-Hash.html">Hash</a>, b:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Compare hashes
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-code-Hash">code(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-code-Hash.html">code</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Convert a Hash to NGS code that would produce the given Hash when executed. Not fully functional yet.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-collector-Hash-Fun">collector(h:Hash, body:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-collector-Hash-Fun.html">collector</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, body:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Defines collector { ... collect(...) ... } behaviour for hashes
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-count-Hash-Any">count(h:Hash, predicate:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-count-Hash-Any.html">count</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Count number of key-value pairs in Hash that satisfy the predicate.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-del-Hash-Any">del(h:Hash, k:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-del-Hash-Any.html">del</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Delete hash key. No exception is thrown if key is not found, the deletion is just skipped then.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-dflt-Hash-Any-Any">dflt(h:Hash, k:Any, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-dflt-Hash-Any-Any.html">dflt</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set an key in a Hash if it's not already set
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-each-Hash-Fun">each(h:Hash, cb:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-each-Hash-Fun.html">each</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterate a Hash.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-each_idx_key_val-Hash-Fun">each_idx_key_val(h:Hash, cb:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-each_idx_key_val-Hash-Fun.html">each_idx_key_val</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterate a Hash.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-filter-Hash-Any">filter(h:Hash, predicate:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-filter-Hash-Any.html">filter</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter hash. Build new hash with kev-value pairs selected by predicate.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-filterk-Hash-Any">filterk(h:Hash, predicate:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-filterk-Hash-Any.html">filterk</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter hash by keys
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-filterv-Hash-Any">filterv(h:Hash, predicate:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-filterv-Hash-Any.html">filterv</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter hash by values
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-get-Hash-Any-Any">get(h:Hash, k:Any, dflt:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-get-Hash-Any-Any.html">get</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, dflt:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Get hash value by key or dflt if it does not exist
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-get-Hash-Any">get(h:Hash, k:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-get-Hash-Any.html">get</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Get hash value by key or null if it does not exist
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-in-Any-Hash">in(x:Any, h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-in-Any-Hash.html">in</a>(x:<a class="type-details-link" href="type-Any.html">Any</a>, h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Check key presence in a Hash
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Hash">init(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Hash.html">init</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Trivial initialization helper for init(o, ...)
 							Sets object fields from the supplied parameters
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-ResDef-Any-Hash">init(rd:ResDef, anchor:Any, props:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-init-ResDef-Any-Hash.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, anchor:<a class="type-details-link" href="type-Any.html">Any</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Res-ResDef-Hash">init(r:Res, def:ResDef, props:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Res-ResDef-Hash.html">init</a>(r:<a class="type-details-link" href="type-Res.html">Res</a>, def:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-HashIter-Hash">init(i:HashIter, h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-init-HashIter-Hash.html">init</a>(i:<a class="type-details-link" href="type-HashIter.html">HashIter</a>, h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							EXPERIMENTAL! Do not use!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-inspect-Hash">inspect(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-inspect-Hash.html">inspect</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Inspect Hash
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Iter-Hash">Iter(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-Iter-Hash.html">Iter</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-keys-Hash">keys(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-keys-Hash.html">keys</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Get Hash keys as an array
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-len-Hash">len(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-len-Hash.html">len</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Get number of key-value pairs in a Hash
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-limit-Hash-Int">limit(h:Hash, l:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-limit-Hash-Int.html">limit</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, l:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Truncate a Hash if necessary so it would have maximum l key-value pairs.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-map-Hash-Fun">map(h:Hash, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-map-Hash-Fun.html">map</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Map a Hash
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-mapk-Hash-Fun">mapk(h:Hash, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-mapk-Hash-Fun.html">mapk</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Map Hash keys. Build new Hash with same values as in h but keys mapped by mapper.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-mapkv-Hash-Fun">mapkv(h:Hash, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-mapkv-Hash-Fun.html">mapkv</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Map Hash keys and values. Build new Hash with keys and values mapped by mapper.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-mapv-Hash-Fun">mapv(h:Hash, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-mapv-Hash-Fun.html">mapv</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Map Hash values. Build new Hash with same keys as in h but values mapped by mapper.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-n-Hash">n(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-n-Hash.html">n</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Convert hash values to integers where possible
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Attempt to parse JSON. Uses decode_json().
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Parse the output of "aws" command. Extracts the array (see "s" below"). For "describe-instances", flattens the instance list.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Parse the output of "find" command which does not use "-printf". Handles "-print0".
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-push-Table-Hash">push(t:Table, row_hash:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-push-Table-Hash.html">push</a>(t:<a class="type-details-link" href="type-Table.html">Table</a>, row_hash:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-sortk-Hash-Fun">sortk(h:Hash, lte:Fun=<em>(a function)</em>)</a>
+							<a class="method-impl-details-link" href="method-impl-sortk-Hash-Fun.html">sortk</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, lte:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Sort Hash by keys
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stdlib_aws_filters-Hash">stdlib_aws_filters(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-stdlib_aws_filters-Hash.html">stdlib_aws_filters</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Convert Hash with AWS filters to command line arguments
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stdlib_aws_straighten_tags-Hash">stdlib_aws_straighten_tags(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-stdlib_aws_straighten_tags-Hash.html">stdlib_aws_straighten_tags</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Convert "Tags" array in the given AWS resource (typically returned by AWS CLI) into Hash.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stdlib_aws_tags-Hash">stdlib_aws_tags(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-stdlib_aws_tags-Hash.html">stdlib_aws_tags</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-Hash">Str(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-Hash.html">Str</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Convert Hash to string
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Strs-Hash">Strs(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-Strs-Hash.html">Strs</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Build array of Str where each resulting string is of the form "KEY=VALUE"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-subset-Hash-Hash">subset(smaller:Hash, larger:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-subset-Hash-Hash.html">subset</a>(smaller:<a class="type-details-link" href="type-Hash.html">Hash</a>, larger:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-unparse-Any-Hash">unparse(data:Any, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-unparse-Any-Hash.html">unparse</a>(data:<a class="type-details-link" href="type-Any.html">Any</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Not implemented yet
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-update-Hash-Hash">update(dst:Hash, src:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-update-Hash-Hash.html">update</a>(dst:<a class="type-details-link" href="type-Hash.html">Hash</a>, src:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Update a Hash with key-value pairs from another Hash. For non destructive version use "dst + src".
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-values-Hash">values(h:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-values-Hash.html">values</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Get Hash values as an array
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-without-Hash-Any">without(h:Hash, without_k:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-without-Hash-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter out specific key
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-without-Hash-Any-Any">without(h:Hash, without_k:Any, without_v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-without-Hash-Any-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>, without_v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter out specific key-value pair
 							</section>

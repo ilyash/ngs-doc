@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-map" class="method-header">map<a class="section-link" title="Permalink to this definition" href="#method-map">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">map(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				Map each N elements of an Array at a time.
+				mapper is called as cb(eltI, ..., eltJ) where I is multiple of n and J is I+n-1
+				Throws InvalidArgument if number of items in arr is not divisible by n.
+				mapper is called as mapper(eltI, ..., eltJ) where I is multiple of n and J is I+n-1
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L1028" style="source-link">stdlib.ngs:1028</a></section>
+				<h4 class="param-header">arr</h4>
+				<section class="method-param-content">
+				Items to iterate in chunks of n
+				</section>
+				<h4 class="param-header">n</h4>
+				<section class="method-param-content">
+				Number of items in chunk
+				</section>
+				<h4 class="param-header">mapper</h4>
+				<section class="method-param-content">
+				Function to be called with values from arr
+				</section>
+				<h4 id="impl-map-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr
+				</section>
+				<h4 id="impl-map-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">[1,2,3,4].map(2, F(a,b) "$a=$b").join("&amp;")  # Outputs: 1=2&amp;3=4</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

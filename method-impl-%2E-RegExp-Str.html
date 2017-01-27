@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-." class="method-header">.<a class="section-link" title="Permalink to this definition" href="#method-.">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">.(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+				<section class="method-impl-content">
+				Get attributes of a RegExp. Throws AttrNotFound if attr is not one of the allowed values. You should not use this directly. Use "~" and "~~" operators.
+				<h4 class="param-header">attr</h4>
+				<section class="method-param-content">
+				"options" or "names"
+				</section>
+				<h4 id="impl-.-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Int for "options". Hash of names/indexes of named groups for "names".
+				</section>
+				<h4 id="impl-.-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">/abc/i.options  # 1 - case insensitive (C_PCRE_CASELESS)
+/(?P&lt;name1&gt;abc)/i.names  # Name to index Hash: {name1=1}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

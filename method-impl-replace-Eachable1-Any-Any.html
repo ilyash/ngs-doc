@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-replace" class="method-header">replace<a class="section-link" title="Permalink to this definition" href="#method-replace">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">replace(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, src:<a class="type-details-link" href="type-Any.html">Any</a>, dst:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Replace all occurrences of src with dst
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L305" style="source-link">stdlib.ngs:305</a></section>
+				<h4 class="param-header">something</h4>
+				<section class="method-param-content">
+				Instance of any type that has each(something, callback) implemented
+				</section>
+				<h4 id="impl-replace-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr
+				</section>
+				<h4 id="impl-replace-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">["ssh", "IP", "w"].replace("IP", "10.0.0.100")  # ['ssh','10.0.0.100','w']</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

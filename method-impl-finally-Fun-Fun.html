@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-finally" class="method-header">finally<a class="section-link" title="Permalink to this definition" href="#method-finally">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">finally(body:<a class="type-details-link" href="type-Fun.html">Fun</a>, cleanup:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				TODO: make sure cleanup() is not run twice in case of exception in cleanup() itself
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L808" style="source-link">stdlib.ngs:808</a></section>
+				<h4 class="param-header">body</h4>
+				<section class="method-param-content">
+				Main code to execute
+				</section>
+				<h4 class="param-header">cleanup</h4>
+				<section class="method-param-content">
+				Cleanup code to execute
+				</section>
+				<h4 id="impl-finally-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Whatever body call returns
+				</section>
+				<h4 id="impl-finally-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">finally(
+  { while entry = c_readdir(d) { ... } },
+  { ... c_closedir(d) ...}
+)</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

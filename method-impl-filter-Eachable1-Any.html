@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-filter" class="method-header">filter<a class="section-link" title="Permalink to this definition" href="#method-filter">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">filter(something:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Filter something to an Arr (array) of values using predicate.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L175" style="source-link">stdlib.ngs:175</a></section>
+				<h4 class="param-header">something</h4>
+				<section class="method-param-content">
+				Instance of any type that has each(something, callback) implemented.
+				</section>
+				<h4 class="param-header">predicate</h4>
+				<section class="method-param-content">
+				Decision function to be called with each item as first argument.
+				When predicate(item) returns true, the item will appear in the resulting array.
+				</section>
+				<h4 id="impl-filter-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr
+				</section>
+				<h4 id="impl-filter-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">(1...10).filter(F(num) num % 2 == 0)  # Gives [2,4,6,8,10]
+(1...10).filter(X&lt;5)  # Gives [1,2,3,4], predicate called as predicate(item, 5)</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

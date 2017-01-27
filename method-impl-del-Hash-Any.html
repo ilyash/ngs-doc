@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-del" class="method-header">del<a class="section-link" title="Permalink to this definition" href="#method-del">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">del(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Delete hash key. No exception is thrown if key is not found, the deletion is just skipped then.
+				<h4 class="param-header">h</h4>
+				<section class="method-param-content">
+				Target hash
+				</section>
+				<h4 class="param-header">k</h4>
+				<section class="method-param-content">
+				Key
+				</section>
+				<h4 id="impl-del-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				h
+				</section>
+				<h4 id="impl-del-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">h={"a": 1}; h.del("a"); h  # {}
+h={}; h.del("a"); h  # {}
+h={"a": 1, "b": 2}; h.del("a"); h  # {"b": 2}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

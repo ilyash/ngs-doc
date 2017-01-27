@@ -8,24 +8,35 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Pfx" class="type-header">Pfx<a class="type-link" title="Permalink to this type" href="#type-Pfx">¶</a></h2>
+			<h2 id="type-Pfx" class="type-header">Pfx</h2>
 			<section class="type-content">
 				Prefix subsequence of a sequence
-				<h3 id="type-Pfx-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-SubSeq">SubSeq</a>
+						<li><a class="type-details-link" href="type-SubSeq.html">SubSeq</a>
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-MaybePfx.html">MaybePfx</a>
+							 - 
+							Prefix that might or might not be present for ~ matching to succeed
+						</li>
+						<li><a class="type-details-link" href="type-MustPfx.html">MustPfx</a>
+							 - 
+							Prefix that must be present for ~ matching to succeed
 						</li>
 				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl---Str-Pfx">-(s:Str, pfx:Pfx)</a>
+							<a class="method-impl-details-link" href="method-impl---Str-Pfx.html">-</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, pfx:<a class="type-details-link" href="type-Pfx.html">Pfx</a>)
 							<section class="type-method-impl-desc">
 							Return string without the prefix. Throws MatchFail if pfx is MustPfx but s does not start with it.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-Pfx">~(s:Str, pfx:Pfx)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-Pfx.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, pfx:<a class="type-details-link" href="type-Pfx.html">Pfx</a>)
 							<section class="type-method-impl-desc">
 							Check whether s starts with pfx.
 							</section>

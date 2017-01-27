@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-$()" class="method-header">$()<a class="section-link" title="Permalink to this definition" href="#method-$()">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">$()(c:<a class="type-details-link" href="type-Command.html">Command</a>)</h3>
+				<section class="method-impl-content">
+				Execute an external command. Waits for the command to finish unless "&amp;" is specified.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L2892" style="source-link">stdlib.ngs:2892</a></section>
+				<h4 class="param-header">c</h4>
+				<section class="method-param-content">
+				Command type instance, typically constructed by NGS when parsing the contents of $(...) .
+				</section>
+				<h4 id="impl-$()-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Process
+				</section>
+				<h4 id="impl-$()-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">if $(test -f /myfile) { ... }
+# or
+p = $(node main.js serve &amp;)
+YOUR_TESTS_OF_NODE_SERVER_HERE
+p.kill()</pre>
+				</section>
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header">$()(c:<a class="type-details-link" href="type-Command.html">Command</a>)</h3>
+				<section class="method-impl-content">
+				Enables "nofail" command prefix.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L3000" style="source-link">stdlib.ngs:3000</a></section>
+				<h4 id="impl-$()-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">test
+$(nofail ./NONE).exit_code.echo()  # Would cause exception without "nofail"</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

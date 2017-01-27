@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-ArgvMatcher" class="method-header">ArgvMatcher<a class="section-link" title="Permalink to this definition" href="#method-ArgvMatcher">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">ArgvMatcher(option:<a class="type-details-link" href="type-Str.html">Str</a>, value:<a class="type-details-link" href="type-Any.html">Any</a>, f:<a class="type-details-link" href="type-Closure.html">Closure</a>)</h3>
+				<section class="method-impl-content">
+				Sets ARGV matching option.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/autoload/ArgvMatcher.ngs#L18" style="source-link">autoload/ArgvMatcher.ngs:18</a></section>
+				<h4 class="param-header">option</h4>
+				<section class="method-param-content">
+				Option name. The only supported option at this time is "positionals".
+				</section>
+				<h4 class="param-header">value</h4>
+				<section class="method-param-content">
+				Option value.
+				</section>
+				<h4 id="impl-ArgvMatcher-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example"># Any command line argument that is not "allreg" goes to "filters" parameters.
+ArgvMatcher('positionals', 'filters') do
+F main(filters:Arr, allreg:Bool=false) ...</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

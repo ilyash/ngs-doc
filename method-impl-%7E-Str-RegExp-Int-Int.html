@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-~" class="method-header">~<a class="section-link" title="Permalink to this definition" href="#method-~">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">~(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>=0, options:<a class="type-details-link" href="type-Int.html">Int</a>=0)</h3>
+				<section class="method-impl-content">
+				Find PCRE regular expression in s. Empty string without options returns MatchN. Throws Error if more than 20 captures are used or if there is an error during matching.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L3320" style="source-link">stdlib.ngs:3320</a></section>
+				<h4 class="param-header">offset</h4>
+				<section class="method-param-content">
+				search start offset
+				</section>
+				<h4 class="param-header">options</h4>
+				<section class="method-param-content">
+				options to pass to underlying PCRE_EXEC(3).
+				</section>
+				<h4 id="impl-~-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Match
+				</section>
+				<h4 id="impl-~-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">globals().keys().filter(/^C_PCRE/)  # lists possible options
+"xabcy" ~ /a(.)c/  # &lt;MatchY matches=['abc','b'] named={} positions=[[1,4],[2,3]] whole=abc before=x after=y&gt;
+m = ("xabcy" ~ /a(?P&lt;mychar&gt;.)c/)
+echo(m.named.mychar)  # Outputs: b</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

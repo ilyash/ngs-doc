@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-stdlib_aws_straighten_tags" class="method-header">stdlib_aws_straighten_tags<a class="section-link" title="Permalink to this definition" href="#method-stdlib_aws_straighten_tags">¶</a></h2>
+			<section class="method-impl">
+			<h3 id="impl-stdlib_aws_straighten_tags-Hash" class="method-impl-header">stdlib_aws_straighten_tags(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)<a class="method-impl-details-link" href="method-impl-stdlib%255Faws%255Fstraighten%255Ftags-Hash.html">stdlib_aws_straighten_tags</a></h3>
+				<section class="method-impl-content">
+				Convert "Tags" array in the given AWS resource (typically returned by AWS CLI) into Hash.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L3090" style="source-link">stdlib.ngs:3090</a></section>
+				<h4 id="impl-stdlib_aws_straighten_tags-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">t = {"Tags": [{"Key": "k", "Value": "v"},{"Key": "k2", "Value": "v2"}]}  # Not very convenient, is it?
+t.stdlib_aws_straighten_tags()
+t  # {Tags={k=v, k2=v2}}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

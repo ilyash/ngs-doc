@@ -8,31 +8,70 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Exception" class="type-header">Exception<a class="type-link" title="Permalink to this type" href="#type-Exception">¶</a></h2>
+			<h2 id="type-Exception" class="type-header">Exception</h2>
 			<section class="type-content">
 				Represents exceptional situaution. All thrown things shouhld inherit Exception.
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-AssertFail.html">AssertFail</a>
+							 - 
+							Represents failed asserttion, thrown by assert()
+						</li>
+						<li><a class="type-details-link" href="type-Error.html">Error</a>
+							 - 
+							Represents an error. Usually more specific error types are used.
+						</li>
+						<li><a class="type-details-link" href="type-ExecutableNotFound.html">ExecutableNotFound</a>
+							 - 
+							Occurs when executable was not found in path or when executable was absolute or relative and was not found.
+						</li>
+						<li><a class="type-details-link" href="type-FetchFail.html">FetchFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-LockFail.html">LockFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-MainFail.html">MainFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-MatchFail.html">MatchFail</a>
+							 - 
+							Matching failure
+						</li>
+						<li><a class="type-details-link" href="type-NoNext.html">NoNext</a>
+							 - 
+							Represents attempt to fetch next value of an iterator when it's exhausted
+						</li>
+						<li><a class="type-details-link" href="type-NotImplemented.html">NotImplemented</a>
+						</li>
+						<li><a class="type-details-link" href="type-RequreFail.html">RequreFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-ResNotFound.html">ResNotFound</a>
+						</li>
+						<li><a class="type-details-link" href="type-UndefinedLocalVar.html">UndefinedLocalVar</a>
+							 - 
+							Represents an error of reading undefined local variable.
+						</li>
+				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-exception_specific_message-Exception">exception_specific_message(e:Exception)</a>
+							<a class="method-impl-details-link" href="method-impl-exception_specific_message-Exception.html">exception_specific_message</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>)
 							<section class="type-method-impl-desc">
 							Do nothing. Catch-all for exception_specific_message().
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Exception-Str">init(e:Exception, message:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Exception-Str.html">init</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Exception-Exception">init(e:Exception, cause:Exception)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Exception-Exception.html">init</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>, cause:<a class="type-details-link" href="type-Exception.html">Exception</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-print_exception-Exception-Int-Exception">print_exception(e:Exception, level:Int=0, parent:Exception=null)</a>
+							<a class="method-impl-details-link" href="method-impl-print_exception-Exception-Int-Exception.html">print_exception</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>, level:<a class="type-details-link" href="type-Int.html">Int</a>=0, parent:<a class="type-details-link" href="type-Exception.html">Exception</a>=null)
 							<section class="type-method-impl-desc">
 							Print exception to stderr. Uses inspect().
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-to_exit_code-Exception">to_exit_code(e:Exception)</a>
+							<a class="method-impl-details-link" href="method-impl-to_exit_code-Exception.html">to_exit_code</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>)
 							</section>
 					<!-- type methods end -->
 			</section>

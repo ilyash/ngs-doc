@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-Hash" class="method-header">Hash<a class="section-link" title="Permalink to this definition" href="#method-Hash">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">Hash(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, key_attr:<a class="type-details-link" href="type-Str.html">Str</a>, val_attr:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+				<section class="method-impl-content">
+				Create Hash from Arr of something that has key and value attribute
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L1713" style="source-link">stdlib.ngs:1713</a></section>
+				<h4 class="param-header">arr</h4>
+				<section class="method-param-content">
+				Arr with all the keys and values
+				</section>
+				<h4 class="param-header">key_attr</h4>
+				<section class="method-param-content">
+				Name of the attribute holding the keys of newly created Hash
+				</section>
+				<h4 class="param-header">val_attr</h4>
+				<section class="method-param-content">
+				Name of the attribute holding the values of newly created Hash
+				</section>
+				<h4 id="impl-Hash-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">Hash([{"Name": "n1", "Value": "v1"},{"Name": "n2", "Value": "v2"}], "Name", "Value")  # {"n1": "v1", "n2": "v2"}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

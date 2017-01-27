@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-replace" class="method-header">replace<a class="section-link" title="Permalink to this definition" href="#method-replace">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">replace(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				Replace all occurrences of r
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L3499" style="source-link">stdlib.ngs:3499</a></section>
+				<h4 class="param-header">mapper</h4>
+				<section class="method-param-content">
+				Function that will be called with one matching string at a time that provides the replacement
+				</section>
+				<h4 id="impl-replace-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Str
+				</section>
+				<h4 id="impl-replace-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">"x10ab20c30y".replace(/[0-9]+/, F(match_text) "[$match_text]")  # "x[10]ab[20]c[30]y"</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

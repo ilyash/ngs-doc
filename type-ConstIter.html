@@ -8,26 +8,48 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-ConstIter" class="type-header">ConstIter<a class="type-link" title="Permalink to this type" href="#type-ConstIter">¶</a></h2>
+			<h2 id="type-ConstIter" class="type-header">ConstIter</h2>
 			<section class="type-content">
-				<h3 id="type-ConstIter-parents" class="type-parents-header">Parent types</h3>
+				Iterator that returns given value forever.
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Iter">Iter</a>
+						<li><a class="type-details-link" href="type-Iter.html">Iter</a>
+							 - 
+							Iterator. Parent type for all specific iterator types.
 						</li>
 				</ul>
+				<h3 id="type-ConstIter-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{ Iter }
+i = ConstIter(10)
+echo(i.next())
+echo(i.next())
+# Output:
+#   10
+#   10</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Bool-ConstIter">Bool(i:ConstIter)</a>
+							<a class="method-impl-details-link" href="method-impl-Bool-ConstIter.html">Bool</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-ConstIter-Any">init(i:ConstIter, val:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-init-ConstIter-Any.html">init</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>, val:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Constant iterator constructor.
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-next-ConstIter">next(i:ConstIter)</a>
+							<a class="method-impl-details-link" href="method-impl-next-ConstIter.html">next</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>)
+							<section class="type-method-impl-desc">
+							Return the constant iterator value
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-peek-ConstIter">peek(i:ConstIter)</a>
+							<a class="method-impl-details-link" href="method-impl-peek-ConstIter.html">peek</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>)
+							<section class="type-method-impl-desc">
+							Return the constant iterator value
+							</section>
 							</section>
 					<!-- type methods end -->
 			</section>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-call" class="method-header">call<a class="section-link" title="Permalink to this definition" href="#method-call">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">call(r:<a class="type-details-link" href="type-Return.html">Return</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>=null)</h3>
+				<section class="method-impl-content">
+				Implements calling of Return type instances
+				like the finish(i) call in the example below
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L66" style="source-link">stdlib.ngs:66</a></section>
+				<h4 id="impl-call-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">F first(r:Range, predicate:Fun) {
+	finish = Return()
+	r.each(F(i) {
+		predicate(i) throws finish(i)
+	})
+	null
+}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

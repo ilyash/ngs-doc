@@ -8,17 +8,30 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-RangeIter" class="type-header">RangeIter<a class="type-link" title="Permalink to this type" href="#type-RangeIter">¶</a></h2>
+			<h2 id="type-RangeIter" class="type-header">RangeIter</h2>
 			<section class="type-content">
-				<h3 id="type-RangeIter-parents" class="type-parents-header">Parent types</h3>
+				NOT IMPLEMENTED YET. Iterator that returns values in the given range
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Iter">Iter</a>
+						<li><a class="type-details-link" href="type-Iter.html">Iter</a>
+							 - 
+							Iterator. Parent type for all specific iterator types.
 						</li>
 				</ul>
+				<h3 id="type-RangeIter-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{ Iter }
+i = RangeIter(10..20)
+echo(i.next())
+echo(i.next())
+# Output:
+#   10
+#   11</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-RangeIter-Range">init(i:RangeIter, r:Range)</a>
+							<a class="method-impl-details-link" href="method-impl-init-RangeIter-Range.html">init</a>(i:<a class="type-details-link" href="type-RangeIter.html">RangeIter</a>, r:<a class="type-details-link" href="type-Range.html">Range</a>)
 							<section class="type-method-impl-desc">
 							NOT IMPLEMENTED YEY
 							</section>

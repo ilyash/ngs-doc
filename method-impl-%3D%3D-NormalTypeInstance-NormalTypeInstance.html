@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-==" class="method-header">==<a class="section-link" title="Permalink to this definition" href="#method-==">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">==(a:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>, b:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>)</h3>
+				<section class="method-impl-content">
+				Equaity test for normal type instances: must be of same type and have same attributes and their values
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L582" style="source-link">stdlib.ngs:582</a></section>
+				<h4 id="impl-==-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Bool
+				</section>
+				<h4 id="impl-==-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">type T
+t1 = T()
+t1.a = 1
+t2 = T()
+t2.a = 1
+echo(t1 == t2)  # Outputs: true</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

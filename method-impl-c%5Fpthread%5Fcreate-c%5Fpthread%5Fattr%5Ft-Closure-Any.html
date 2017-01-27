@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-c_pthread_create" class="method-header">c_pthread_create<a class="section-link" title="Permalink to this definition" href="#method-c_pthread_create">¶</a></h2>
+			<section class="method-impl">
+			<h3 id="impl-c_pthread_create-c_pthread_attr_t-Closure-Any" class="method-impl-header">c_pthread_create(attr:<a class="type-details-link" href="type-c_pthread_attr_t.html">c_pthread_attr_t</a>, start_routine:<a class="type-details-link" href="type-Closure.html">Closure</a>, arg:<a class="type-details-link" href="type-Any.html">Any</a>)<a class="method-impl-details-link" href="method-impl-c%255Fpthread%255Fcreate-c%255Fpthread%255Fattr%255Ft-Closure-Any.html">c_pthread_create</a></h3>
+				<section class="method-impl-content">
+				Call PTHREAD_CREATE(3). Not recommended for direct calls, use Thread type instead.
+				<h4 id="impl-c_pthread_create-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr with [Int, c_pthread_t]. Int is the status returned by pthread_create(). c_pthread_t is a thin wrapper around underlying pthread_t, returned by PTHREAD_CREATE(3)
+				</section>
+				<h4 id="impl-c_pthread_create-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">F init(t:Thread, f:Fun, arg) {
+	thread_attr = c_pthread_attr_t()
+	c_pthread_attr_init(thread_attr)
+	create_result = c_pthread_create(thread_attr, f, arg)
+	code = create_result[0]
+	if code {
+		throw Error("Failed to c_pthread_create")
+	}
+	t.thread = create_result[1]
+}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

@@ -8,15 +8,21 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-NoNext" class="type-header">NoNext<a class="type-link" title="Permalink to this type" href="#type-NoNext">¶</a></h2>
+			<h2 id="type-NoNext" class="type-header">NoNext</h2>
 			<section class="type-content">
-				<h3 id="type-NoNext-parents" class="type-parents-header">Parent types</h3>
+				Represents attempt to fetch next value of an iterator when it's exhausted
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Exception">Exception</a>
+						<li><a class="type-details-link" href="type-Exception.html">Exception</a>
 							 - 
 							Represents exceptional situaution. All thrown things shouhld inherit Exception.
 						</li>
 				</ul>
+				<h3 id="type-NoNext-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">{ Iter([]).next() }
+# ... Exception of type NoNext ...</pre>
+				</section>
 			</section>
 		</section>
 	<!-- types end -->

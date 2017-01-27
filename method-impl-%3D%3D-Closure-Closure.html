@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-==" class="method-header">==<a class="section-link" title="Permalink to this definition" href="#method-==">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">==(a:<a class="type-details-link" href="type-Closure.html">Closure</a>, b:<a class="type-details-link" href="type-Closure.html">Closure</a>)</h3>
+				<section class="method-impl-content">
+				Closure equality comparison. Implemented as sameness comparison.
+				<h4 id="impl-==-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">F make_closure() { F(x) x + 1 }; make_closure()      == make_closure()       # false - different instances
+F make_closure() { F(x) x + 1 }; make_closure().ip() == make_closure().ip()  # true - same code
+f = F(x) x +1; f == f  # true - same instance</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

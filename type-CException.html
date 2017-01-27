@@ -8,20 +8,37 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-CException" class="type-header">CException<a class="type-link" title="Permalink to this type" href="#type-CException">¶</a></h2>
+			<h2 id="type-CException" class="type-header">CException</h2>
 			<section class="type-content">
 				Base type for exceptions arising from errors returned by calling C functions
-				<h3 id="type-CException-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Error">Error</a>
+						<li><a class="type-details-link" href="type-Error.html">Error</a>
 							 - 
 							Represents an error. Usually more specific error types are used.
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-DirFail.html">DirFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-FileIOFail.html">FileIOFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-KillFail.html">KillFail</a>
+							 - 
+							Exception representing a failure to kill() a process
+						</li>
+						<li><a class="type-details-link" href="type-PipeCreateFail.html">PipeCreateFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-StatFail.html">StatFail</a>
+						</li>
+						<li><a class="type-details-link" href="type-TtyCheckFail.html">TtyCheckFail</a>
 						</li>
 				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-CException-Str">init(e:CException, message:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-CException-Str.html">init</a>(e:<a class="type-details-link" href="type-CException.html">CException</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							CException constructor. In addition to storing message attribute, adds errno and errno_name attributes.
 							</section>

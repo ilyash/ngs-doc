@@ -8,14 +8,33 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-CallFail" class="type-header">CallFail<a class="type-link" title="Permalink to this type" href="#type-CallFail">¶</a></h2>
+			<h2 id="type-CallFail" class="type-header">CallFail</h2>
 			<section class="type-content">
 				Represents calling failure.
-				<h3 id="type-CallFail-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Error">Error</a>
+						<li><a class="type-details-link" href="type-Error.html">Error</a>
 							 - 
 							Represents an error. Usually more specific error types are used.
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-ArgsMismatch.html">ArgsMismatch</a>
+							 - 
+							Represents calling failure due to arguments vs parameters mismatch.
+						</li>
+						<li><a class="type-details-link" href="type-DontKnowHowToCall.html">DontKnowHowToCall</a>
+							 - 
+							Represents calling failure when it is not known how to call the given object.
+						</li>
+						<li><a class="type-details-link" href="type-ImplNotFound.html">ImplNotFound</a>
+							 - 
+							Represents calling failure when arguments do not match any method implementation.
+						</li>
+						<li><a class="type-details-link" href="type-StackDepthFail.html">StackDepthFail</a>
+							 - 
+							Represents stack overflow error.
 						</li>
 				</ul>
 			</section>

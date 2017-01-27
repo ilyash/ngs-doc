@@ -8,55 +8,72 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Path" class="type-header">Path<a class="type-link" title="Permalink to this type" href="#type-Path">¶</a></h2>
+			<h2 id="type-Path" class="type-header">Path</h2>
 			<section class="type-content">
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-BlockDevice.html">BlockDevice</a>
+						</li>
+						<li><a class="type-details-link" href="type-CharDevice.html">CharDevice</a>
+						</li>
+						<li><a class="type-details-link" href="type-Dir.html">Dir</a>
+						</li>
+						<li><a class="type-details-link" href="type-FifoFile.html">FifoFile</a>
+						</li>
+						<li><a class="type-details-link" href="type-File.html">File</a>
+						</li>
+						<li><a class="type-details-link" href="type-SocketFile.html">SocketFile</a>
+						</li>
+						<li><a class="type-details-link" href="type-Symlink.html">Symlink</a>
+						</li>
+				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-/-Path-Path">/(a:Path, b:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-%252F-Path-Path.html">/</a>(a:<a class="type-details-link" href="type-Path.html">Path</a>, b:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							Concatenate two Path-s using /(a:Str, b:Str)
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Bool-Path">Bool(p:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-Bool-Path.html">Bool</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							Checks whether the path is accessible using access(2) and F_OK.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Path-Str">init(p:Path, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Path-Str.html">init</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Path constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Path-Path">init(p:Path, other:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Path-Path.html">init</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>, other:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							Path constructor. Duplicates other Path.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-lstat-Path">lstat(p:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-lstat-Path.html">lstat</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							Issue lstat() system call. Throws StatFail if the call fails.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-specific-Path">specific(p:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-specific-Path.html">specific</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							EXPERIMENTAL, do not use outside of stdlib!
 							Instanciates Path sub-type, depending on what p is
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stat-Path">stat(p:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-stat-Path.html">stat</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							Issue stat() system call. Throws StatFail if the call fails.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-Path">Str(p:Path)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-Path.html">Str</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 							<section class="type-method-impl-desc">
 							String representation of a Path (or it's sub-type)
 							</section>

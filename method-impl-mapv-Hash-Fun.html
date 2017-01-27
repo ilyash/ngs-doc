@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-mapv" class="method-header">mapv<a class="section-link" title="Permalink to this definition" href="#method-mapv">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">mapv(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				Map Hash values. Build new Hash with same keys as in h but values mapped by mapper.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L1581" style="source-link">stdlib.ngs:1581</a></section>
+				<h4 class="param-header">h</h4>
+				<section class="method-param-content">
+				Source hash
+				</section>
+				<h4 class="param-header">mapper</h4>
+				<section class="method-param-content">
+				Function to be called with values
+				</section>
+				<h4 id="impl-mapv-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Hash
+				</section>
+				<h4 id="impl-mapv-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">LEN = 3
+lines_ = fetch("/usr/share/dict/words").lines()
+long_lines = lines_.filter({A.len()&gt;LEN})
+prefix_to_lines = long_lines.group(F(line) line[0..LEN])  # {"pfx1": ["pfx1a", "pfx1b", ...], "pfx2": ["pfx2a", "pfx2b", ...], ...}
+prefix_to_count = prefix_to_lines.mapv(len)  # {"pfx1": 30, "pfx2": 35, ...}
+top = prefix_to_count.Arr().sort(F(a, b) b[1] &lt;= a[1]).Hash()
+top .= limit(10)
+echo(top)  # Outputs: {con=1219, dis=1001, pro=808, pre=607, com=600, int=543, tra=498, ove=431, per=422, imp=421}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-each_idx_key_val" class="method-header">each_idx_key_val<a class="section-link" title="Permalink to this definition" href="#method-each_idx_key_val">¶</a></h2>
+			<section class="method-impl">
+			<h3 id="impl-each_idx_key_val-Hash-Fun" class="method-impl-header">each_idx_key_val(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)<a class="method-impl-details-link" href="method-impl-each%255Fidx%255Fkey%255Fval-Hash-Fun.html">each_idx_key_val</a></h3>
+				<section class="method-impl-content">
+				Iterate a Hash.
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L1539" style="source-link">stdlib.ngs:1539</a></section>
+				<h4 class="param-header">h</h4>
+				<section class="method-param-content">
+				Hash to iterate
+				</section>
+				<h4 class="param-header">cb</h4>
+				<section class="method-param-content">
+				Function to call with successive indexes, keys and values
+				</section>
+				<h4 id="impl-each_idx_key_val-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				h
+				</section>
+				<h4 id="impl-each_idx_key_val-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">{"a": 1, "b": 2}.each_idx_key_val(F(idx, k, v) echo("[$idx] $k=$v"))
+# Outputs: "[0] a=1" and on the next line "[1] b=2"</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

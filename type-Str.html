@@ -8,314 +8,314 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-Str" class="type-header">Str<a class="type-link" title="Permalink to this type" href="#type-Str">¶</a></h2>
+			<h2 id="type-Str" class="type-header">Str</h2>
 			<section class="type-content">
 				String type
-				<h3 id="type-Str-parents" class="type-parents-header">Parent types</h3>
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Eachable">Eachable</a>
+						<li><a class="type-details-link" href="type-Eachable1.html">Eachable1</a>
 							 - 
-							Parent type of all types that have each() method
+							Eachable which each() calls the callback with one argument
 						</li>
 				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-*-Str-Int">*(s:Str, n:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-%252A-Str-Int.html">*</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Repeat string n times
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-+-Str-Str">+(s1:Str, s2:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252B-Str-Str.html">+</a>(s1:<a class="type-details-link" href="type-Str.html">Str</a>, s2:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Concatenate strings
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-+-Str-Arr">+(s:Str, a:Arr)</a>
+							<a class="method-impl-details-link" href="method-impl-%252B-Str-Arr.html">+</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							<section class="type-method-impl-desc">
 							Prepend each line in a with s
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-+-Arr-Str">+(a:Arr, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252B-Arr-Str.html">+</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Append s to each line in a
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl---Str-Pfx">-(s:Str, pfx:Pfx)</a>
+							<a class="method-impl-details-link" href="method-impl---Str-Pfx.html">-</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, pfx:<a class="type-details-link" href="type-Pfx.html">Pfx</a>)
 							<section class="type-method-impl-desc">
 							Return string without the prefix. Throws MatchFail if pfx is MustPfx but s does not start with it.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl---Str-Sfx">-(s:Str, sfx:Sfx)</a>
+							<a class="method-impl-details-link" href="method-impl---Str-Sfx.html">-</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, sfx:<a class="type-details-link" href="type-Sfx.html">Sfx</a>)
 							<section class="type-method-impl-desc">
 							Return string without the suffix. Throws MatchFail if pfx is MustSfx but s does not end with it.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl---Str-RegExp">-(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl---Str-RegExp.html">-</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Returns the string with one occurrence of regexp cut out of it. Throws InvalidArgument if s does not contain r.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-RegExp-Str">.(regexp:RegExp, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-RegExp-Str.html">.</a>(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get attributes of a RegExp. Throws AttrNotFound if attr is not one of the allowed values. You should not use this directly. Use "~" and "~~" operators.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-c_pthread_attr_t-Str">.(pa:c_pthread_attr_t, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-c_pthread_attr_t-Str.html">.</a>(pa:<a class="type-details-link" href="type-c_pthread_attr_t.html">c_pthread_attr_t</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-BasicType-Str">.(obj:BasicType, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-BasicType-Str.html">.</a>(obj:<a class="type-details-link" href="type-BasicType.html">BasicType</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get BasicType (Int, Arr, Hash, ...) attribute. Throws AttrNotFound.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-NormalType-Str">.(obj:NormalType, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-NormalType-Str.html">.</a>(obj:<a class="type-details-link" href="type-NormalType.html">NormalType</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get NormalType (a type that is typically defined by user) attribute. Throws AttrNotFound.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-NormalTypeInstance-Str">.(obj:NormalTypeInstance, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-NormalTypeInstance-Str.html">.</a>(obj:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get NormalType (a type that is typically defined by user) instance attribute. Throws AttrNotFound.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-Hash-Str">.(h:Hash, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-Hash-Str.html">.</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get hash key.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-Arr-Str">.(a:Arr, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-Arr-Str.html">.</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Return array made of given attribute of each element of given array
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-Process-Str">.(p:Process, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-Process-Str.html">.</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get process "stdout"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-Process-Str">.(p:Process, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-Process-Str.html">.</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get process "stderr"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.=-NormalTypeInstance-Str-Any">.=(obj:NormalTypeInstance, attr:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-NormalTypeInstance-Str-Any.html">.=</a>(obj:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set Normal type (a type that is typically defined by user) instance attribute. Throws AttrNotFound.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.=-Hash-Str-Any">.=(h:Hash, attr:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-Hash-Str-Any.html">.=</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set hash key.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.=-Process-Str-Any">.=(p:Process, attr:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-Process-Str-Any.html">.=</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set process "stdout"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.=-Process-Str-Any">.=(p:Process, attr:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-Process-Str-Any.html">.=</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set process "stderr"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-/-Str-Str">/(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252F-Str-Str.html">/</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Concatenate two path parts using STDLIB_PATH_SEP (currently "/") but should be platform-specific later.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-/-Str-Str">/(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252F-Str-Str.html">/</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Concatenate two path parts using STDLIB_PATH_SEP (currently "/") but should be platform-specific later.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-/-Str-Str">/(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252F-Str-Str.html">/</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Concatenate two path parts using STDLIB_PATH_SEP (currently "/") but should be platform-specific later.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-//-Str-Str">//(regexp:Str, flags:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252F%252F-Str-Str.html">//</a>(regexp:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Regular expression constructor. Called by NGS when /myregex/ syntax is used.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-&lt;=-Str-Str">&lt;=(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%253C%253D-Str-Str.html">&lt;=</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Case sensitive LessThan or Equal comparison for strings
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-==-Str-Str">==(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%253D%253D-Str-Str.html">==</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Equality comparison
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-CLib-Str">[](lib:CLib, symbol:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-CLib-Str.html">[]</a>(lib:<a class="type-details-link" href="type-CLib.html">CLib</a>, symbol:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Unfinished feature. Don't use!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-ExclusiveRange">[](s:Str, range:ExclusiveRange)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-ExclusiveRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
 							<section class="type-method-impl-desc">
 							Get substring
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-Int">[](s:Str, i:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-Int.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, i:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Get given character (currently byte) of the string
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-Int">[](s:Str, i:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-Int.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, i:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Get given character (currently byte) of the string.
 							TODO: Document InvalidArgument exception.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-ExclusiveRange">[](s:Str, r:ExclusiveRange)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-ExclusiveRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
 							<section class="type-method-impl-desc">
 							Get a substring. Indexes in s are specified by ExclusiveRange.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-RegExp">[](s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-RegExp.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Get substring of a string that corresponds to first match of given regular expression
 							%EX "x10ab20c30y"[/[0-9]+/]  # "10"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]=-Str-ExclusiveRange-Str">[]=(s:Str, range:ExclusiveRange, replacement:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Str-ExclusiveRange-Str.html">[]=</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>, replacement:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Change substring
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-ArgvMatcher-Str-Any-Closure">ArgvMatcher(option:Str, value:Any, f:Closure)</a>
+							<a class="method-impl-details-link" href="method-impl-ArgvMatcher-Str-Any-Closure.html">ArgvMatcher</a>(option:<a class="type-details-link" href="type-Str.html">Str</a>, value:<a class="type-details-link" href="type-Any.html">Any</a>, f:<a class="type-details-link" href="type-Closure.html">Closure</a>)
 							<section class="type-method-impl-desc">
 							Sets ARGV matching option.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-assert-Bool-Str">assert(condition:Bool, msg:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-assert-Bool-Str.html">assert</a>(condition:<a class="type-details-link" href="type-Bool.html">Bool</a>, msg:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Throws AssertFail with givens message if condition is false
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-assert_resolvable-Str-Any-Any-Any">assert_resolvable(h:Str, title:Any='Resolve host', times:Any=45, sleep:Any=2)</a>
+							<a class="method-impl-details-link" href="method-impl-assert_resolvable-Str-Any-Any-Any.html">assert_resolvable</a>(h:<a class="type-details-link" href="type-Str.html">Str</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>='Resolve host', times:<a class="type-details-link" href="type-Any.html">Any</a>=45, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=2)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-basename-Str">basename(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-basename-Str.html">basename</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get basename of the file. Uses BASENAME(1).
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_access-Str-Int">c_access(pathname:Str, mode:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-c_access-Str-Int.html">c_access</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>, mode:<a class="type-details-link" href="type-Int.html">Int</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_dlopen-Str-Int">c_dlopen(filename:Str, flags:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-c_dlopen-Str-Int.html">c_dlopen</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Unfinished feature. Don't use!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_execve-Str-Arr-Arr">c_execve(filename:Str, argv:Arr, envp:Arr)</a>
+							<a class="method-impl-details-link" href="method-impl-c_execve-Str-Arr-Arr.html">c_execve</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>, argv:<a class="type-details-link" href="type-Arr.html">Arr</a>, envp:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_lseek-Int-Int-Str">c_lseek(fd:Int, offset:Int, whence:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_lseek-Int-Int-Str.html">c_lseek</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>, whence:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_lstat-Str">c_lstat(pathname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_lstat-Str.html">c_lstat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_open-Str-Str">c_open(pathname:Str, flags:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_open-Str-Str.html">c_open</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_opendir-Str">c_opendir(name:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_opendir-Str.html">c_opendir</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_pcre_compile-Str-Int">c_pcre_compile(regexp:Str, flags:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-c_pcre_compile-Str-Int.html">c_pcre_compile</a>(regexp:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Throws RegExpCompileFail on errors.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_pcre_exec-RegExp-Str-Int-Int">c_pcre_exec(regexp:RegExp, subject:Str, offset:Int, options:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-c_pcre_exec-RegExp-Str-Int-Int.html">c_pcre_exec</a>(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, subject:<a class="type-details-link" href="type-Str.html">Str</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>, options:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Search string for regular expression. Uses PCRE_EXEC(3). Do not use this function directly!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_stat-Str">c_stat(pathname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_stat-Str.html">c_stat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_strcasecmp-Str-Str">c_strcasecmp(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_strcasecmp-Str-Str.html">c_strcasecmp</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_strcmp-Str-Str">c_strcmp(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_strcmp-Str-Str.html">c_strcmp</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_write-Int-Str">c_write(fd:Int, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-c_write-Int-Str.html">c_write</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-code-Str">code(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-code-Str.html">code</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Convert a Str to NGS code that would produce the string when executed. Not fully functional yet.
 							BUG: Does not do escaping.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-column-Table-Str">column(t:Table, k:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-column-Table-Str.html">column</a>(t:<a class="type-details-link" href="type-Table.html">Table</a>, k:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-compile-Str-Str">compile(code:Str, fname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-compile-Str-Str.html">compile</a>(code:<a class="type-details-link" href="type-Str.html">Str</a>, fname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Compile NGS source to bytecode.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-config-Str">config(k:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-config-Str.html">config</a>(k:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get configuration for the given key. Lookup order / first wins: (1) Environment variable NGS_$k (2) previously set config(k, v)
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-config-Str-Any">config(k:Str, v:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-config-Str-Any.html">config</a>(k:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set configuration. To be used with config(k:Str).
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-debug-Str">debug(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-debug-Str.html">debug</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Debug to standard error.
 							"DEBUG" environment variable must be non-empty string to activate. Otherwise nothing is outputted.
@@ -324,93 +324,93 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-decode_json-Str">decode_json(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-decode_json-Str.html">decode_json</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Decode (parse) JSON.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-die-Str-Any">die(s:Str, exit_code:Any=1)</a>
+							<a class="method-impl-details-link" href="method-impl-die-Str-Any.html">die</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, exit_code:<a class="type-details-link" href="type-Any.html">Any</a>=1)
 							<section class="type-method-impl-desc">
 							Write message in s to standard error and exit
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-dir-Str-Any">dir(dirname:Str, subtype:Any=false)</a>
+							<a class="method-impl-details-link" href="method-impl-dir-Str-Any.html">dir</a>(dirname:<a class="type-details-link" href="type-Str.html">Str</a>, subtype:<a class="type-details-link" href="type-Any.html">Any</a>=false)
 							<section class="type-method-impl-desc">
 							List directory contents. Warning: "." and ".." are included.
 							Throws DirFail when directory can not be listed.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-dir-Str-Fun-Any">dir(dirname:Str, cb:Fun, subtype:Any=false)</a>
+							<a class="method-impl-details-link" href="method-impl-dir-Str-Fun-Any.html">dir</a>(dirname:<a class="type-details-link" href="type-Str.html">Str</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>, subtype:<a class="type-details-link" href="type-Any.html">Any</a>=false)
 							<section class="type-method-impl-desc">
 							List directory contents and call cb with Path() of each found item. Warning: "." and ".." are included.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-each-Str-Fun">each(s:Str, cb:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-each-Str-Fun.html">each</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterates over all string characters (currently bytes).
 							TODO: example.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-echo-Str">echo(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-echo-Str.html">echo</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Print given string and a newline to stdout.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-echo-Int-Str">echo(fd:Int, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-echo-Int-Str.html">echo</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Print given string and a newline to a file referenced by descriptor.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-encode_hex-Str">encode_hex(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-encode_hex-Str.html">encode_hex</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Encodes each character in a string as two uppercase hexadecimal digits
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-encode_html-Str">encode_html(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-encode_html-Str.html">encode_html</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Encodes HTML. Escapes &amp;, &lt; and &gt; .
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-encode_html_attr-Str">encode_html_attr(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-encode_html_attr-Str.html">encode_html_attr</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Encodes HTML attribute. Escapes &amp;, &lt;, &gt;, " and ' .
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-encode_uri_component-Str">encode_uri_component(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-encode_uri_component-Str.html">encode_uri_component</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Encodes URI component, escaping with %XX hexadecimal codes.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-ends_with-Str-Str">ends_with(haystack:Str, needle:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-ends_with-Str-Str.html">ends_with</a>(haystack:<a class="type-details-link" href="type-Str.html">Str</a>, needle:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Check whether a string ends with another string
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-error-Str">error(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-error-Str.html">error</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Write error message to standard error.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-fetch-Str">fetch(fname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-fetch-Str.html">fetch</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Fetches the whole file
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-find_in_path-Str">find_in_path(executable_name:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-find_in_path-Str.html">find_in_path</a>(executable_name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Finds given binary and returns it's full path.
 							Throws ExecutableNotFound if the binary was not found.
@@ -420,13 +420,13 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-glob-Str-Any">glob(pattern:Str, start_dir:Any='.')</a>
+							<a class="method-impl-details-link" href="method-impl-glob-Str-Any.html">glob</a>(pattern:<a class="type-details-link" href="type-Str.html">Str</a>, start_dir:<a class="type-details-link" href="type-Any.html">Any</a>='.')
 							<section class="type-method-impl-desc">
 							Work in progress, do not use!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-global_not_found_handler-Str">global_not_found_handler(name:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-global_not_found_handler-Str.html">global_not_found_handler</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Called when reading undefined global.
 							Implements autoloading.
@@ -435,122 +435,122 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Hash-Arr-Str">Hash(arr:Arr, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-Hash-Arr-Str.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							TODO. Not sure it's used anywhere. Maybe remove?
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Hash-Arr-Str-Str">Hash(arr:Arr, key_attr:Str, val_attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-Hash-Arr-Str-Str.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, key_attr:<a class="type-details-link" href="type-Str.html">Str</a>, val_attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Create Hash from Arr of something that has key and value attribute
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-in-Str-CLib">in(symbol:Str, lib:CLib)</a>
+							<a class="method-impl-details-link" href="method-impl-in-Str-CLib.html">in</a>(symbol:<a class="type-details-link" href="type-Str.html">Str</a>, lib:<a class="type-details-link" href="type-CLib.html">CLib</a>)
 							<section class="type-method-impl-desc">
 							Unfinished feature. Don't use!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-in-Str-NormalTypeInstance">in(attr:Str, obj:NormalTypeInstance)</a>
+							<a class="method-impl-details-link" href="method-impl-in-Str-NormalTypeInstance.html">in</a>(attr:<a class="type-details-link" href="type-Str.html">Str</a>, obj:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>)
 							<section class="type-method-impl-desc">
 							Check whether NormalType (a type that is typically defined by user) instance has an attribute.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-in-Str-HashLike">in(name:Str, hl:HashLike)</a>
+							<a class="method-impl-details-link" href="method-impl-in-Str-HashLike.html">in</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>, hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-in-Str-Str">in(needle:Str, haystack:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-in-Str-Str.html">in</a>(needle:<a class="type-details-link" href="type-Str.html">Str</a>, haystack:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Determin if needle substring occurs at least once in haystack
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Exception-Str">init(e:Exception, message:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Exception-Str.html">init</a>(e:<a class="type-details-link" href="type-Exception.html">Exception</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-IndexNotFound-Str-Any-Any">init(e:IndexNotFound, message:Str, container:Any, key:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-init-IndexNotFound-Str-Any-Any.html">init</a>(e:<a class="type-details-link" href="type-IndexNotFound.html">IndexNotFound</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>, container:<a class="type-details-link" href="type-Any.html">Any</a>, key:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							IndexNotFound exception constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-ArrLike-Str">init(al:ArrLike, attr:Str='items')</a>
+							<a class="method-impl-details-link" href="method-impl-init-ArrLike-Str.html">init</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-HashLike-Str">init(hl:HashLike, attr:Str='items')</a>
+							<a class="method-impl-details-link" href="method-impl-init-HashLike-Str.html">init</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-CException-Str">init(e:CException, message:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-CException-Str.html">init</a>(e:<a class="type-details-link" href="type-CException.html">CException</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							CException constructor. In addition to storing message attribute, adds errno and errno_name attributes.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-Path-Str">init(p:Path, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-Path-Str.html">init</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Path constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-File-Str">init(f:File, path:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-File-Str.html">init</a>(f:<a class="type-details-link" href="type-File.html">File</a>, path:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-MatchFail-Str-Any-Any">init(mf:MatchFail, msg:Str, container:Any, pattern:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-init-MatchFail-Str-Any-Any.html">init</a>(mf:<a class="type-details-link" href="type-MatchFail.html">MatchFail</a>, msg:<a class="type-details-link" href="type-Str.html">Str</a>, container:<a class="type-details-link" href="type-Any.html">Any</a>, pattern:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-LockFail-Str-Int-Str">init(e:LockFail, op:Str, code:Int, msg:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-LockFail-Str-Int-Str.html">init</a>(e:<a class="type-details-link" href="type-LockFail.html">LockFail</a>, op:<a class="type-details-link" href="type-Str.html">Str</a>, code:<a class="type-details-link" href="type-Int.html">Int</a>, msg:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-TestFail-Str">init(tf:TestFail, message:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-TestFail-Str.html">init</a>(tf:<a class="type-details-link" href="type-TestFail.html">TestFail</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-TextDocNode-Str">init(tdn:TextDocNode, text:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-init-TextDocNode-Str.html">init</a>(tdn:<a class="type-details-link" href="type-TextDocNode.html">TextDocNode</a>, text:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-inspect-Str">inspect(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-inspect-Str.html">inspect</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Inspect Str
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Int-Str-Int">Int(s:Str, base:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-Int-Str-Int.html">Int</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, base:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Convert Str to Int.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Int-Str">Int(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-Int-Str.html">Int</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Convert base-10 string to Int.
 							Throws InvalidArgument if the number in s is not well-formatted.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-join-Arr-Str">join(arr:Arr, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-join-Arr-Str.html">join</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-join-Arr-Str">join(a:Arr, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-join-Arr-Str.html">join</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Join non-strings. Converts a elements to string first, then uses built-in join().
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-len-Str">len(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-len-Str.html">len</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get Str length in bytes
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-limit-Str-Int-Str">limit(s:Str, n:Int, marker:Str='')</a>
+							<a class="method-impl-details-link" href="method-impl-limit-Str-Int-Str.html">limit</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>='')
 							<section class="type-method-impl-desc">
 							Truncate a string if necessary so it would have maximum n characters (currently bytes).
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-lines-Str">lines(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-lines-Str.html">lines</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Split s to strings using end-of-line separators.
 							UNIX and Windows line endings supported (Windows - not tested yet).
@@ -558,44 +558,44 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-lines-Str-Fun">lines(s:Str, cb:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-lines-Str-Fun.html">lines</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Split s to strings using end-of-line separators and call cb for each one of the lines.
 							TODO: More efficient implementation, which would not have temporary array of all lines.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-load-Str-Str">load(bytecode:Str, func_name:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-load-Str-Str.html">load</a>(bytecode:<a class="type-details-link" href="type-Str.html">Str</a>, func_name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Load compiled bytecode.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-log-Str">log(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-log-Str.html">log</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Log to standard output. Later log output will be treated specially by the shell. It will have suitable representation in the UI. Use log() when it's semantically a log.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-log-ResDef-Str-Str">log(rd:ResDef, method:Str, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-log-ResDef-Str-Str.html">log</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, method:<a class="type-details-link" href="type-Str.html">Str</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-log_test_ok-Str">log_test_ok(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-log_test_ok-Str.html">log_test_ok</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-lstat-Str">lstat(pathname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-lstat-Str.html">lstat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Issue lstat() system call. Throws StatFail if the call fails.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-lte-Str-Str">lte(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-lte-Str-Str.html">lte</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Case-insensitive LessThan or Equal comparison for strings
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-open-File-Str">open(f:File, flags:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-open-File-Str.html">open</a>(f:<a class="type-details-link" href="type-File.html">File</a>, flags:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Open a file and set the "fd" field to the file descriptor. Uses OPEN(2).
 							Throws InvalidArgument if file is already open.
@@ -603,157 +603,157 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-ord-Str-Int">ord(s:Str, idx:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-ord-Str-Int.html">ord</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Get character (byte) ordinal value. Throws InvalidArgument if idx is not pointing into s.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-ord-Str">ord(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-ord-Str.html">ord</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get character (currently byte) code. Throws InvalidArgument if s is not of length 1.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str">parse(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Call parse(s, {})
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Attempt to parse JSON. Uses decode_json().
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Parse the output of "aws" command. Extracts the array (see "s" below"). For "describe-instances", flattens the instance list.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-parse-Str-Hash">parse(s:Str, hints:Hash)</a>
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Parse the output of "find" command which does not use "-printf". Handles "-print0".
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Path-Str-Any">Path(s:Str, subtype:Any=false)</a>
+							<a class="method-impl-details-link" href="method-impl-Path-Str-Any.html">Path</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, subtype:<a class="type-details-link" href="type-Any.html">Any</a>=false)
 							<section class="type-method-impl-desc">
 							Path constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-pos-Str-Str-Int">pos(haystack:Str, needle:Str, start:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-pos-Str-Str-Int.html">pos</a>(haystack:<a class="type-details-link" href="type-Str.html">Str</a>, needle:<a class="type-details-link" href="type-Str.html">Str</a>, start:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Find substring position
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-pos-Str-Str">pos(haystack:Str, needle:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-pos-Str-Str.html">pos</a>(haystack:<a class="type-details-link" href="type-Str.html">Str</a>, needle:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Find substring in a string.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-push-TextCollector-Str">push(t:TextCollector, s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-push-TextCollector-Str.html">push</a>(t:<a class="type-details-link" href="type-TextCollector.html">TextCollector</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-rand-Str">rand(a:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-rand-Str.html">rand</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Pick random character from a string
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-rand-Str-Int">rand(a:Str, n:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-rand-Str-Int.html">rand</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-read-Str">read(filename:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-read-Str.html">read</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							fetch() and parse() the given file
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Real-Str">Real(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-Real-Str.html">Real</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Convert a string to real (floating) number, inefficiently
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-replace-Str-RegExp-Fun">replace(s:Str, r:RegExp, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-replace-Str-RegExp-Fun.html">replace</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Replace all occurrences of r
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-require-Str">require(fname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-require-Str.html">require</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Runs the given file
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-resolve_global_variable-Str">resolve_global_variable(name:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-resolve_global_variable-Str.html">resolve_global_variable</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Do not use directly! Get global variable index by name.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-run-Res-Str-Command">run(r:Res, log_pfx:Str, cmd:Command)</a>
+							<a class="method-impl-details-link" href="method-impl-run-Res-Str-Command.html">run</a>(r:<a class="type-details-link" href="type-Res.html">Res</a>, log_pfx:<a class="type-details-link" href="type-Str.html">Str</a>, cmd:<a class="type-details-link" href="type-Command.html">Command</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-run-ResDef-Str-Command">run(rd:ResDef, log_pfx:Str, cmd:Command)</a>
+							<a class="method-impl-details-link" href="method-impl-run-ResDef-Str-Command.html">run</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, log_pfx:<a class="type-details-link" href="type-Str.html">Str</a>, cmd:<a class="type-details-link" href="type-Command.html">Command</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-set-Any-Str-Any">set(obj:Any, attr:Str, val:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-set-Any-Str-Any.html">set</a>(obj:<a class="type-details-link" href="type-Any.html">Any</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, val:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Sets the given attribute to the given value
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-sort-Arr-Str-Fun">sort(a:Arr, attr:Str, lte:Fun=<em>(a function)</em>)</a>
+							<a class="method-impl-details-link" href="method-impl-sort-Arr-Str-Fun.html">sort</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, lte:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Sort an array based on attribute value
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-split-Str-Str">split(s:Str, delim:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-split-Str-Str.html">split</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Split string by substring
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-split-Str-RegExp">split(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-split-Str-RegExp.html">split</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							%EX "x10ab20c30y".split(/[0-9]+/).join(" :: ")  # "x :: ab :: c :: y"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-starts_with-Str-Str">starts_with(haystack:Str, needle:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-starts_with-Str-Str.html">starts_with</a>(haystack:<a class="type-details-link" href="type-Str.html">Str</a>, needle:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Check whether a string starts with another string
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stat-Str">stat(pathname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-stat-Str.html">stat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Issue stat() system call. Throws StatFail if the call fails.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-status-Str">status(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-status-Str.html">status</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Send status to standard error. Later status output will be treated specially by the shell. It will have suitable representation in the UI. Use status() when it's semantically a status - a task that's being done.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-stdlib_aws_straighten_tags-Str">stdlib_aws_straighten_tags(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-stdlib_aws_straighten_tags-Str.html">stdlib_aws_straighten_tags</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							A no-op
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-store-Str-Int">store(s:Str, fd:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-store-Str-Int.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fd:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Write data to a file referenced by file descriptor.
 							WARNING: Incomplete implementation.
@@ -762,79 +762,79 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-store-Str-Pipe">store(s:Str, p:Pipe)</a>
+							<a class="method-impl-details-link" href="method-impl-store-Str-Pipe.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, p:<a class="type-details-link" href="type-Pipe.html">Pipe</a>)
 							<section class="type-method-impl-desc">
 							Write to Pipe. TODO: document if it throws.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-store-Str-Str">store(s:Str, fname:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-store-Str-Str.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-Str">Str(s:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-Str.html">Str</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							TODO
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-Str-Int">Str(s:Str, target_width:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-Str-Int.html">Str</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, target_width:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Pad a string to given width with spaces
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-test-Str-Fun">test(name:Str, f:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-test-Str-Fun.html">test</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>, f:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Type-Str-Any">Type(name:Str, doc:Any)</a>
+							<a class="method-impl-details-link" href="method-impl-Type-Str-Any.html">Type</a>(name:<a class="type-details-link" href="type-Str.html">Str</a>, doc:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Create a new type. Do not use directly. Use "type MyType".
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Type-Str-Any-Type">Type(t:Str, doc:Any, parent:Type)</a>
+							<a class="method-impl-details-link" href="method-impl-Type-Str-Any-Type.html">Type</a>(t:<a class="type-details-link" href="type-Str.html">Str</a>, doc:<a class="type-details-link" href="type-Any.html">Any</a>, parent:<a class="type-details-link" href="type-Type.html">Type</a>)
 							<section class="type-method-impl-desc">
 							Type constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Type-Str-Any-Arr">Type(t:Str, doc:Any, parents:Arr)</a>
+							<a class="method-impl-details-link" href="method-impl-Type-Str-Any-Arr.html">Type</a>(t:<a class="type-details-link" href="type-Str.html">Str</a>, doc:<a class="type-details-link" href="type-Any.html">Any</a>, parents:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							<section class="type-method-impl-desc">
 							Type constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-without-Str-RegExp">without(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-without-Str-RegExp.html">without</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Get string with all occurrences of r removed
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-Str">~(a:Str, b:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-Str.html">~</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							EXPERIMENTAL. For use with AWS Anchors.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-Pfx">~(s:Str, pfx:Pfx)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-Pfx.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, pfx:<a class="type-details-link" href="type-Pfx.html">Pfx</a>)
 							<section class="type-method-impl-desc">
 							Check whether s starts with pfx.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-Sfx">~(s:Str, sfx:Sfx)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-Sfx.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, sfx:<a class="type-details-link" href="type-Sfx.html">Sfx</a>)
 							<section class="type-method-impl-desc">
 							Check whether s ends with pfx.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-RegExp-Int-Int">~(s:Str, r:RegExp, offset:Int=0, options:Int=0)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-RegExp-Int-Int.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>=0, options:<a class="type-details-link" href="type-Int.html">Int</a>=0)
 							<section class="type-method-impl-desc">
 							Find PCRE regular expression in s. Empty string without options returns MatchN. Throws Error if more than 20 captures are used or if there is an error during matching.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~~-Str-RegExp-Bool">~~(s:Str, r:RegExp, collect_unmatched:Bool=false)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E%257E-Str-RegExp-Bool.html">~~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, collect_unmatched:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
 							<section class="type-method-impl-desc">
 							Find all non-overlapping matches of regular expression in a string.
 							</section>

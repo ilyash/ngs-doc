@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-reject" class="method-header">reject<a class="section-link" title="Permalink to this definition" href="#method-reject">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">reject(something:<a class="type-details-link" href="type-Eachable.html">Eachable</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Filter something to an Arr (array) of values using predicate
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L264" style="source-link">stdlib.ngs:264</a></section>
+				<h4 class="param-header">something</h4>
+				<section class="method-param-content">
+				Instance of any type that has each(something, callback) implemented
+				</section>
+				<h4 class="param-header">predicate</h4>
+				<section class="method-param-content">
+				Decision function to be called with each item as first argument.
+				When predicate(item) returns true, the item will not appear in the resulting array
+				</section>
+				<h4 id="impl-reject-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr
+				</section>
+				<h4 id="impl-reject-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">(1...10).reject(F(num) num % 2 == 0)  # Gives [1,3,5,7,9]
+(1...10).reject(X&lt;5)  # Gives [5,6,7,8,9,10], predicate called as predicate(item, 5)</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

@@ -8,73 +8,73 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-RegExp" class="type-header">RegExp<a class="type-link" title="Permalink to this type" href="#type-RegExp">¶</a></h2>
+			<h2 id="type-RegExp" class="type-header">RegExp</h2>
 			<section class="type-content">
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl---Str-RegExp">-(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl---Str-RegExp.html">-</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Returns the string with one occurrence of regexp cut out of it. Throws InvalidArgument if s does not contain r.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-.-RegExp-Str">.(regexp:RegExp, attr:Str)</a>
+							<a class="method-impl-details-link" href="method-impl-%252E-RegExp-Str.html">.</a>(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Get attributes of a RegExp. Throws AttrNotFound if attr is not one of the allowed values. You should not use this directly. Use "~" and "~~" operators.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-[]-Str-RegExp">[](s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-RegExp.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Get substring of a string that corresponds to first match of given regular expression
 							%EX "x10ab20c30y"[/[0-9]+/]  # "10"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-c_pcre_exec-RegExp-Str-Int-Int">c_pcre_exec(regexp:RegExp, subject:Str, offset:Int, options:Int)</a>
+							<a class="method-impl-details-link" href="method-impl-c_pcre_exec-RegExp-Str-Int-Int.html">c_pcre_exec</a>(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, subject:<a class="type-details-link" href="type-Str.html">Str</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>, options:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Search string for regular expression. Uses PCRE_EXEC(3). Do not use this function directly!
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Pred-RegExp">Pred(r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-Pred-RegExp.html">Pred</a>(r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Convert regular expression to a predicate.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-replace-Str-RegExp-Fun">replace(s:Str, r:RegExp, mapper:Fun)</a>
+							<a class="method-impl-details-link" href="method-impl-replace-Str-RegExp-Fun.html">replace</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Replace all occurrences of r
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-split-Str-RegExp">split(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-split-Str-RegExp.html">split</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							%EX "x10ab20c30y".split(/[0-9]+/).join(" :: ")  # "x :: ab :: c :: y"
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-RegExp">Str(regexp:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-RegExp.html">Str</a>(regexp:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Represents RegExp
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-without-Str-RegExp">without(s:Str, r:RegExp)</a>
+							<a class="method-impl-details-link" href="method-impl-without-Str-RegExp.html">without</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)
 							<section class="type-method-impl-desc">
 							Get string with all occurrences of r removed
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~-Str-RegExp-Int-Int">~(s:Str, r:RegExp, offset:Int=0, options:Int=0)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E-Str-RegExp-Int-Int.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>=0, options:<a class="type-details-link" href="type-Int.html">Int</a>=0)
 							<section class="type-method-impl-desc">
 							Find PCRE regular expression in s. Empty string without options returns MatchN. Throws Error if more than 20 captures are used or if there is an error during matching.
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-~~-Str-RegExp-Bool">~~(s:Str, r:RegExp, collect_unmatched:Bool=false)</a>
+							<a class="method-impl-details-link" href="method-impl-%257E%257E-Str-RegExp-Bool.html">~~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, collect_unmatched:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
 							<section class="type-method-impl-desc">
 							Find all non-overlapping matches of regular expression in a string.
 							</section>

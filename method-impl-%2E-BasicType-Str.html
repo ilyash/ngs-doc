@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-." class="method-header">.<a class="section-link" title="Permalink to this definition" href="#method-.">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">.(obj:<a class="type-details-link" href="type-BasicType.html">BasicType</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+				<section class="method-impl-content">
+				Get BasicType (Int, Arr, Hash, ...) attribute. Throws AttrNotFound.
+				<h4 class="param-header">attr</h4>
+				<section class="method-param-content">
+				Attribute to get. Currently only "name" and "constructors" are supported.
+				</section>
+				<h4 id="impl-.-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Str for "name" and Arr for "constructors".
+				</section>
+				<h4 id="impl-.-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">Hash.name  # String: Hash
+Hash.constructors  # [&lt;Native method Hash&gt;,&lt;Closure Hash at ...&gt;,...]</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

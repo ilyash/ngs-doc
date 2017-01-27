@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-collector" class="method-header">collector<a class="section-link" title="Permalink to this definition" href="#method-collector">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">collector(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, body:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				Defines collector { ... collect(...) ... } behaviour for arrays
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/54e95557f655507d50a54ba30e1f9b5dc3ce46fc/c/stdlib.ngs#L757" style="source-link">stdlib.ngs:757</a></section>
+				<h4 class="param-header">a</h4>
+				<section class="method-param-content">
+				Initial array
+				</section>
+				<h4 class="param-header">body</h4>
+				<section class="method-param-content">
+				The body after collector keyword and possible initial value, wrapped in a function
+				"collector THIS_CODE" or "collector/my_init THIS_CODE"
+				</section>
+				<h4 id="impl-collector-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Constructed array
+				</section>
+				<h4 id="impl-collector-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">items = collector {
+  collect(10)
+  for(i;2) collect(i)
+  collect(20)
+}
+echo(items)  # Outputs: [10,0,1,20]
+
+# Or start with few items:
+items = collector/[100,200] {
+  collect(10)
+  for(i;2) collect(i)
+  collect(20)
+}
+echo(items)  # Outputs: [100,200,10,0,1,20]</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

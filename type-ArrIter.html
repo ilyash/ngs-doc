@@ -8,29 +8,73 @@
 	<!-- types start -->
 	<h1>Types</h1>
 		<section class="type">
-			<h2 id="type-ArrIter" class="type-header">ArrIter<a class="type-link" title="Permalink to this type" href="#type-ArrIter">¶</a></h2>
+			<h2 id="type-ArrIter" class="type-header">ArrIter</h2>
 			<section class="type-content">
-				<h3 id="type-ArrIter-parents" class="type-parents-header">Parent types</h3>
+				Arr (array) iterator.
+				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
-						<li><a class="type-ref-link" title="See type" href="types.html#type-Iter">Iter</a>
+						<li><a class="type-details-link" href="type-Iter.html">Iter</a>
+							 - 
+							Iterator. Parent type for all specific iterator types.
 						</li>
 				</ul>
+				<h3 id="type-ArrIter-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">
+my_args = %[--switch val some other positional --sw2 val2]
+i = Iter(my_args)
+
+named = {}
+positional = []
+
+while i {
+	t = i.next()
+	m = t ~ Pfx('--')
+	if m {
+		named[m.after] = i.next()
+	} else {
+		positional.push(t)
+	}
+}
+
+echo(named)
+echo(positional)
+# Output:
+#   {switch=val, sw2=val2}
+#   ['some','other','positional']</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Bool-ArrIter">Bool(i:ArrIter)</a>
+							<a class="method-impl-details-link" href="method-impl-Bool-ArrIter.html">Bool</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)
+							<section class="type-method-impl-desc">
+							Check whether all array elements were iterated over.
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-init-ArrIter-Arr">init(i:ArrIter, arr:Arr)</a>
+							<a class="method-impl-details-link" href="method-impl-init-ArrIter-Arr.html">init</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>, arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+							<section class="type-method-impl-desc">
+							ArrIter constructor.
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-next-ArrIter">next(i:ArrIter)</a>
+							<a class="method-impl-details-link" href="method-impl-next-ArrIter.html">next</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)
+							<section class="type-method-impl-desc">
+							Get value of the next element of the array iterated over.
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-peek-ArrIter">peek(i:ArrIter)</a>
+							<a class="method-impl-details-link" href="method-impl-peek-ArrIter.html">peek</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)
+							<section class="type-method-impl-desc">
+							Preview value of the next element of the array iterated over.
+							Does not affect internal pointer which means it does not affect of value returned by next().
+							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-ref-link" title="See method" href="methods.html#impl-Str-ArrIter">Str(i:ArrIter)</a>
+							<a class="method-impl-details-link" href="method-impl-Str-ArrIter.html">Str</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)
+							<section class="type-method-impl-desc">
+							Textual representation of ArrIter.
+							</section>
 							</section>
 					<!-- type methods end -->
 			</section>

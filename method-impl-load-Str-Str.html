@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-load" class="method-header">load<a class="section-link" title="Permalink to this definition" href="#method-load">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">load(bytecode:<a class="type-details-link" href="type-Str.html">Str</a>, func_name:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+				<section class="method-impl-content">
+				Load compiled bytecode.
+				<h4 class="param-header">bytecode</h4>
+				<section class="method-param-content">
+				compile() result.
+				</section>
+				<h4 class="param-header">func_name</h4>
+				<section class="method-param-content">
+				Name of function to create. Used for backtraces and debugging purposes.
+				</section>
+				<h4 id="impl-load-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Fun - function with no parameters that runs the loaded bytecode when called.
+				</section>
+				<h4 id="impl-load-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example"># From bootstrap.ngs, require() definition
+program_text = fetch(fname)
+program_bytecode = compile(program_text, fname)
+program_func = load(program_bytecode, "require()d file: $fname")
+ret = program_func()</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

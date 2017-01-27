@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- types start -->
+	<h1>Types</h1>
+		<section class="type">
+			<h2 id="type-Eachable2" class="type-header">Eachable2</h2>
+			<section class="type-content">
+				Eachable which each() calls the callback with two arguments
+				<h3 class="type-parents-header">Parent types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-Eachable.html">Eachable</a>
+							 - 
+							Parent type of all types that have each() method
+						</li>
+				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-Hash.html">Hash</a>
+							 - 
+							Hash type. Maps unique keys to their values. 
+							Key-Value pairs are stored and iterated in insertion order.
+							Currently Hash type has several limitations: 
+							Hash keys are hashed using internal hash() function which can not be overwritten. 
+							The internal hash() function exposed to NGS code but adding implementations or setting "hash" to some other function 
+							will not affect operation of Hashes. 
+							Hash values are compared using internal is_equal() function which can not be overwritten. 
+							Both hash() and is_equal() currently handle only Int, Str and arbitrary objects. 
+							Comparison of arbitrary objects is done by comparing their addresses in memory.
+						</li>
+						<li><a class="type-details-link" href="type-HashLike.html">HashLike</a>
+						</li>
+				</ul>
+			</section>
+		</section>
+	<!-- types end -->
+</body>
+</html>

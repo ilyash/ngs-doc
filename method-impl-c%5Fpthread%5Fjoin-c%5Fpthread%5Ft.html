@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-c_pthread_join" class="method-header">c_pthread_join<a class="section-link" title="Permalink to this definition" href="#method-c_pthread_join">¶</a></h2>
+			<section class="method-impl">
+			<h3 id="impl-c_pthread_join-c_pthread_t" class="method-impl-header">c_pthread_join(thread:<a class="type-details-link" href="type-c_pthread_t.html">c_pthread_t</a>)<a class="method-impl-details-link" href="method-impl-c%255Fpthread%255Fjoin-c%255Fpthread%255Ft.html">c_pthread_join</a></h3>
+				<section class="method-impl-content">
+				Call PTHREAD_JOIN(3). Not recommended for direct calls, use Thread type instead.
+				<h4 id="impl-c_pthread_join-returns" class="returns-header">Returns</h4>
+				<section class="method-returns-content">
+				Arr with [Int, Any]. Int is the status returned by pthread_join(). Any is the value returned by the thread of status is 0, Any is null if status is non-zero.
+				</section>
+				<h4 id="impl-c_pthread_join-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">F join(t:Thread) {
+	join_result = c_pthread_join(t.thread)
+	if join_result[0] {
+		throw Error("Failed to c_pthread_join")
+	}
+	join_result[1]
+}</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>
