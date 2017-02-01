@@ -10,18 +10,45 @@
 		<section class="type">
 			<h2 id="type-Box" class="type-header">Box</h2>
 			<section class="type-content">
-				Parent type of FullBox and EmptyBox
+				A box which might (FullBox) or might not (EmptyBox) contain a value
 				<h3 class="type-parents-header">Direct children types</h3>
 				<ul>
 						<li><a class="type-details-link" href="type-EmptyBox.html">EmptyBox</a>
 							 - 
-							Represents no value
+							Represents absence of a value
 						</li>
 						<li><a class="type-details-link" href="type-FullBox.html">FullBox</a>
 							 - 
-							Represents available value
+							Represents presence of a value
 						</li>
 				</ul>
+					<!-- type constructors start -->
+					<h3>Constructors</h3>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Box-Any.html">Box</a>(x:<a class="type-details-link" href="type-Any.html">Any</a>)
+						<section class="type-method-impl-desc">
+						Convert anything to Box (always FullBox)
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Box-Null.html">Box</a>(n:<a class="type-details-link" href="type-Null.html">Null</a>)
+						<section class="type-method-impl-desc">
+						Convert null to Box (always EmptyBox)
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Box-Arr.html">Box</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+						<section class="type-method-impl-desc">
+						Convert array to a Box. Throws InvalidArgument if length of the array is not 0 or 1.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Box-Any-Any.html">Box</a>(container:<a class="type-details-link" href="type-Any.html">Any</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+						<section class="type-method-impl-desc">
+						Convert container value indexed by the given key to a Box
+						</section>
+						</section>
+					<!-- type constructors end -->
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">

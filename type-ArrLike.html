@@ -10,6 +10,18 @@
 		<section class="type">
 			<h2 id="type-ArrLike" class="type-header">ArrLike</h2>
 			<section class="type-content">
+				Parent type for user-defined types with array-like behaviour. Use in cases when you would like to inherit from built-in Arr. Inheriting from built-ins is not possible for now.
+					<h3 class="attrs-header">Attributes</h3>
+					<section class="type-attrs-content">
+						<h3 class="param-header">arr_like_attr</h3>
+						<section class="type-attr-content">
+						name of the attribute that holds the underlying array, defaults to "items"
+						</section>
+						<h3 class="param-header">items</h3>
+						<section class="type-attr-content">
+						default attribute for the underlying array
+						</section>
+					</section>
 				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-details-link" href="type-Eachable1.html">Eachable1</a>
@@ -17,25 +29,77 @@
 							Eachable which each() calls the callback with one argument
 						</li>
 				</ul>
+				<h3 class="type-parents-header">Direct children types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-DelimStr.html">DelimStr</a>
+							 - 
+							EXPERIMENTAL. Delimited string. Showing ArrLike usage.
+						</li>
+				</ul>
+				<h3 id="type-ArrLike-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">type T(ArrLike)
+F Str(t:T) "&lt;My array has ${len(t)} items totalling ${sum(t)}&gt;"  # Override one of the Arr methods
+a = T()
+a.push(10)
+a.push(20)
+echo(a)  # &lt;My array has 2 items totalling 30&gt;
+
+# If you need init() you should have something like the following to allow ArrLike initialization:
+init(t:T) {
+	super(t)
+	...
+}</pre>
+				</section>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D-ArrLike-Int.html">[]</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Set element in the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-ArrLike-Int-Any.html">[]=</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>, x:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Get element from the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-Bool-ArrLike.html">Bool</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>)
+							<section class="type-method-impl-desc">
+							Call Bool() on the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-each-ArrLike-Fun.html">each</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Call cb for each element in the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-ArrLike-Str.html">init</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')
+							<section class="type-method-impl-desc">
+							ArrLike constructor
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-len-ArrLike.html">len</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>)
+							<section class="type-method-impl-desc">
+							Get length of the underlying array.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-push-ArrLike-Any.html">push</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, val:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Push an element to the underlying array.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-without-ArrLike-Any.html">without</a>(ds:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, without_elt:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Get new DelimStr without the given element
+							</section>
 							</section>
 					<!-- type methods end -->
 			</section>

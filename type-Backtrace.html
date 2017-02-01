@@ -10,6 +10,28 @@
 		<section class="type">
 			<h2 id="type-Backtrace" class="type-header">Backtrace</h2>
 			<section class="type-content">
+				Represents stack trace
+					<h3 class="attrs-header">Attributes</h3>
+					<section class="type-attrs-content">
+						<h3 class="param-header">frames</h3>
+						<section class="type-attr-content">
+						Array of locations. Each element of the array is a Hash with "ip" and "closure" properties.
+						</section>
+					</section>
+				<h3 id="type-Backtrace-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">Backtrace().frames.each(echo)
+# {ip=4770, closure=&lt;Closure &lt;anonymous&gt; at /etc/ngs/bootstrap.ngs:3&gt;}
+# {ip=4153, closure=&lt;Closure bootstrap_exception_catch_wrapper at /etc/ngs/bootstrap.ngs:205&gt;}
+# {ip=3583, closure=&lt;Closure bootstrap at /etc/ngs/bootstrap.ngs:111&gt;}
+# {ip=116587, closure=&lt;Closure &lt;anonymous&gt; at &lt;command line -pi switch&gt;:2&gt;}</pre>
+				</section>
+					<!-- type constructors start -->
+					<h3>Constructors</h3>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Backtrace-.html">Backtrace</a>()
+						</section>
+					<!-- type constructors end -->
 			</section>
 		</section>
 	<!-- types end -->

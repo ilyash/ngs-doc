@@ -13,7 +13,7 @@
 			<h3 class="method-impl-header">mapv(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
 				<section class="method-impl-content">
 				Map Hash values. Build new Hash with same keys as in h but values mapped by mapper.
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/5a507bb009c6540ad39750f038d655f5ca289a07/lib/stdlib.ngs#L1581" style="source-link">stdlib.ngs:1581</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L1629" style="source-link">stdlib.ngs:1629</a></section>
 				<h4 class="param-header">h</h4>
 				<section class="method-param-content">
 				Source hash
@@ -29,7 +29,7 @@
 				<h4 id="impl-mapv-example" class="example-header">Example</h4>
 				<section class="method-example-content">
 				<pre class="example">LEN = 3
-lines_ = fetch("/usr/share/dict/words").lines()
+lines_ = read("/usr/share/dict/words").lines()
 long_lines = lines_.filter({A.len()&gt;LEN})
 prefix_to_lines = long_lines.group(F(line) line[0..LEN])  # {"pfx1": ["pfx1a", "pfx1b", ...], "pfx2": ["pfx2a", "pfx2b", ...], ...}
 prefix_to_count = prefix_to_lines.mapv(len)  # {"pfx1": 30, "pfx2": 35, ...}

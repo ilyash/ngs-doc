@@ -24,7 +24,7 @@
 		<section class="type">
 			<h2 id="type-Arr" class="type-header"><a class="type-details-link" href="type-Arr.html">Arr</a></h2>
 			<section class="type-content">
-				Array type
+				Array - list of items accessed by zero-based index
 			</section>
 		</section>
 		<section class="type">
@@ -36,12 +36,13 @@
 		<section class="type">
 			<h2 id="type-ArrLike" class="type-header"><a class="type-details-link" href="type-ArrLike.html">ArrLike</a></h2>
 			<section class="type-content">
+				Parent type for user-defined types with array-like behaviour. Use in cases when you would like to inherit from built-in Arr. Inheriting from built-ins is not possible for now.
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-AssertFail" class="type-header"><a class="type-details-link" href="type-AssertFail.html">AssertFail</a></h2>
 			<section class="type-content">
-				Represents failed asserttion, thrown by assert()
+				Represents failed asserttion, thrown by assert(). Should be used to catch programming errors.
 			</section>
 		</section>
 		<section class="type">
@@ -53,6 +54,7 @@
 		<section class="type">
 			<h2 id="type-Backtrace" class="type-header"><a class="type-details-link" href="type-Backtrace.html">Backtrace</a></h2>
 			<section class="type-content">
+				Represents stack trace
 			</section>
 		</section>
 		<section class="type">
@@ -64,12 +66,13 @@
 		<section class="type">
 			<h2 id="type-BasicTypeInstance" class="type-header"><a class="type-details-link" href="type-BasicTypeInstance.html">BasicTypeInstance</a></h2>
 			<section class="type-content">
-				A type for instances of builtin types
+				A type for instances of builtin types. Children types are not displayed as this type is specially optimized.
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-BlockDevice" class="type-header"><a class="type-details-link" href="type-BlockDevice.html">BlockDevice</a></h2>
 			<section class="type-content">
+				Represents a block device in a file system (S_IFBLK)
 			</section>
 		</section>
 		<section class="type">
@@ -81,7 +84,7 @@
 		<section class="type">
 			<h2 id="type-Box" class="type-header"><a class="type-details-link" href="type-Box.html">Box</a></h2>
 			<section class="type-content">
-				Parent type of FullBox and EmptyBox
+				A box which might (FullBox) or might not (EmptyBox) contain a value
 			</section>
 		</section>
 		<section class="type">
@@ -129,6 +132,7 @@
 		<section class="type">
 			<h2 id="type-CharDevice" class="type-header"><a class="type-details-link" href="type-CharDevice.html">CharDevice</a></h2>
 			<section class="type-content">
+				Represents a character device in a file system (S_IFCHR)
 			</section>
 		</section>
 		<section class="type">
@@ -173,8 +177,15 @@
 			</section>
 		</section>
 		<section class="type">
+			<h2 id="type-DelimStr" class="type-header"><a class="type-details-link" href="type-DelimStr.html">DelimStr</a></h2>
+			<section class="type-content">
+				EXPERIMENTAL. Delimited string. Showing ArrLike usage.
+			</section>
+		</section>
+		<section class="type">
 			<h2 id="type-Dir" class="type-header"><a class="type-details-link" href="type-Dir.html">Dir</a></h2>
 			<section class="type-content">
+				Represents a directory in a file system (S_IFBLK)
 			</section>
 		</section>
 		<section class="type">
@@ -227,7 +238,7 @@
 		<section class="type">
 			<h2 id="type-EmptyBox" class="type-header"><a class="type-details-link" href="type-EmptyBox.html">EmptyBox</a></h2>
 			<section class="type-content">
-				Represents no value
+				Represents absence of a value
 			</section>
 		</section>
 		<section class="type">
@@ -261,11 +272,13 @@
 		<section class="type">
 			<h2 id="type-FifoFile" class="type-header"><a class="type-details-link" href="type-FifoFile.html">FifoFile</a></h2>
 			<section class="type-content">
+				Represents a fifo file in a file system (S_IFIFO)
 			</section>
 		</section>
 		<section class="type">
 			<h2 id="type-File" class="type-header"><a class="type-details-link" href="type-File.html">File</a></h2>
 			<section class="type-content">
+				Represents a file in a file system (S_IFREG)
 			</section>
 		</section>
 		<section class="type">
@@ -276,7 +289,7 @@
 		<section class="type">
 			<h2 id="type-FullBox" class="type-header"><a class="type-details-link" href="type-FullBox.html">FullBox</a></h2>
 			<section class="type-content">
-				Represents available value
+				Represents presence of a value
 			</section>
 		</section>
 		<section class="type">
@@ -474,9 +487,15 @@
 			</section>
 		</section>
 		<section class="type">
+			<h2 id="type-NormalTypeConstructor" class="type-header"><a class="type-details-link" href="type-NormalTypeConstructor.html">NormalTypeConstructor</a></h2>
+			<section class="type-content">
+				Default constructor for Normal types. Normal types are user-defined and some of the built-in types.
+			</section>
+		</section>
+		<section class="type">
 			<h2 id="type-NormalTypeInstance" class="type-header"><a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a></h2>
 			<section class="type-content">
-				A type for instances of user-defined types
+				A type for instances of user-defined types. Children types are not displayed as this type is specially optimized.
 			</section>
 		</section>
 		<section class="type">
@@ -493,6 +512,7 @@
 		<section class="type">
 			<h2 id="type-Path" class="type-header"><a class="type-details-link" href="type-Path.html">Path</a></h2>
 			<section class="type-content">
+				Represents file system path
 			</section>
 		</section>
 		<section class="type">
@@ -603,6 +623,7 @@
 		<section class="type">
 			<h2 id="type-SocketFile" class="type-header"><a class="type-details-link" href="type-SocketFile.html">SocketFile</a></h2>
 			<section class="type-content">
+				Represents a socket file in a file system (S_IFSOCK)
 			</section>
 		</section>
 		<section class="type">
@@ -619,6 +640,7 @@
 		<section class="type">
 			<h2 id="type-StatFail" class="type-header"><a class="type-details-link" href="type-StatFail.html">StatFail</a></h2>
 			<section class="type-content">
+				Represents a failure in stat() system call.
 			</section>
 		</section>
 		<section class="type">
@@ -647,6 +669,7 @@
 		<section class="type">
 			<h2 id="type-Symlink" class="type-header"><a class="type-details-link" href="type-Symlink.html">Symlink</a></h2>
 			<section class="type-content">
+				Represents a link in a file system (S_IFLNK)
 			</section>
 		</section>
 		<section class="type">

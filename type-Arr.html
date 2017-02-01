@@ -10,7 +10,7 @@
 		<section class="type">
 			<h2 id="type-Arr" class="type-header">Arr</h2>
 			<section class="type-content">
-				Array type
+				Array - list of items accessed by zero-based index
 				<h3 class="type-parents-header">Parent types</h3>
 				<ul>
 						<li><a class="type-details-link" href="type-Eachable1.html">Eachable1</a>
@@ -18,6 +18,61 @@
 							Eachable which each() calls the callback with one argument
 						</li>
 				</ul>
+				<h3 id="type-Arr-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">x = ["first", "second", "third", "fourth"]
+
+echo(x)
+# Output:
+#   ['first','second','third','fourth']
+
+echo(x.len())
+# Output:
+#   4
+
+echo(x[1])
+# Output:
+#   second
+
+echo(x[10])
+# ... Exception of type IndexNotFound occured ...</pre>
+				</section>
+					<!-- type constructors start -->
+					<h3>Constructors</h3>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-Hash.html">Arr</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+						<section class="type-method-impl-desc">
+						Make Arr from Hash. Each key/value pair becomes two-items array:
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-Arr.html">Arr</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+						<section class="type-method-impl-desc">
+						Make Arr from Arr. A no-op.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-Range.html">Arr</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>)
+						<section class="type-method-impl-desc">
+						Convert range to an array
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-FullBox.html">Arr</a>(fb:<a class="type-details-link" href="type-FullBox.html">FullBox</a>)
+						<section class="type-method-impl-desc">
+						Convert FullBox to array
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-EmptyBox.html">Arr</a>(eb:<a class="type-details-link" href="type-EmptyBox.html">EmptyBox</a>)
+						<section class="type-method-impl-desc">
+						Convert EmptyBox to array
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Arr-TextCollector.html">Arr</a>(t:<a class="type-details-link" href="type-TextCollector.html">TextCollector</a>)
+						</section>
+					<!-- type constructors end -->
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
@@ -301,6 +356,12 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-ResFindCommand-Arr-Bool.html">init</a>(c:<a class="type-details-link" href="type-ResFindCommand.html">ResFindCommand</a>, cmd:<a class="type-details-link" href="type-Arr.html">Arr</a>, supports_filters:<a class="type-details-link" href="type-Bool.html">Bool</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<section class="type-method-impl-desc">
+							DelimStr constructor
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-ArrIter-Arr.html">init</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>, arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)

@@ -13,7 +13,13 @@
 			<h3 class="method-impl-header">none(b:<a class="type-details-link" href="type-Box.html">Box</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
 				<section class="method-impl-content">
 				Test Box value
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/5a507bb009c6540ad39750f038d655f5ca289a07/lib/stdlib.ngs#L1869" style="source-link">stdlib.ngs:1869</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L1927" style="source-link">stdlib.ngs:1927</a></section>
+				<h4 id="impl-none-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">Box(5).none(Int)      # false
+Box(5).none(Str)      # true
+EmptyBox().none(Int)  # true</pre>
+				</section>
 				</section>
 			</section>
 		</section>

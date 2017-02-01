@@ -581,6 +581,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-%255B%255D-ArrLike-Int.html">[]</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)</h3>
 				<section class="method-impl-content">
+				Set element in the underlying array.
 				</section>
 			</section>
 			<section class="method-impl">
@@ -666,6 +667,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-%255B%255D%253D-ArrLike-Int-Any.html">[]=</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>, x:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
 				<section class="method-impl-content">
+				Get element from the underlying array.
 				</section>
 			</section>
 			<section class="method-impl">
@@ -988,7 +990,6 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Backtrace-.html">Backtrace</a>()</h3>
 				<section class="method-impl-content">
-				Backtrace constructor
 				</section>
 			</section>
 		</section>
@@ -1029,6 +1030,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Bool-ArrLike.html">Bool</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>)</h3>
 				<section class="method-impl-content">
+				Call Bool() on the underlying array.
 				</section>
 			</section>
 			<section class="method-impl">
@@ -1078,7 +1080,8 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Bool-ArrIter.html">Bool</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)</h3>
 				<section class="method-impl-content">
-				Check whether all array elements were iterated over.
+				Check whether there are more array elements to iterate over.
+				true: next() will return next element. false: next() will throw NoNext
 				</section>
 			</section>
 			<section class="method-impl">
@@ -1136,13 +1139,13 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Box-Any.html">Box</a>(x:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
 				<section class="method-impl-content">
-				Convert anything to Box
+				Convert anything to Box (always FullBox)
 				</section>
 			</section>
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Box-Null.html">Box</a>(n:<a class="type-details-link" href="type-Null.html">Null</a>)</h3>
 				<section class="method-impl-content">
-				Convert null to Box
+				Convert null to Box (always EmptyBox)
 				</section>
 			</section>
 			<section class="method-impl">
@@ -1952,6 +1955,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-each-ArrLike-Fun.html">each</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
 				<section class="method-impl-content">
+				Call cb for each element in the underlying array.
 				</section>
 			</section>
 			<section class="method-impl">
@@ -2167,21 +2171,15 @@
 		<section class="method">
 		<h2 id="method-fetch" class="method-header">fetch<a class="section-link" title="Permalink to this definition" href="#method-fetch">¶</a></h2>
 			<section class="method-impl">
-			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-fetch-Str.html">fetch</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-fetch-Str-Hash.html">fetch</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>, parse_hints:<a class="type-details-link" href="type-Hash.html">Hash</a>={})</h3>
 				<section class="method-impl-content">
-				Fetches the whole file
+				read() and parse() the given file
 				</section>
 			</section>
 			<section class="method-impl">
-			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-fetch-Int.html">fetch</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>)</h3>
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-fetch-Hash.html">fetch</a>(parse_hints:<a class="type-details-link" href="type-Hash.html">Hash</a>={})</h3>
 				<section class="method-impl-content">
-				Read all data from a file referenced by file descriptor without parsing it.
-				</section>
-			</section>
-			<section class="method-impl">
-			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-fetch-Pipe.html">fetch</a>(p:<a class="type-details-link" href="type-Pipe.html">Pipe</a>)</h3>
-				<section class="method-impl-content">
-				Read from Pipe without parsing. TODO: document if it throws.
+				Read standard input and parse() it, passing "source" equals "stdin" hint.
 				</section>
 			</section>
 		</section>
@@ -2216,6 +2214,12 @@
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-filter-EmptyBox-Any.html">filter</a>(eb:<a class="type-details-link" href="type-EmptyBox.html">EmptyBox</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
 				<section class="method-impl-content">
 				Do nothing
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-filter-DelimStr-Any.html">filter</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Get new DelimStr with some elements filtered out
 				</section>
 			</section>
 		</section>
@@ -2655,6 +2659,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-init-ArrLike-Str.html">init</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')</h3>
 				<section class="method-impl-content">
+				ArrLike constructor
 				</section>
 			</section>
 			<section class="method-impl">
@@ -2790,6 +2795,18 @@
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-init-Counter.html">init</a>(c:<a class="type-details-link" href="type-Counter.html">Counter</a>)</h3>
 				<section class="method-impl-content">
 				Counter constructor. Sets the counter to 0.
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-init-DelimStr-Str-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')</h3>
+				<section class="method-impl-content">
+				DelimStr constructor
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')</h3>
+				<section class="method-impl-content">
+				DelimStr constructor
 				</section>
 			</section>
 			<section class="method-impl">
@@ -3125,6 +3142,7 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-len-ArrLike.html">len</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>)</h3>
 				<section class="method-impl-content">
+				Get length of the underlying array.
 				</section>
 			</section>
 			<section class="method-impl">
@@ -3596,6 +3614,11 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
 				<section class="method-impl-content">
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
+				<section class="method-impl-content">
 				Parse the output of "aws" command. Extracts the array (see "s" below"). For "describe-instances", flattens the instance list.
 				</section>
 			</section>
@@ -3758,6 +3781,12 @@
 				</section>
 			</section>
 			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-push-ArrLike-Any.html">push</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, val:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Push an element to the underlying array.
+				</section>
+			</section>
+			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-push-Hook-Closure.html">push</a>(hook:<a class="type-details-link" href="type-Hook.html">Hook</a>, handler:<a class="type-details-link" href="type-Closure.html">Closure</a>)</h3>
 				<section class="method-impl-content">
 				Add unnamed handler.
@@ -3847,15 +3876,21 @@
 		<section class="method">
 		<h2 id="method-read" class="method-header">read<a class="section-link" title="Permalink to this definition" href="#method-read">¶</a></h2>
 			<section class="method-impl">
-			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-read-Str.html">read</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-read-Str.html">read</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)</h3>
 				<section class="method-impl-content">
-				fetch() and parse() the given file
+				Fetches the whole file
 				</section>
 			</section>
 			<section class="method-impl">
-			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-read-.html">read</a>()</h3>
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-read-Int.html">read</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>)</h3>
 				<section class="method-impl-content">
-				Read standard input and parse() it, passing "source" equals "stdin" hint.
+				Read all data from a file referenced by file descriptor without parsing it.
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-read-Pipe.html">read</a>(p:<a class="type-details-link" href="type-Pipe.html">Pipe</a>)</h3>
+				<section class="method-impl-content">
+				Read from Pipe without parsing. TODO: document if it throws.
 				</section>
 			</section>
 		</section>
@@ -4370,6 +4405,11 @@
 				</section>
 			</section>
 			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Str-DelimStr.html">Str</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>)</h3>
+				<section class="method-impl-content">
+				</section>
+			</section>
+			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-Str-ArrIter.html">Str</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)</h3>
 				<section class="method-impl-content">
 				Textual representation of ArrIter.
@@ -4411,6 +4451,15 @@
 			<section class="method-impl">
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-StrForTable-Null-Int.html">StrForTable</a>(x:<a class="type-details-link" href="type-Null.html">Null</a>, width:<a class="type-details-link" href="type-Int.html">Int</a>)</h3>
 				<section class="method-impl-content">
+				</section>
+			</section>
+		</section>
+		<section class="method">
+		<h2 id="method-StrParams" class="method-header">StrParams<a class="section-link" title="Permalink to this definition" href="#method-StrParams">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-StrParams-Fun.html">StrParams</a>(f:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
+				<section class="method-impl-content">
+				TODO: Defaut values
 				</section>
 			</section>
 		</section>
@@ -4753,6 +4802,12 @@
 			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-without-Str-RegExp.html">without</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>)</h3>
 				<section class="method-impl-content">
 				Get string with all occurrences of r removed
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header"><a class="method-impl-details-link" href="method-impl-without-ArrLike-Any.html">without</a>(ds:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, without_elt:<a class="type-details-link" href="type-Any.html">Any</a>)</h3>
+				<section class="method-impl-content">
+				Get new DelimStr without the given element
 				</section>
 			</section>
 		</section>

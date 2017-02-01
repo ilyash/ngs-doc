@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- types start -->
+	<h1>Types</h1>
+		<section class="type">
+			<h2 id="type-DelimStr" class="type-header">DelimStr</h2>
+			<section class="type-content">
+				EXPERIMENTAL. Delimited string. Showing ArrLike usage.
+				<h3 class="type-parents-header">Parent types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-ArrLike.html">ArrLike</a>
+							 - 
+							Parent type for user-defined types with array-like behaviour. Use in cases when you would like to inherit from built-in Arr. Inheriting from built-ins is not possible for now.
+						</li>
+				</ul>
+				<h3 id="type-DelimStr-example" class="example-header">Example</h3>
+				<section class="type-example-content">
+				<pre class="example">DelimStr("/bin:/usr/bin:/usr/local/bin").without("/usr/bin").Str()  # "/bin:/usr/local/bin"</pre>
+				</section>
+					<!-- type methods start -->
+					<h3>Methods</h3>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-filter-DelimStr-Any.html">filter</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Get new DelimStr with some elements filtered out
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Str-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<section class="type-method-impl-desc">
+							DelimStr constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<section class="type-method-impl-desc">
+							DelimStr constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Str-DelimStr.html">Str</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>)
+							</section>
+					<!-- type methods end -->
+			</section>
+		</section>
+	<!-- types end -->
+</body>
+</html>

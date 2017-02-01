@@ -48,6 +48,45 @@ echo(x)
 #   {a=10, b=2}
 </pre>
 				</section>
+					<!-- type constructors start -->
+					<h3>Constructors</h3>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-NormalTypeInstance.html">Hash</a>(obj:<a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a>)
+						<section class="type-method-impl-desc">
+						Get all attributes and their values as key-value pairs in the resulting Hash.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-Arr.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+						<section class="type-method-impl-desc">
+						Create a Hash from Arr of Arr[2]
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-Arr-Str.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
+						<section class="type-method-impl-desc">
+						TODO. Not sure it's used anywhere. Maybe remove?
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-Arr-Fun.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+						<section class="type-method-impl-desc">
+						Create a Hash from keys in arr using cb for values calculation
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-Arr-Arr.html">Hash</a>(keys:<a class="type-details-link" href="type-Arr.html">Arr</a>, values:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+						<section class="type-method-impl-desc">
+						Create a Hash from keys in "keys" and corresponding values in "values"
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-Arr-Str-Str.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, key_attr:<a class="type-details-link" href="type-Str.html">Str</a>, val_attr:<a class="type-details-link" href="type-Str.html">Str</a>)
+						<section class="type-method-impl-desc">
+						Create Hash from Arr of something that has key and value attribute
+						</section>
+						</section>
+					<!-- type constructors end -->
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
@@ -153,6 +192,18 @@ echo(x)
 							<a class="method-impl-details-link" href="method-impl-each_idx_key_val-Hash-Fun.html">each_idx_key_val</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterate a Hash.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-fetch-Str-Hash.html">fetch</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>, parse_hints:<a class="type-details-link" href="type-Hash.html">Hash</a>={})
+							<section class="type-method-impl-desc">
+							read() and parse() the given file
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-fetch-Hash.html">fetch</a>(parse_hints:<a class="type-details-link" href="type-Hash.html">Hash</a>={})
+							<section class="type-method-impl-desc">
+							Read standard input and parse() it, passing "source" equals "stdin" hint.
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -272,6 +323,9 @@ echo(x)
 							<section class="type-method-impl-desc">
 							Attempt to parse JSON. Uses decode_json().
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)

@@ -11,11 +11,18 @@
 			<h2 id="type-Exception" class="type-header">Exception</h2>
 			<section class="type-content">
 				Represents exceptional situaution. All thrown things shouhld inherit Exception.
+					<h3 class="attrs-header">Attributes</h3>
+					<section class="type-attrs-content">
+						<h3 class="param-header">backtrace</h3>
+						<section class="type-attr-content">
+						Automatic attribute set when creating Exception type instances (including sub-types, as long as super() is called.
+						</section>
+					</section>
 				<h3 class="type-parents-header">Direct children types</h3>
 				<ul>
 						<li><a class="type-details-link" href="type-AssertFail.html">AssertFail</a>
 							 - 
-							Represents failed asserttion, thrown by assert()
+							Represents failed asserttion, thrown by assert(). Should be used to catch programming errors.
 						</li>
 						<li><a class="type-details-link" href="type-Error.html">Error</a>
 							 - 

@@ -18,6 +18,34 @@
 							Eachable which each() calls the callback with one argument
 						</li>
 				</ul>
+					<!-- type constructors start -->
+					<h3>Constructors</h3>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Int-Real.html">Int</a>(r:<a class="type-details-link" href="type-Real.html">Real</a>)
+						<section class="type-method-impl-desc">
+						Convert Real (floating) number to Int. Floating part is truncated.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Int-Str-Int.html">Int</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, base:<a class="type-details-link" href="type-Int.html">Int</a>)
+						<section class="type-method-impl-desc">
+						Convert Str to Int.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Int-Str.html">Int</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
+						<section class="type-method-impl-desc">
+						Convert base-10 string to Int.
+						Throws InvalidArgument if the number in s is not well-formatted.
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Int-Bool.html">Int</a>(b:<a class="type-details-link" href="type-Bool.html">Bool</a>)
+						<section class="type-method-impl-desc">
+						Convert Bool to int.
+						</section>
+						</section>
+					<!-- type constructors end -->
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
@@ -103,6 +131,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D-ArrLike-Int.html">[]</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Set element in the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-Int.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -134,6 +165,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-ArrLike-Int-Any.html">[]=</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>, x:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Get element from the underlying array.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-assert_exit_code-Process-Int-Any.html">assert_exit_code</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, expected:<a class="type-details-link" href="type-Int.html">Int</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=null)
@@ -291,12 +325,6 @@
 							<a class="method-impl-details-link" href="method-impl-expect-ResDef-Int.html">expect</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, e:<a class="type-details-link" href="type-Int.html">Int</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-fetch-Int.html">fetch</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>)
-							<section class="type-method-impl-desc">
-							Read all data from a file referenced by file descriptor without parsing it.
-							</section>
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-get-Arr-Int-Any.html">get</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>, dflt:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
@@ -427,6 +455,12 @@
 							<a class="method-impl-details-link" href="method-impl-rand_uniq-Any-Int.html">rand_uniq</a>(something:<a class="type-details-link" href="type-Any.html">Any</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Pick n random unique elements from something
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-read-Int.html">read</a>(fd:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Read all data from a file referenced by file descriptor without parsing it.
 							</section>
 							</section>
 							<section class="type-method-impl">
