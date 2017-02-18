@@ -35,6 +35,9 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-%252E-HashLike-Any.html">.</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%252E%252E-Any-Any.html">..</a>(start:<a class="type-details-link" href="type-Any.html">Any</a>, end:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							ExclusiveRange constructor
@@ -51,6 +54,9 @@
 							<section class="type-method-impl-desc">
 							Set Normal type (a type that is typically defined by user) instance attribute. Throws AttrNotFound.
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-%252E%253D-HashLike-Any-Any.html">.=</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%252E%253D-Hash-Str-Any.html">.=</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -225,22 +231,10 @@
 							<a class="method-impl-details-link" href="method-impl-assert_string-Any-Any.html">assert_string</a>(actual:<a class="type-details-link" href="type-Any.html">Any</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=null)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-attrs-NativeMethod-Any.html">attrs</a>(m:<a class="type-details-link" href="type-NativeMethod.html">NativeMethod</a>, datum:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Set native method attributes. Should be a Hash.
-							</section>
+							<a class="method-impl-details-link" href="method-impl-attrs-Any.html">attrs</a>(obj:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-attrs-Closure-Any.html">attrs</a>(c:<a class="type-details-link" href="type-Closure.html">Closure</a>, datum:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Set closure attributes. Should be a Hash.
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-attrs-Type-Any.html">attrs</a>(t:<a class="type-details-link" href="type-Type.html">Type</a>, datum:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Set Type attributes. Usually a Hash with "doc" key.
-							</section>
+							<a class="method-impl-details-link" href="method-impl-attrs-Any-Any.html">attrs</a>(obj:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-Bool-Any.html">Bool</a>(x:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -255,9 +249,15 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-Box-Any-Any.html">Box</a>(container:<a class="type-details-link" href="type-Any.html">Any</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<a class="method-impl-details-link" href="method-impl-Box-Arr-Any.html">Box</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, idx:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
-							Convert container value indexed by the given key to a Box
+							Convert array value indexed by the given index
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Box-Hash-Any.html">Box</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Convert hash value indexed by the given key to a Box
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -315,6 +315,9 @@
 							<section class="type-method-impl-desc">
 							Set an attribute on instances if it's not already set
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-dflt-HashLike-Any-Any.html">dflt</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-dflt-Hash-Any-Any.html">dflt</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -435,9 +438,22 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-get-HashLike-Any-Any.html">get</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, dflt:<a class="type-details-link" href="type-Any.html">Any</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-get-HashLike-Any.html">get</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-get-Hash-Any.html">get</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Get hash value by key or null if it does not exist
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-get-Eachable1-Str-Any.html">get</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, dflt:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Return array made of given attribute of each element of given Eachable1 where present or default value where the attribute is not present
+							Return array (? depends on map() ?) made of given attribute of each element of given Eachable1
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -506,12 +522,6 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-Hook-Any.html">init</a>(hook:<a class="type-details-link" href="type-Hook.html">Hook</a>, combiner:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>)
-							<section class="type-method-impl-desc">
-							Hook constructor.
-							</section>
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-Range-Any-Any-Any.html">init</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>, start:<a class="type-details-link" href="type-Any.html">Any</a>, end:<a class="type-details-link" href="type-Any.html">Any</a>, step:<a class="type-details-link" href="type-Any.html">Any</a>=1)
 							<section class="type-method-impl-desc">
 							Range constructor
@@ -533,10 +543,10 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-ResDef-Any-Hash.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, anchor:<a class="type-details-link" href="type-Any.html">Any</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<a class="method-impl-details-link" href="method-impl-init-ResDef-Any.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, anchor:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-ResDef-Any.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, anchor:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<a class="method-impl-details-link" href="method-impl-init-SecGroup-Str-Any.html">init</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, vpc_id:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-ConstIter-Any.html">init</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>, val:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -840,13 +850,13 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-without-Hash-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<a class="method-impl-details-link" href="method-impl-without-Eachable2-Any.html">without</a>(e:<a class="type-details-link" href="type-Eachable2.html">Eachable2</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter out specific key
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-without-Hash-Any-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>, without_v:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<a class="method-impl-details-link" href="method-impl-without-Eachable2-Any-Any.html">without</a>(e:<a class="type-details-link" href="type-Eachable2.html">Eachable2</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>, without_v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Filter out specific key-value pair
 							</section>

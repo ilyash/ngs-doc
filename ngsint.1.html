@@ -43,7 +43,7 @@
 <h1 id="bytecode">BYTECODE</h1>
 <p>(WIP)</p>
 <p><code>BYTECODE_HANDLE</code> typedef'ed struct. Although reading/writing bytecode to a file is not implemented yet, bytecode layout in memory was designed to be easy to write to or read from a file.</p>
-<p><code>ngs_add_bytecode_section(bytecode, BYTECODE_SECTION_TYPE_..., l, buf)</code> function</p>
+<p><code>ngs_add_bytecode_section()</code> function</p>
 <h1 id="vm">VM</h1>
 <p>NGS runs a <a href="https://en.wikipedia.org/wiki/Stack_machine">stack-based VM</a>.</p>
 <p><code>VM</code> typedef'ed struct represents the VM.</p>
@@ -53,7 +53,8 @@
 <p>This is procedure for adding ordinary (such as for <code>DIR</code> type used in <code>opendir()</code> and friends) built-in (native) type</p>
 <p>In <code>obj.h</code> - add something along these lines:</p>
 <pre><code>typedef struct {
-    OBJECT base;         // must be present and must be the first member of the structure
+    OBJECT base;         // must be present and
+                         // must be the first member of the structure
     VALUE my_field_1;    // free style fields here and below
     VALUE my_field_2;
     size_t my_data_len;

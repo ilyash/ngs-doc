@@ -20,7 +20,7 @@
 <p>ngs - Next Generation Shell.</p>
 <h1 id="synopsis">SYNOPSIS</h1>
 <p><strong>ngs</strong> <em>script_name.ngs</em></p>
-<p><strong>ngs</strong> [<strong>-e</strong>|<strong>-E</strong>|<strong>-p</strong>|<strong>-pi</strong>|<strong>-pj</strong>] <em>expression</em></p>
+<p><strong>ngs</strong> [<strong>-e</strong>|<strong>-E</strong>|<strong>-p</strong>|<strong>-pi</strong>|<strong>-pj</strong>|<strong>-pl</strong>|<strong>-pjl</strong>] <em>expression</em></p>
 <h1 id="description">DESCRIPTION</h1>
 <p><strong>ngs</strong> is a Next Generation Shell. It has two main parts: the language and the interactive shell.</p>
 <p>This project contains the language part which is under development. The interactive part will be dealt with later. This manual covers both implemented and unimplemented parts.</p>
@@ -32,6 +32,8 @@
 <p><strong>-p</strong> prints the resulting <em>expression</em> value in a human readable NGS format.</p>
 <p><strong>-pi</strong> prints <code>inspect(...)</code> (detailed information) of the resulting <em>expression</em> value.</p>
 <p><strong>-pj</strong> prints the resulting <em>expression</em> value as JSON.</p>
+<p><strong>-pl</strong> prints elements of the result, one per line (mnemonic &quot;print lines&quot;)</p>
+<p><strong>-pjl</strong> prints elements of the result, one per line as JSON (mnemonic &quot;print JSON lines&quot;)</p>
 <h2 id="motivation">MOTIVATION</h2>
 <p>NGS tries to fill the void between classical shells such as <strong>bash</strong> and general-purpose programming languages such as <strong>Ruby</strong>, <strong>Python</strong>, <strong>Perl</strong>, <strong>Go</strong>. The shells are domain-specific languages but the domain has changed so classical shells are not optimal for today's tasks. General-purpose languages on the other hand are not domain-specific so they are not good as shells and too verbose for system tasks scripting, not a good fit.</p>
 <h1 id="exit-status">EXIT STATUS</h1>

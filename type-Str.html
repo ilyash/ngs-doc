@@ -400,6 +400,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_access-Str-Int.html">c_access</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>, mode:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Call ACCESS(2)
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_dlopen-Str-Int.html">c_dlopen</a>(filename:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -415,6 +418,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_lstat-Str.html">c_lstat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<section class="type-method-impl-desc">
+							Call LSTAT(2)
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_open-Str-Str.html">c_open</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>, flags:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -436,6 +442,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_stat-Str.html">c_stat</a>(pathname:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<section class="type-method-impl-desc">
+							Call STAT(2)
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-c_strcasecmp-Str-Str.html">c_strcasecmp</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -580,6 +589,19 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-get-Eachable1-Str.html">get</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<section class="type-method-impl-desc">
+							Return array made of given attribute of each element of given Eachable1 where present
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-get-Eachable1-Str-Any.html">get</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, dflt:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Return array made of given attribute of each element of given Eachable1 where present or default value where the attribute is not present
+							Return array (? depends on map() ?) made of given attribute of each element of given Eachable1
+							</section>
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-glob-Str-Any.html">glob</a>(pattern:<a class="type-details-link" href="type-Str.html">Str</a>, start_dir:<a class="type-details-link" href="type-Any.html">Any</a>='.')
 							<section class="type-method-impl-desc">
 							Work in progress, do not use!
@@ -643,9 +665,6 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-HashLike-Str.html">init</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-CException-Str.html">init</a>(e:<a class="type-details-link" href="type-CException.html">CException</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							CException constructor. In addition to storing message attribute, adds errno and errno_name attributes.
@@ -664,6 +683,15 @@
 							<a class="method-impl-details-link" href="method-impl-init-MatchFail-Str-Any-Any.html">init</a>(mf:<a class="type-details-link" href="type-MatchFail.html">MatchFail</a>, msg:<a class="type-details-link" href="type-Str.html">Str</a>, container:<a class="type-details-link" href="type-Any.html">Any</a>, pattern:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-TestFail-Str.html">init</a>(tf:<a class="type-details-link" href="type-TestFail.html">TestFail</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-ResDef-Str.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, _ngs_name:<a class="type-details-link" href="type-Str.html">Str</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-SecGroup-Str-Any.html">init</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, vpc_id:<a class="type-details-link" href="type-Any.html">Any</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Str-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
 							<section class="type-method-impl-desc">
 							DelimStr constructor
@@ -677,9 +705,6 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-LockFail-Str-Int-Str.html">init</a>(e:<a class="type-details-link" href="type-LockFail.html">LockFail</a>, op:<a class="type-details-link" href="type-Str.html">Str</a>, code:<a class="type-details-link" href="type-Int.html">Int</a>, msg:<a class="type-details-link" href="type-Str.html">Str</a>)
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-TestFail-Str.html">init</a>(tf:<a class="type-details-link" href="type-TestFail.html">TestFail</a>, message:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-TextDocNode-Str.html">init</a>(tdn:<a class="type-details-link" href="type-TextDocNode.html">TextDocNode</a>, text:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -778,6 +803,9 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-ord-Str-Int.html">ord</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Get character (byte) ordinal value. Throws InvalidArgument if idx is not pointing into s.
@@ -803,6 +831,21 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL. KVS (key-value separator) hint for parse()
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL. FS (field separator) hint for parse()
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Handle fields_names hint - run parse() and make Arr[Hash] from Arr[Arr] using provided fields_names
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
@@ -863,6 +906,9 @@
 							<section class="type-method-impl-desc">
 							Replace all occurrences of r
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-req_prop-ResDef-Str-Hash.html">req_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-require-Str.html">require</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -979,6 +1025,12 @@
 							<a class="method-impl-details-link" href="method-impl-Type-Str-Any-Arr.html">Type</a>(t:<a class="type-details-link" href="type-Str.html">Str</a>, doc:<a class="type-details-link" href="type-Any.html">Any</a>, parents:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							<section class="type-method-impl-desc">
 							Type constructor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-warn-Str.html">warn</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<section class="type-method-impl-desc">
+							Write error message to standard error.
 							</section>
 							</section>
 							<section class="type-method-impl">

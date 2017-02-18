@@ -57,6 +57,13 @@ echo(x)
 						</section>
 						</section>
 						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Hash-HashLike.html">Hash</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>)
+						<section class="type-method-impl-desc">
+						Get the underlying Hash with all the keys/values of the HashLike.
+						Note: the returned value is not a copy.
+						</section>
+						</section>
+						<section class="type-method-impl">
 						<a class="method-impl-details-link" href="method-impl-Hash-Arr.html">Hash</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 						<section class="type-method-impl-desc">
 						Create a Hash from Arr of Arr[2]
@@ -147,6 +154,12 @@ echo(x)
 							<a class="method-impl-details-link" href="method-impl-assert_hash_keys_values-Any-Hash-Any.html">assert_hash_keys_values</a>(actual:<a class="type-details-link" href="type-Any.html">Any</a>, expected:<a class="type-details-link" href="type-Hash.html">Hash</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=null)
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Box-Hash-Any.html">Box</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Convert hash value indexed by the given key to a Box
+							</section>
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-cmp-Hash-Hash.html">cmp</a>(a:<a class="type-details-link" href="type-Hash.html">Hash</a>, b:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Compare hashes
@@ -169,6 +182,30 @@ echo(x)
 							<section class="type-method-impl-desc">
 							Count number of key-value pairs in Hash that satisfy the predicate.
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-ResDef-Int-Hash.html">create</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-Vpc-Hash.html">create</a>(rd:<a class="type-details-link" href="type-Vpc.html">Vpc</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-Igw-Hash.html">create</a>(rd:<a class="type-details-link" href="type-Igw.html">Igw</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-SecGroup-Hash.html">create</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-Subnet-Hash.html">create</a>(rd:<a class="type-details-link" href="type-Subnet.html">Subnet</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-Instance-Hash.html">create</a>(rd:<a class="type-details-link" href="type-Instance.html">Instance</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-Elb-Hash.html">create</a>(rd:<a class="type-details-link" href="type-Elb.html">Elb</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-create-RecordSet-Hash.html">create</a>(rd:<a class="type-details-link" href="type-RecordSet.html">RecordSet</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-del-Hash-Any.html">del</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -250,10 +287,13 @@ echo(x)
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-ResDef-Any-Hash.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, anchor:<a class="type-details-link" href="type-Any.html">Any</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<a class="method-impl-details-link" href="method-impl-init-HashLike-Hash.html">init</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, h:<a class="type-details-link" href="type-Hash.html">Hash</a>=null)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-Res-ResDef-Hash.html">init</a>(r:<a class="type-details-link" href="type-Res.html">Res</a>, def:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-init-ResDef-Hash.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, _ngs_tags:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-init-HashIter-Hash.html">init</a>(i:<a class="type-details-link" href="type-HashIter.html">HashIter</a>, h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
@@ -319,6 +359,9 @@ echo(x)
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Attempt to parse JSON. Uses decode_json().
@@ -326,6 +369,21 @@ echo(x)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL. KVS (key-value separator) hint for parse()
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							EXPERIMENTAL. FS (field separator) hint for parse()
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Handle fields_names hint - run parse() and make Arr[Hash] from Arr[Arr] using provided fields_names
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-parse-Str-Hash.html">parse</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)
@@ -343,15 +401,12 @@ echo(x)
 							<a class="method-impl-details-link" href="method-impl-push-Table-Hash.html">push</a>(t:<a class="type-details-link" href="type-Table.html">Table</a>, row_hash:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-req_prop-ResDef-Str-Hash.html">req_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-sortk-Hash-Fun.html">sortk</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, lte:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Sort Hash by keys
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-stdlib_aws_filters-Hash.html">stdlib_aws_filters</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
-							<section class="type-method-impl-desc">
-							Convert Hash with AWS filters to command line arguments
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -391,21 +446,30 @@ echo(x)
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-VpcRes-Hash.html">update</a>(r:<a class="type-details-link" href="type-VpcRes.html">VpcRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-IgwRes-Hash.html">update</a>(r:<a class="type-details-link" href="type-IgwRes.html">IgwRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-SecGroupRes-Hash.html">update</a>(sg:<a class="type-details-link" href="type-SecGroupRes.html">SecGroupRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-SubnetRes-Hash.html">update</a>(r:<a class="type-details-link" href="type-SubnetRes.html">SubnetRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-InstanceRes-Hash.html">update</a>(instance:<a class="type-details-link" href="type-InstanceRes.html">InstanceRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-ElbRes-Hash.html">update</a>(elb:<a class="type-details-link" href="type-ElbRes.html">ElbRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-update-RecordSetRes-Hash.html">update</a>(rrset:<a class="type-details-link" href="type-RecordSetRes.html">RecordSetRes</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-values-Hash.html">values</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							<section class="type-method-impl-desc">
 							Get Hash values as an array
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-without-Hash-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Filter out specific key
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-without-Hash-Any-Any.html">without</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, without_k:<a class="type-details-link" href="type-Any.html">Any</a>, without_v:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Filter out specific key-value pair
 							</section>
 							</section>
 					<!-- type methods end -->

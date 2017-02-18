@@ -13,20 +13,47 @@
 			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
 				<section class="method-impl-content">
 				Attempt to parse JSON. Uses decode_json().
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L3116" style="source-link">stdlib.ngs:3116</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3167" style="source-link">stdlib.ngs:3167</a></section>
 				</section>
 			</section>
 			<section class="method-impl">
 			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
 				<section class="method-impl-content">
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L3123" style="source-link">stdlib.ngs:3123</a></section>
+				EXPERIMENTAL. KVS (key-value separator) hint for parse()
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3176" style="source-link">stdlib.ngs:3176</a></section>
+				<h4 id="impl-parse-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">parse('a b\nc d', {'KVS': ' '}) == {'a': 'b', 'c': 'd'}</pre>
+				</section>
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
+				<section class="method-impl-content">
+				EXPERIMENTAL. FS (field separator) hint for parse()
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3185" style="source-link">stdlib.ngs:3185</a></section>
+				<h4 id="impl-parse-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">parse('a b\nc d', {'FS': ' '})  # [['a', 'b'], ['c', 'd']]</pre>
+				</section>
+				</section>
+			</section>
+			<section class="method-impl">
+			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
+				<section class="method-impl-content">
+				Handle fields_names hint - run parse() and make Arr[Hash] from Arr[Arr] using provided fields_names
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3194" style="source-link">stdlib.ngs:3194</a></section>
+				<h4 id="impl-parse-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">backup_list = fetch('backup.list', {'FS': ' ', 'fields_names': %[env role]})</pre>
+				</section>
 				</section>
 			</section>
 			<section class="method-impl">
 			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
 				<section class="method-impl-content">
 				Parse the output of "aws" command. Extracts the array (see "s" below"). For "describe-instances", flattens the instance list.
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L3185" style="source-link">stdlib.ngs:3185</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3258" style="source-link">stdlib.ngs:3258</a></section>
 				<h4 class="param-header">s</h4>
 				<section class="method-param-content">
 				Str containing JSON with a Hash at top level with exactly one Arr as value
@@ -45,7 +72,7 @@
 			<h3 class="method-impl-header">parse(s:<a class="type-details-link" href="type-Str.html">Str</a>, hints:<a class="type-details-link" href="type-Hash.html">Hash</a>)</h3>
 				<section class="method-impl-content">
 				Parse the output of "find" command which does not use "-printf". Handles "-print0".
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/f94555a14cd6229d9e0959dc25cfad3460ffab74/lib/stdlib.ngs#L3215" style="source-link">stdlib.ngs:3215</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/ef0ec5c819798b79a0470ffb4b99476d03146750/lib/stdlib.ngs#L3288" style="source-link">stdlib.ngs:3288</a></section>
 				<h4 class="param-header">hints</h4>
 				<section class="method-param-content">
 				hints.process.command.argv[0] must be 'find'
