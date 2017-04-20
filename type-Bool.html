@@ -41,6 +41,18 @@
 						</section>
 						</section>
 						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Bool-ArrDiff.html">Bool</a>(d:<a class="type-details-link" href="type-ArrDiff.html">ArrDiff</a>)
+						<section class="type-method-impl-desc">
+						Whether there is a difference
+						</section>
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Bool-HashDiff.html">Bool</a>(d:<a class="type-details-link" href="type-HashDiff.html">HashDiff</a>)
+						<section class="type-method-impl-desc">
+						Whether there is a difference
+						</section>
+						</section>
+						<section class="type-method-impl">
 						<a class="method-impl-details-link" href="method-impl-Bool-Path.html">Bool</a>(p:<a class="type-details-link" href="type-Path.html">Path</a>)
 						<section class="type-method-impl-desc">
 						Checks whether the path is accessible using access(2) and F_OK.
@@ -60,6 +72,9 @@
 						</section>
 						<section class="type-method-impl">
 						<a class="method-impl-details-link" href="method-impl-Bool-ConstIter.html">Bool</a>(i:<a class="type-details-link" href="type-ConstIter.html">ConstIter</a>)
+						</section>
+						<section class="type-method-impl">
+						<a class="method-impl-details-link" href="method-impl-Bool-RangeIter.html">Bool</a>(i:<a class="type-details-link" href="type-RangeIter.html">RangeIter</a>)
 						</section>
 						<section class="type-method-impl">
 						<a class="method-impl-details-link" href="method-impl-Bool-ArrIter.html">Bool</a>(i:<a class="type-details-link" href="type-ArrIter.html">ArrIter</a>)
@@ -96,6 +111,21 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-code-Bool.html">code</a>(b:<a class="type-details-link" href="type-Bool.html">Bool</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
+							<section class="type-method-impl-desc">
+							Compare arrays. Warning: Hash is used so internal Hash keys comparison is used, not ==
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-Int-Bool.html">Int</a>(b:<a class="type-details-link" href="type-Bool.html">Bool</a>)
 							<section class="type-method-impl-desc">
 							Convert Bool to int.
@@ -105,6 +135,12 @@
 							<a class="method-impl-details-link" href="method-impl-not-Bool.html">not</a>(x:<a class="type-details-link" href="type-Bool.html">Bool</a>)
 							<section class="type-method-impl-desc">
 							Invert boolean
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-retry-Int-Any-Fun-Any-Bool-Any-Fun-Fun-Any-Fun.html">retry</a>(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Bool.html">Bool</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>=&lt;retry&gt;, progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
+							<section class="type-method-impl-desc">
+							Retry. Executes given "body" "times" times. Throws RetryFail if all calls fail and fail_cb is not provided.
 							</section>
 							</section>
 							<section class="type-method-impl">

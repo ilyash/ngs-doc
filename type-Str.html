@@ -64,21 +64,15 @@
 						</section>
 						</section>
 						<section class="type-method-impl">
-						<a class="method-impl-details-link" href="method-impl-Str-ExclusiveRange.html">Str</a>(r:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
+						<a class="method-impl-details-link" href="method-impl-Str-Range.html">Str</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>)
 						<section class="type-method-impl-desc">
-						TODO
-						</section>
-						</section>
-						<section class="type-method-impl">
-						<a class="method-impl-details-link" href="method-impl-Str-InclusiveRange.html">Str</a>(r:<a class="type-details-link" href="type-InclusiveRange.html">InclusiveRange</a>)
-						<section class="type-method-impl-desc">
-						TODO
+						Convert range to human readable representation
 						</section>
 						</section>
 						<section class="type-method-impl">
 						<a class="method-impl-details-link" href="method-impl-Str-Str.html">Str</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 						<section class="type-method-impl-desc">
-						TODO
+						No-op constructor
 						</section>
 						</section>
 						<section class="type-method-impl">
@@ -340,7 +334,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-ExclusiveRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-NumRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-NumRange.html">NumRange</a>)
 							<section class="type-method-impl-desc">
 							Get substring
 							</section>
@@ -359,9 +353,9 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-ExclusiveRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Str-NumRange.html">[]</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-NumRange.html">NumRange</a>)
 							<section class="type-method-impl-desc">
-							Get a substring. Indexes in s are specified by ExclusiveRange.
+							Get a substring. Indexes in s are specified by NumRange.
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -372,10 +366,13 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Str-ExclusiveRange-Str.html">[]=</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>, replacement:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Str-NumRange-Str.html">[]=</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, range:<a class="type-details-link" href="type-NumRange.html">NumRange</a>, replacement:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Change substring
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Arg-Str.html">Arg</a>(x:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-ArgvMatcher-Str-Any-Closure.html">ArgvMatcher</a>(option:<a class="type-details-link" href="type-Str.html">Str</a>, value:<a class="type-details-link" href="type-Any.html">Any</a>, f:<a class="type-details-link" href="type-Closure.html">Closure</a>)
@@ -390,7 +387,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-assert_resolvable-Str-Any-Any-Any.html">assert_resolvable</a>(h:<a class="type-details-link" href="type-Str.html">Str</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>='Resolve host', times:<a class="type-details-link" href="type-Any.html">Any</a>=45, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=2)
+							<a class="method-impl-details-link" href="method-impl-assert_resolvable-Str-Any-Any-Any-Any.html">assert_resolvable</a>(h:<a class="type-details-link" href="type-Str.html">Str</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=Resolve host, times:<a class="type-details-link" href="type-Any.html">Any</a>=45, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=2, check:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-basename-Str.html">basename</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -485,6 +482,12 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-debug-Str.html">debug</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
+							<section class="type-method-impl-desc">
+							Same as debug('default', s)
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-debug-Str-Str.html">debug</a>(facility:<a class="type-details-link" href="type-Str.html">Str</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Debug to standard error.
 							"DEBUG" environment variable must be non-empty string to activate. Otherwise nothing is outputted.
@@ -602,7 +605,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-glob-Str-Any.html">glob</a>(pattern:<a class="type-details-link" href="type-Str.html">Str</a>, start_dir:<a class="type-details-link" href="type-Any.html">Any</a>='.')
+							<a class="method-impl-details-link" href="method-impl-glob-Str-Any.html">glob</a>(pattern:<a class="type-details-link" href="type-Str.html">Str</a>, start_dir:<a class="type-details-link" href="type-Any.html">Any</a>=.)
 							<section class="type-method-impl-desc">
 							Work in progress, do not use!
 							</section>
@@ -659,7 +662,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-ArrLike-Str.html">init</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>='items')
+							<a class="method-impl-details-link" href="method-impl-init-ArrLike-Str.html">init</a>(al:<a class="type-details-link" href="type-ArrLike.html">ArrLike</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>=items)
 							<section class="type-method-impl-desc">
 							ArrLike constructor
 							</section>
@@ -689,16 +692,16 @@
 							<a class="method-impl-details-link" href="method-impl-init-ResDef-Str.html">init</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, _ngs_name:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-SecGroup-Str-Any.html">init</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, vpc_id:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<a class="method-impl-details-link" href="method-impl-init-SecGroup-Str-Any.html">init</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, VpcId:<a class="type-details-link" href="type-Any.html">Any</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Str-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Str-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=:)
 							<section class="type-method-impl-desc">
 							DelimStr constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=:)
 							<section class="type-method-impl-desc">
 							DelimStr constructor
 							</section>
@@ -744,7 +747,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-limit-Str-Int-Str.html">limit</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>='')
+							<a class="method-impl-details-link" href="method-impl-limit-Str-Int-Str.html">limit</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>=)
 							<section class="type-method-impl-desc">
 							Truncate a string if necessary so it would have maximum n characters (currently bytes).
 							</section>
@@ -780,6 +783,9 @@
 							<a class="method-impl-details-link" href="method-impl-log-ResDef-Str-Str.html">log</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, method:<a class="type-details-link" href="type-Str.html">Str</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-log-Res-Str-Str.html">log</a>(r:<a class="type-details-link" href="type-Res.html">Res</a>, method:<a class="type-details-link" href="type-Str.html">Str</a>, s:<a class="type-details-link" href="type-Str.html">Str</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-log_test_ok-Str.html">log_test_ok</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
@@ -804,6 +810,15 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Get optional resource property, looking up in properties first and then in anchor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash-Fun.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Run cb with optional resource property if it exists, uses opt_prop(ResDef, Str, Hash)
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-ord-Str-Int.html">ord</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -909,6 +924,9 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-req_prop-ResDef-Str-Hash.html">req_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Get resource property, looking up in properties first and then in anchor
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-require-Str.html">require</a>(fname:<a class="type-details-link" href="type-Str.html">Str</a>)
@@ -967,7 +985,9 @@
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-status-Str.html">status</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
-							Send status to standard error. Later status output will be treated specially by the shell. It will have suitable representation in the UI. Use status() when it's semantically a status - a task that's being done.
+							Send status to standard error.
+							Later status output will be treated specially by the shell. It will have suitable representation in the UI.
+							Use status() when it's semantically a status - a task that's being done.
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -977,27 +997,9 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-store-Str-Int.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fd:<a class="type-details-link" href="type-Int.html">Int</a>)
-							<section class="type-method-impl-desc">
-							Write data to a file referenced by file descriptor.
-							WARNING: Incomplete implementation.
-							TODO: handle errors, throw exceptions.
-							TODO: handle possible EINTR.
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-store-Str-Pipe.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, p:<a class="type-details-link" href="type-Pipe.html">Pipe</a>)
-							<section class="type-method-impl-desc">
-							Write to Pipe. TODO: document if it throws.
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-store-Str-Str.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fname:<a class="type-details-link" href="type-Str.html">Str</a>)
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-Str-Str.html">Str</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
-							TODO
+							No-op constructor
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -1038,6 +1040,24 @@
 							<section class="type-method-impl-desc">
 							Get string with all occurrences of r removed
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-write-Str-Int.html">write</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fd:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Write data to a file referenced by file descriptor.
+							WARNING: Incomplete implementation.
+							TODO: handle errors, throw exceptions.
+							TODO: handle possible EINTR.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-write-Str-Pipe.html">write</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, p:<a class="type-details-link" href="type-Pipe.html">Pipe</a>)
+							<section class="type-method-impl-desc">
+							Write to Pipe. TODO: document if it throws.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-write-Str-Str.html">write</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fname:<a class="type-details-link" href="type-Str.html">Str</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%257E-Str-Str.html">~</a>(a:<a class="type-details-link" href="type-Str.html">Str</a>, b:<a class="type-details-link" href="type-Str.html">Str</a>)

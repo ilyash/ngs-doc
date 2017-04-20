@@ -24,15 +24,29 @@
 							 - 
 							Array - list of items accessed by zero-based index
 						</li>
+						<li><a class="type-details-link" href="type-ArrIter.html">ArrIter</a>
+							 - 
+							Arr (array) iterator.
+						</li>
 						<li><a class="type-details-link" href="type-ArrLike.html">ArrLike</a>
 							 - 
 							Parent type for user-defined types with array-like behaviour. Use in cases when you would like to inherit from built-in Arr. Inheriting from built-ins is not possible for now.
+						</li>
+						<li><a class="type-details-link" href="type-ConstIter.html">ConstIter</a>
+							 - 
+							Iterator that returns given value forever.
 						</li>
 						<li><a class="type-details-link" href="type-Int.html">Int</a>
 							 - 
 							Integer type. On 64 bit platforms it's a 61 bit signed integer
 						</li>
-						<li><a class="type-details-link" href="type-Range.html">Range</a>
+						<li><a class="type-details-link" href="type-NumRange.html">NumRange</a>
+						</li>
+						<li><a class="type-details-link" href="type-RangeIter.html">RangeIter</a>
+							 - 
+							NOT IMPLEMENTED YET. Iterator that returns values in the given range
+						</li>
+						<li><a class="type-details-link" href="type-ResDef.html">ResDef</a>
 						</li>
 						<li><a class="type-details-link" href="type-Str.html">Str</a>
 							 - 
@@ -46,16 +60,16 @@
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-all-Eachable1-Any.html">all</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
-							<section class="type-method-impl-desc">
-							Check whether all elements in arr satisfy the given predicate.
-							</section>
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-any-Eachable1-Any.html">any</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Check whether there is any element in arr that satisfies the given predicate.
 							TODO: Make it work on anything with Eachable2 too.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Arr-Eachable1.html">Arr</a>(r:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>)
+							<section class="type-method-impl-desc">
+							Convert range to an array
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -78,6 +92,19 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-first-Eachable1-Any.html">first</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Any.html">Any</a>)
+							<section class="type-method-impl-desc">
+							Find first element in e that satisfies the predicate.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-first-Eachable1.html">first</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>)
+							<section class="type-method-impl-desc">
+							Find first element in e that satisfies Bool(e) == true.
+							Exactly same as first(e, identity).
+							</section>
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-get-Eachable1-Str.html">get</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>)
 							<section class="type-method-impl-desc">
 							Return array made of given attribute of each element of given Eachable1 where present
@@ -93,7 +120,7 @@
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-none-Eachable1-Fun.html">none</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
-							Check that there is no element in e that satisfies the given predicate. Exactly same as not(any(arr, predicate)) .
+							Check that there is no element in e that satisfies the given predicate. Exactly same as not(any(e, predicate)) .
 							</section>
 							</section>
 							<section class="type-method-impl">

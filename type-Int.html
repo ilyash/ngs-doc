@@ -17,6 +17,8 @@
 							 - 
 							Eachable which each() calls the callback with one argument
 						</li>
+						<li><a class="type-details-link" href="type-Num.html">Num</a>
+						</li>
 				</ul>
 					<!-- type constructors start -->
 					<h3>Constructors</h3>
@@ -170,6 +172,9 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Arg-Int.html">Arg</a>(x:<a class="type-details-link" href="type-Int.html">Int</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-assert_exit_code-Process-Int-Any.html">assert_exit_code</a>(p:<a class="type-details-link" href="type-Process.html">Process</a>, expected:<a class="type-details-link" href="type-Int.html">Int</a>, title:<a class="type-details-link" href="type-Any.html">Any</a>=null)
 							</section>
 							<section class="type-method-impl">
@@ -290,7 +295,7 @@
 							<a class="method-impl-details-link" href="method-impl-column-Table-Int.html">column</a>(t:<a class="type-details-link" href="type-Table.html">Table</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-create-ResDef-Int-Hash.html">create</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<a class="method-impl-details-link" href="method-impl-create-ResDef-Int-Hash.html">create</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, **props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-drop-Iter-Int.html">drop</a>(i:<a class="type-details-link" href="type-Iter.html">Iter</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -403,7 +408,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-limit-Str-Int-Str.html">limit</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>='')
+							<a class="method-impl-details-link" href="method-impl-limit-Str-Int-Str.html">limit</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, marker:<a class="type-details-link" href="type-Str.html">Str</a>=)
 							<section class="type-method-impl-desc">
 							Truncate a string if necessary so it would have maximum n characters (currently bytes).
 							</section>
@@ -488,7 +493,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-retry-Int-Any-Fun-Any-Any-Any-Fun-Fun-Any-Fun.html">retry</a>(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Any.html">Any</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>='&lt;retry&gt;', progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
+							<a class="method-impl-details-link" href="method-impl-retry-Int-Any-Fun-Any-Bool-Any-Fun-Fun-Any-Fun.html">retry</a>(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Bool.html">Bool</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>=&lt;retry&gt;, progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Retry. Executes given "body" "times" times. Throws RetryFail if all calls fail and fail_cb is not provided.
 							</section>
@@ -503,15 +508,6 @@
 							<a class="method-impl-details-link" href="method-impl-srand-Int.html">srand</a>(seed:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
 							Seed random generator. Uses SRANDOM(3).
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-store-Str-Int.html">store</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fd:<a class="type-details-link" href="type-Int.html">Int</a>)
-							<section class="type-method-impl-desc">
-							Write data to a file referenced by file descriptor.
-							WARNING: Incomplete implementation.
-							TODO: handle errors, throw exceptions.
-							TODO: handle possible EINTR.
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -558,6 +554,15 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-to_exit_code-Int.html">to_exit_code</a>(n:<a class="type-details-link" href="type-Int.html">Int</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-write-Str-Int.html">write</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, fd:<a class="type-details-link" href="type-Int.html">Int</a>)
+							<section class="type-method-impl-desc">
+							Write data to a file referenced by file descriptor.
+							WARNING: Incomplete implementation.
+							TODO: handle errors, throw exceptions.
+							TODO: handle possible EINTR.
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%257E-Str-RegExp-Int-Int.html">~</a>(s:<a class="type-details-link" href="type-Str.html">Str</a>, r:<a class="type-details-link" href="type-RegExp.html">RegExp</a>, offset:<a class="type-details-link" href="type-Int.html">Int</a>=0, options:<a class="type-details-link" href="type-Int.html">Int</a>=0)

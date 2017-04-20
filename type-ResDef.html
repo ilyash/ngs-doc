@@ -10,16 +10,29 @@
 		<section class="type">
 			<h2 id="type-ResDef" class="type-header">ResDef</h2>
 			<section class="type-content">
+				<h3 class="type-parents-header">Parent types</h3>
+				<ul>
+						<li><a class="type-details-link" href="type-Eachable1.html">Eachable1</a>
+							 - 
+							Eachable which each() calls the callback with one argument
+						</li>
+				</ul>
 					<!-- type methods start -->
 					<h3>Methods</h3>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-converge-ResDef-Hash.html">converge</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, **props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-create-ResDef-Int-Hash.html">create</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<a class="method-impl-details-link" href="method-impl-create-ResDef-Int-Hash.html">create</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>, **props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-created-ResDef-Arr-Hash.html">created</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, resources:<a class="type-details-link" href="type-Arr.html">Arr</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-delete-ResDef.html">delete</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-each-ResDef-Fun.html">each</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-expect-ResDef-Int.html">expect</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, e:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -47,9 +60,21 @@
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Get optional resource property, looking up in properties first and then in anchor
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash-Fun.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Run cb with optional resource property if it exists, uses opt_prop(ResDef, Str, Hash)
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-req_prop-ResDef-Str-Hash.html">req_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							<section class="type-method-impl-desc">
+							Get resource property, looking up in properties first and then in anchor
+							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-Str-ResDef.html">Str</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- methods start -->
+	<h1>Methods</h1>
+		<section class="method">
+		<h2 id="method-[]" class="method-header">[]<a class="section-link" title="Permalink to this definition" href="#method-[]">¶</a></h2>
+			<section class="method-impl">
+			<h3 class="method-impl-header">[](arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, r:<a class="type-details-link" href="type-PredRange.html">PredRange</a>)</h3>
+				<section class="method-impl-content">
+				Extract array elements between the element that matches r.start and the element that matches r.end .
+				Starting and ending elements are optionally included, depending on r.include_start and r.include_end .
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/10b1097c57903bfcd974b41accbbc7479c671144/lib/stdlib.ngs#L1339" style="source-link">stdlib.ngs:1339</a></section>
+				<h4 id="impl-[]-example" class="example-header">Example</h4>
+				<section class="method-example-content">
+				<pre class="example">%[a1 a2 b1 b2][/^a/../^b/]   # ['a2']
+%[a1 a2 b1 b2][/^a/.../^b/]  # ['a1', 'a2', 'b1']
+%[a1 a2 b1 b2][/^a/.../^x/]  # IndexNotFound exception</pre>
+				</section>
+				</section>
+			</section>
+		</section>
+	<!-- methods end -->
+</body>
+</html>

@@ -52,7 +52,7 @@ echo(x[10])
 						</section>
 						</section>
 						<section class="type-method-impl">
-						<a class="method-impl-details-link" href="method-impl-Arr-Range.html">Arr</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>)
+						<a class="method-impl-details-link" href="method-impl-Arr-Eachable1.html">Arr</a>(r:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>)
 						<section class="type-method-impl-desc">
 						Convert range to an array
 						</section>
@@ -75,6 +75,13 @@ echo(x[10])
 					<!-- type constructors end -->
 					<!-- type methods start -->
 					<h3>Methods</h3>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-%2522%2524%252A%2522-Arr.html">"$*"</a>(components:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+							<section class="type-method-impl-desc">
+							String expansion handler. Called automatically for every double-quoted string that
+							has $* components.
+							</section>
+							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%252A-Arr-Int.html">*</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, n:<a class="type-details-link" href="type-Int.html">Int</a>)
 							<section class="type-method-impl-desc">
@@ -125,7 +132,7 @@ echo(x[10])
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-ExclusiveRange.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-NumRange.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, range:<a class="type-details-link" href="type-NumRange.html">NumRange</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-Int.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>)
@@ -137,9 +144,16 @@ echo(x[10])
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-ExclusiveRange.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, r:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-NumRange.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, r:<a class="type-details-link" href="type-NumRange.html">NumRange</a>)
 							<section class="type-method-impl-desc">
-							Get array elements at specified indexes. Indexes specified by ExclusiveRange.
+							Get array elements at specified indexes. Indexes specified by NumRange.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-%255B%255D-Arr-PredRange.html">[]</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, r:<a class="type-details-link" href="type-PredRange.html">PredRange</a>)
+							<section class="type-method-impl-desc">
+							Extract array elements between the element that matches r.start and the element that matches r.end .
+							Starting and ending elements are optionally included, depending on r.include_start and r.include_end .
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -149,7 +163,7 @@ echo(x[10])
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Arr-ExclusiveRange-Arr.html">[]=</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, range:<a class="type-details-link" href="type-ExclusiveRange.html">ExclusiveRange</a>, replacement:<a class="type-details-link" href="type-Arr.html">Arr</a>)
+							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Arr-NumRange-Arr.html">[]=</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, range:<a class="type-details-link" href="type-NumRange.html">NumRange</a>, replacement:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-%255B%255D%253D-Arr-Int-Any.html">[]=</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, idx:<a class="type-details-link" href="type-Int.html">Int</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
@@ -209,12 +223,6 @@ echo(x[10])
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-cmp-Arr-Arr.html">cmp</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>)
-							<section class="type-method-impl-desc">
-							Compare arrays. Warning: Hash is used so internal Hash keys comparison is used, not ==
-							</section>
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-code-Arr.html">code</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							<section class="type-method-impl-desc">
 							Convert an array to NGS code that would produce the array when executed. Not fully functional yet.
@@ -224,13 +232,6 @@ echo(x[10])
 							<a class="method-impl-details-link" href="method-impl-collector-Arr-Fun.html">collector</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, body:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Defines collector { ... collect(...) ... } behaviour for arrays
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-compare-Arr-Arr.html">compare</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>)
-							<section class="type-method-impl-desc">
-							Like cmp() but compare arrays without using Hash so that '==' is used for comparison
-							and not internal '===' for Hash keys. Much slower than cmp().
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -250,16 +251,25 @@ echo(x[10])
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-created-ResDef-Arr-Hash.html">created</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, resources:<a class="type-details-link" href="type-Arr.html">Arr</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>)
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-dflt-Arr-Any-Any.html">dflt</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, k:<a class="type-details-link" href="type-Any.html">Any</a>, v:<a class="type-details-link" href="type-Any.html">Any</a>)
 							<section class="type-method-impl-desc">
 							Set an attribute on instances if it's not already set
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-die-Arr-Any.html">die</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, exit_code:<a class="type-details-link" href="type-Any.html">Any</a>=1)
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
 							<section class="type-method-impl-desc">
-							Write messages in a to standard error and exit
+							Compare arrays. Warning: Hash is used so internal Hash keys comparison is used, not ==
 							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-Diff-Arr-Arr-Bool.html">Diff</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, b:<a class="type-details-link" href="type-Arr.html">Arr</a>, full:<a class="type-details-link" href="type-Bool.html">Bool</a>=false)
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-each-Arr-Fun.html">each</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
@@ -279,19 +289,6 @@ echo(x[10])
 							<a class="method-impl-details-link" href="method-impl-each_idx_val-Arr-Fun.html">each_idx_val</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterates over the elements of arr, passing each in turn to cb along with index and args: cb(INDEX, ITEM)
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-first-Arr.html">first</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>)
-							<section class="type-method-impl-desc">
-							Find first true value
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-first-Arr-Fun.html">first</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
-							<section class="type-method-impl-desc">
-							Find first value that satisfies the predicate.
-							TODO: Make it work on anything with each() method
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -364,7 +361,7 @@ echo(x[10])
 							<a class="method-impl-details-link" href="method-impl-init-SecGroup-Arr.html">init</a>(rd:<a class="type-details-link" href="type-SecGroup.html">SecGroup</a>, anchor:<a class="type-details-link" href="type-Arr.html">Arr</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=':')
+							<a class="method-impl-details-link" href="method-impl-init-DelimStr-Arr-Str.html">init</a>(ds:<a class="type-details-link" href="type-DelimStr.html">DelimStr</a>, a:<a class="type-details-link" href="type-Arr.html">Arr</a>, delim:<a class="type-details-link" href="type-Str.html">Str</a>=:)
 							<section class="type-method-impl-desc">
 							DelimStr constructor
 							</section>

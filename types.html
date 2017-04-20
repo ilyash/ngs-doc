@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="methods.css" type="text/css" />
+</head>
+<body>
+	<!-- types start -->
+	<h1>Types</h1>
+		<section class="type">
+			<h2 id="type-Absent" class="type-header"><a class="type-details-link" href="type-Absent.html">Absent</a></h2>
+			<section class="type-content">
+				Represents a target configuration list item that must be absent
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Any" class="type-header"><a class="type-details-link" href="type-Any.html">Any</a></h2>
+			<section class="type-content">
+				Any type is parent type of all types. 
+				All instances in NGS are of type Any. 
+				F(x) ... is same as F(x:Any) ...
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ArgsMismatch" class="type-header"><a class="type-details-link" href="type-ArgsMismatch.html">ArgsMismatch</a></h2>
+			<section class="type-content">
+				Represents calling failure due to arguments vs parameters mismatch.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Arr" class="type-header"><a class="type-details-link" href="type-Arr.html">Arr</a></h2>
+			<section class="type-content">
+				Array - list of items accessed by zero-based index
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ArrDiff" class="type-header"><a class="type-details-link" href="type-ArrDiff.html">ArrDiff</a></h2>
+			<section class="type-content">
+				Represents difference of elements between two arrays (order unimportant)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ArrIter" class="type-header"><a class="type-details-link" href="type-ArrIter.html">ArrIter</a></h2>
+			<section class="type-content">
+				Arr (array) iterator.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ArrLike" class="type-header"><a class="type-details-link" href="type-ArrLike.html">ArrLike</a></h2>
+			<section class="type-content">
+				Parent type for user-defined types with array-like behaviour. Use in cases when you would like to inherit from built-in Arr. Inheriting from built-ins is not possible for now.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-AssertFail" class="type-header"><a class="type-details-link" href="type-AssertFail.html">AssertFail</a></h2>
+			<section class="type-content">
+				Represents failed asserttion, thrown by assert(). Should be used to catch programming errors.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-AttrNotFound" class="type-header"><a class="type-details-link" href="type-AttrNotFound.html">AttrNotFound</a></h2>
+			<section class="type-content">
+				Represents an error of reading non-existent attribute of an object.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Backtrace" class="type-header"><a class="type-details-link" href="type-Backtrace.html">Backtrace</a></h2>
+			<section class="type-content">
+				Represents stack trace
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-BasicType" class="type-header"><a class="type-details-link" href="type-BasicType.html">BasicType</a></h2>
+			<section class="type-content">
+				Type for builtin types. F f(t:BasicType) ...; f(Arr)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-BasicTypeInstance" class="type-header"><a class="type-details-link" href="type-BasicTypeInstance.html">BasicTypeInstance</a></h2>
+			<section class="type-content">
+				A type for instances of builtin types. Children types are not displayed as this type is specially optimized.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-BlockDevice" class="type-header"><a class="type-details-link" href="type-BlockDevice.html">BlockDevice</a></h2>
+			<section class="type-content">
+				Represents a block device in a file system (S_IFBLK)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Bool" class="type-header"><a class="type-details-link" href="type-Bool.html">Bool</a></h2>
+			<section class="type-content">
+				Boolean type. The only instances are true and false
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Box" class="type-header"><a class="type-details-link" href="type-Box.html">Box</a></h2>
+			<section class="type-content">
+				A box which might (FullBox) or might not (EmptyBox) contain a value
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-C_DIR" class="type-header"><a class="type-details-link" href="type-C_DIR.html">C_DIR</a></h2>
+			<section class="type-content">
+				C language DIR type for low level directory operations. Please do not use directly unless you are extending stdlib.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-c_ffi_cif" class="type-header"><a class="type-details-link" href="type-c_ffi_cif.html">c_ffi_cif</a></h2>
+			<section class="type-content">
+				Unfinished feature. Don't use!
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-c_ffi_type" class="type-header"><a class="type-details-link" href="type-c_ffi_type.html">c_ffi_type</a></h2>
+			<section class="type-content">
+				Unfinished feature. Don't use!
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-c_pthread_attr_t" class="type-header"><a class="type-details-link" href="type-c_pthread_attr_t.html">c_pthread_attr_t</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-c_pthread_mutex_t" class="type-header"><a class="type-details-link" href="type-c_pthread_mutex_t.html">c_pthread_mutex_t</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-c_pthread_t" class="type-header"><a class="type-details-link" href="type-c_pthread_t.html">c_pthread_t</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CallFail" class="type-header"><a class="type-details-link" href="type-CallFail.html">CallFail</a></h2>
+			<section class="type-content">
+				Represents calling failure.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CException" class="type-header"><a class="type-details-link" href="type-CException.html">CException</a></h2>
+			<section class="type-content">
+				Base type for exceptions arising from errors returned by calling C functions
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CharDevice" class="type-header"><a class="type-details-link" href="type-CharDevice.html">CharDevice</a></h2>
+			<section class="type-content">
+				Represents a character device in a file system (S_IFCHR)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CLib" class="type-header"><a class="type-details-link" href="type-CLib.html">CLib</a></h2>
+			<section class="type-content">
+				C library, result of dlopen(), not used yet
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Closure" class="type-header"><a class="type-details-link" href="type-Closure.html">Closure</a></h2>
+			<section class="type-content">
+				Closure type. User-defined functions/methods are Closures
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Command" class="type-header"><a class="type-details-link" href="type-Command.html">Command</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CompileFail" class="type-header"><a class="type-details-link" href="type-CompileFail.html">CompileFail</a></h2>
+			<section class="type-content">
+				Represents a compilation error.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ConstIter" class="type-header"><a class="type-details-link" href="type-ConstIter.html">ConstIter</a></h2>
+			<section class="type-content">
+				Iterator that returns given value forever.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-CSym" class="type-header"><a class="type-details-link" href="type-CSym.html">CSym</a></h2>
+			<section class="type-content">
+				C symbol, result of dlsym(), not used yet
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-DelimStr" class="type-header"><a class="type-details-link" href="type-DelimStr.html">DelimStr</a></h2>
+			<section class="type-content">
+				EXPERIMENTAL. Delimited string. Showing ArrLike usage.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Diff" class="type-header"><a class="type-details-link" href="type-Diff.html">Diff</a></h2>
+			<section class="type-content">
+				Represents difference
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Dir" class="type-header"><a class="type-details-link" href="type-Dir.html">Dir</a></h2>
+			<section class="type-content">
+				Represents a directory in a file system (S_IFBLK)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-DirFail" class="type-header"><a class="type-details-link" href="type-DirFail.html">DirFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-DivisionByZero" class="type-header"><a class="type-details-link" href="type-DivisionByZero.html">DivisionByZero</a></h2>
+			<section class="type-content">
+				Represents an error of dividing by zero.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-DlopenFail" class="type-header"><a class="type-details-link" href="type-DlopenFail.html">DlopenFail</a></h2>
+			<section class="type-content">
+				Represents failure to open dynamically loaded library (feature is a work in progress).
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-DontKnowHowToCall" class="type-header"><a class="type-details-link" href="type-DontKnowHowToCall.html">DontKnowHowToCall</a></h2>
+			<section class="type-content">
+				Represents calling failure when it is not known how to call the given object.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Eachable" class="type-header"><a class="type-details-link" href="type-Eachable.html">Eachable</a></h2>
+			<section class="type-content">
+				Parent type of all types that have each() method
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Eachable1" class="type-header"><a class="type-details-link" href="type-Eachable1.html">Eachable1</a></h2>
+			<section class="type-content">
+				Eachable which each() calls the callback with one argument
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Eachable2" class="type-header"><a class="type-details-link" href="type-Eachable2.html">Eachable2</a></h2>
+			<section class="type-content">
+				Eachable which each() calls the callback with two arguments
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-EmptyArrayFail" class="type-header"><a class="type-details-link" href="type-EmptyArrayFail.html">EmptyArrayFail</a></h2>
+			<section class="type-content">
+				Represents an error of using an empty array for an operation that requires at least one element in the array.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-EmptyBox" class="type-header"><a class="type-details-link" href="type-EmptyBox.html">EmptyBox</a></h2>
+			<section class="type-content">
+				Represents absence of a value
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Error" class="type-header"><a class="type-details-link" href="type-Error.html">Error</a></h2>
+			<section class="type-content">
+				Represents an error. Usually more specific error types are used.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ExactPresence" class="type-header"><a class="type-details-link" href="type-ExactPresence.html">ExactPresence</a></h2>
+			<section class="type-content">
+				Represents a target configuration list item in a list
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Exception" class="type-header"><a class="type-details-link" href="type-Exception.html">Exception</a></h2>
+			<section class="type-content">
+				Represents exceptional situaution. All thrown things shouhld inherit Exception.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ExecutableNotFound" class="type-header"><a class="type-details-link" href="type-ExecutableNotFound.html">ExecutableNotFound</a></h2>
+			<section class="type-content">
+				Occurs when executable was not found in path or when executable was absolute or relative and was not found.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-FifoFile" class="type-header"><a class="type-details-link" href="type-FifoFile.html">FifoFile</a></h2>
+			<section class="type-content">
+				Represents a fifo file in a file system (S_IFIFO)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-File" class="type-header"><a class="type-details-link" href="type-File.html">File</a></h2>
+			<section class="type-content">
+				Represents a file in a file system (S_IFREG)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-FileIOFail" class="type-header"><a class="type-details-link" href="type-FileIOFail.html">FileIOFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-FullBox" class="type-header"><a class="type-details-link" href="type-FullBox.html">FullBox</a></h2>
+			<section class="type-content">
+				Represents presence of a value
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Fun" class="type-header"><a class="type-details-link" href="type-Fun.html">Fun</a></h2>
+			<section class="type-content">
+				Function type: an Array of Closures, a Closure, or a native method
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-GlobalNotFound" class="type-header"><a class="type-details-link" href="type-GlobalNotFound.html">GlobalNotFound</a></h2>
+			<section class="type-content">
+				Represents an error of accessing undefined global variable.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Hash" class="type-header"><a class="type-details-link" href="type-Hash.html">Hash</a></h2>
+			<section class="type-content">
+				Hash type. Maps unique keys to their values. 
+				Key-Value pairs are stored and iterated in insertion order.
+				Currently Hash type has several limitations: 
+				Hash keys are hashed using internal hash() function which can not be overwritten. 
+				The internal hash() function exposed to NGS code but adding implementations or setting "hash" to some other function 
+				will not affect operation of Hashes. 
+				Hash values are compared using internal is_equal() function which can not be overwritten. 
+				Both hash() and is_equal() currently handle only Int, Str and arbitrary objects. 
+				Comparison of arbitrary objects is done by comparing their addresses in memory.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-HashDiff" class="type-header"><a class="type-details-link" href="type-HashDiff.html">HashDiff</a></h2>
+			<section class="type-content">
+				Represents difference of elements between two hashes (order unimportant)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-HashIter" class="type-header"><a class="type-details-link" href="type-HashIter.html">HashIter</a></h2>
+			<section class="type-content">
+				EXPERIMENTAL Hash iterator.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-HashLike" class="type-header"><a class="type-details-link" href="type-HashLike.html">HashLike</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Hook" class="type-header"><a class="type-details-link" href="type-Hook.html">Hook</a></h2>
+			<section class="type-content">
+				Hook is a simple pub-sub
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ImplNotFound" class="type-header"><a class="type-details-link" href="type-ImplNotFound.html">ImplNotFound</a></h2>
+			<section class="type-content">
+				Represents calling failure when arguments do not match any method implementation.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-IndexNotFound" class="type-header"><a class="type-details-link" href="type-IndexNotFound.html">IndexNotFound</a></h2>
+			<section class="type-content">
+				Represents an error of out-of-bounds array index.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-InstantiatingAbstractType" class="type-header"><a class="type-details-link" href="type-InstantiatingAbstractType.html">InstantiatingAbstractType</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Int" class="type-header"><a class="type-details-link" href="type-Int.html">Int</a></h2>
+			<section class="type-content">
+				Integer type. On 64 bit platforms it's a 61 bit signed integer
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-InternalError" class="type-header"><a class="type-details-link" href="type-InternalError.html">InternalError</a></h2>
+			<section class="type-content">
+				Represents an error which is likely to be NGS implementation bug.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-InvalidArgument" class="type-header"><a class="type-details-link" href="type-InvalidArgument.html">InvalidArgument</a></h2>
+			<section class="type-content">
+				Represents an error of calling a method with incorrect argument.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Iter" class="type-header"><a class="type-details-link" href="type-Iter.html">Iter</a></h2>
+			<section class="type-content">
+				Iterator. Parent type for all specific iterator types.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-KeyNotFound" class="type-header"><a class="type-details-link" href="type-KeyNotFound.html">KeyNotFound</a></h2>
+			<section class="type-content">
+				Represents an error of accessing non-existent key in a hash.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-KillFail" class="type-header"><a class="type-details-link" href="type-KillFail.html">KillFail</a></h2>
+			<section class="type-content">
+				Exception representing a failure to kill() a process
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-KV" class="type-header"><a class="type-details-link" href="type-KV.html">KV</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Lock" class="type-header"><a class="type-details-link" href="type-Lock.html">Lock</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-LockFail" class="type-header"><a class="type-details-link" href="type-LockFail.html">LockFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-LookupFail" class="type-header"><a class="type-details-link" href="type-LookupFail.html">LookupFail</a></h2>
+			<section class="type-content">
+				Represents an error of accessing non-existent element of a collection.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MainFail" class="type-header"><a class="type-details-link" href="type-MainFail.html">MainFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Match" class="type-header"><a class="type-details-link" href="type-Match.html">Match</a></h2>
+			<section class="type-content">
+				Successful or unsuccessful match result
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MatchedParam" class="type-header"><a class="type-details-link" href="type-MatchedParam.html">MatchedParam</a></h2>
+			<section class="type-content">
+				ArgvMatcher internal type, do not use!
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MatchFail" class="type-header"><a class="type-details-link" href="type-MatchFail.html">MatchFail</a></h2>
+			<section class="type-content">
+				Matching failure
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MatchN" class="type-header"><a class="type-details-link" href="type-MatchN.html">MatchN</a></h2>
+			<section class="type-content">
+				Unsucessfull match result
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MatchY" class="type-header"><a class="type-details-link" href="type-MatchY.html">MatchY</a></h2>
+			<section class="type-content">
+				Successful match result
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MaybePfx" class="type-header"><a class="type-details-link" href="type-MaybePfx.html">MaybePfx</a></h2>
+			<section class="type-content">
+				Prefix that might or might not be present for ~ matching to succeed
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MaybeSfx" class="type-header"><a class="type-details-link" href="type-MaybeSfx.html">MaybeSfx</a></h2>
+			<section class="type-content">
+				Suffix that might or might not be present for ~ matching to succeed
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MustPfx" class="type-header"><a class="type-details-link" href="type-MustPfx.html">MustPfx</a></h2>
+			<section class="type-content">
+				Prefix that must be present for ~ matching to succeed
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-MustSfx" class="type-header"><a class="type-details-link" href="type-MustSfx.html">MustSfx</a></h2>
+			<section class="type-content">
+				Suffix that must be present for ~ matching to succeed
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NativeMethod" class="type-header"><a class="type-details-link" href="type-NativeMethod.html">NativeMethod</a></h2>
+			<section class="type-content">
+				Native method type
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NgsStrComp" class="type-header"><a class="type-details-link" href="type-NgsStrComp.html">NgsStrComp</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NgsStrCompExp" class="type-header"><a class="type-details-link" href="type-NgsStrCompExp.html">NgsStrCompExp</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NgsStrCompImm" class="type-header"><a class="type-details-link" href="type-NgsStrCompImm.html">NgsStrCompImm</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NgsStrCompSplatExp" class="type-header"><a class="type-details-link" href="type-NgsStrCompSplatExp.html">NgsStrCompSplatExp</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NoData" class="type-header"><a class="type-details-link" href="type-NoData.html">NoData</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NoNext" class="type-header"><a class="type-details-link" href="type-NoNext.html">NoNext</a></h2>
+			<section class="type-content">
+				Represents attempt to fetch next value of an iterator when it's exhausted
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NormalType" class="type-header"><a class="type-details-link" href="type-NormalType.html">NormalType</a></h2>
+			<section class="type-content">
+				Type for user-defined types. type T1; F f(t:NormalType) ...; f(T1)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NormalTypeConstructor" class="type-header"><a class="type-details-link" href="type-NormalTypeConstructor.html">NormalTypeConstructor</a></h2>
+			<section class="type-content">
+				Default constructor for Normal types. Normal types are user-defined and some of the built-in types.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NormalTypeInstance" class="type-header"><a class="type-details-link" href="type-NormalTypeInstance.html">NormalTypeInstance</a></h2>
+			<section class="type-content">
+				A type for instances of user-defined types. Children types are not displayed as this type is specially optimized.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NotImplemented" class="type-header"><a class="type-details-link" href="type-NotImplemented.html">NotImplemented</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Null" class="type-header"><a class="type-details-link" href="type-Null.html">Null</a></h2>
+			<section class="type-content">
+				Null type. Has only one instance, null
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Num" class="type-header"><a class="type-details-link" href="type-Num.html">Num</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-NumRange" class="type-header"><a class="type-details-link" href="type-NumRange.html">NumRange</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-PartialPresence" class="type-header"><a class="type-details-link" href="type-PartialPresence.html">PartialPresence</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Path" class="type-header"><a class="type-details-link" href="type-Path.html">Path</a></h2>
+			<section class="type-content">
+				Represents file system path
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Pfx" class="type-header"><a class="type-details-link" href="type-Pfx.html">Pfx</a></h2>
+			<section class="type-content">
+				Prefix subsequence of a sequence
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Pipe" class="type-header"><a class="type-details-link" href="type-Pipe.html">Pipe</a></h2>
+			<section class="type-content">
+				Wrapper around file descriptors returned by PIPE(2)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-PipeCreateFail" class="type-header"><a class="type-details-link" href="type-PipeCreateFail.html">PipeCreateFail</a></h2>
+			<section class="type-content">
+				Represents failure of creating a Pipe when calling PIPE(2)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-PredRange" class="type-header"><a class="type-details-link" href="type-PredRange.html">PredRange</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Presence" class="type-header"><a class="type-details-link" href="type-Presence.html">Presence</a></h2>
+			<section class="type-content">
+				Represents desired target configuration list item presence
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Present" class="type-header"><a class="type-details-link" href="type-Present.html">Present</a></h2>
+			<section class="type-content">
+				Represents a target configuration list item that must be present
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Process" class="type-header"><a class="type-details-link" href="type-Process.html">Process</a></h2>
+			<section class="type-content">
+				Running or finished process
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Range" class="type-header"><a class="type-details-link" href="type-Range.html">Range</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-RangeIter" class="type-header"><a class="type-details-link" href="type-RangeIter.html">RangeIter</a></h2>
+			<section class="type-content">
+				NOT IMPLEMENTED YET. Iterator that returns values in the given range
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ReadFail" class="type-header"><a class="type-details-link" href="type-ReadFail.html">ReadFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Real" class="type-header"><a class="type-details-link" href="type-Real.html">Real</a></h2>
+			<section class="type-content">
+				Real/Float type. Equivalent to the 'double' type in C
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Redir" class="type-header"><a class="type-details-link" href="type-Redir.html">Redir</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-RegExp" class="type-header"><a class="type-details-link" href="type-RegExp.html">RegExp</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-RegExpCompileFail" class="type-header"><a class="type-details-link" href="type-RegExpCompileFail.html">RegExpCompileFail</a></h2>
+			<section class="type-content">
+				Represents a regulat expression compilation error.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-RequreFail" class="type-header"><a class="type-details-link" href="type-RequreFail.html">RequreFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Res" class="type-header"><a class="type-details-link" href="type-Res.html">Res</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-ResDef" class="type-header"><a class="type-details-link" href="type-ResDef.html">ResDef</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-RetryFail" class="type-header"><a class="type-details-link" href="type-RetryFail.html">RetryFail</a></h2>
+			<section class="type-content">
+				Represents failure on all retries
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Return" class="type-header"><a class="type-details-link" href="type-Return.html">Return</a></h2>
+			<section class="type-content">
+				Return instance types, when thrown, will exit the call frame where they were created returning given value.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Seq" class="type-header"><a class="type-details-link" href="type-Seq.html">Seq</a></h2>
+			<section class="type-content">
+				Unused type
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Sfx" class="type-header"><a class="type-details-link" href="type-Sfx.html">Sfx</a></h2>
+			<section class="type-content">
+				Suffix subsequence of a sequence
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-SocketFile" class="type-header"><a class="type-details-link" href="type-SocketFile.html">SocketFile</a></h2>
+			<section class="type-content">
+				Represents a socket file in a file system (S_IFSOCK)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-StackDepthFail" class="type-header"><a class="type-details-link" href="type-StackDepthFail.html">StackDepthFail</a></h2>
+			<section class="type-content">
+				Represents stack overflow error.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Stat" class="type-header"><a class="type-details-link" href="type-Stat.html">Stat</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-StatFail" class="type-header"><a class="type-details-link" href="type-StatFail.html">StatFail</a></h2>
+			<section class="type-content">
+				Represents a failure in stat() system call.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Stats" class="type-header"><a class="type-details-link" href="type-Stats.html">Stats</a></h2>
+			<section class="type-content">
+				A group of named counters
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Str" class="type-header"><a class="type-details-link" href="type-Str.html">Str</a></h2>
+			<section class="type-content">
+				String type
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-SubSeq" class="type-header"><a class="type-details-link" href="type-SubSeq.html">SubSeq</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-SwitchFail" class="type-header"><a class="type-details-link" href="type-SwitchFail.html">SwitchFail</a></h2>
+			<section class="type-content">
+				Represents missing appropriate eswitch/econd/ematch clause.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Symlink" class="type-header"><a class="type-details-link" href="type-Symlink.html">Symlink</a></h2>
+			<section class="type-content">
+				Represents a link in a file system (S_IFLNK)
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Table" class="type-header"><a class="type-details-link" href="type-Table.html">Table</a></h2>
+			<section class="type-content">
+				Manipulates tabular data
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-TestFail" class="type-header"><a class="type-details-link" href="type-TestFail.html">TestFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-TestMessage" class="type-header"><a class="type-details-link" href="type-TestMessage.html">TestMessage</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-TheOneFail" class="type-header"><a class="type-details-link" href="type-TheOneFail.html">TheOneFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Thread" class="type-header"><a class="type-details-link" href="type-Thread.html">Thread</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-TtyCheckFail" class="type-header"><a class="type-details-link" href="type-TtyCheckFail.html">TtyCheckFail</a></h2>
+			<section class="type-content">
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-Type" class="type-header"><a class="type-details-link" href="type-Type.html">Type</a></h2>
+			<section class="type-content">
+				Type for types. F f(t:Type) ...; f(Arr) ...
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-UndefinedLocalVar" class="type-header"><a class="type-details-link" href="type-UndefinedLocalVar.html">UndefinedLocalVar</a></h2>
+			<section class="type-content">
+				Represents an error of reading undefined local variable.
+			</section>
+		</section>
+		<section class="type">
+			<h2 id="type-UnmatchedParam" class="type-header"><a class="type-details-link" href="type-UnmatchedParam.html">UnmatchedParam</a></h2>
+			<section class="type-content">
+				ArgvMatcher internal type, do not use!
+			</section>
+		</section>
+	<!-- types end -->
+</body>
+</html>

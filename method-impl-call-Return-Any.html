@@ -14,10 +14,10 @@
 				<section class="method-impl-content">
 				Implements calling of Return type instances
 				like the finish(i) call in the example below
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/794cbf6f1a24b20396c76369dc9dedbb9c836630/lib/stdlib.ngs#L76" style="source-link">stdlib.ngs:76</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/10b1097c57903bfcd974b41accbbc7479c671144/lib/stdlib.ngs#L81" style="source-link">stdlib.ngs:81</a></section>
 				<h4 id="impl-call-example" class="example-header">Example</h4>
 				<section class="method-example-content">
-				<pre class="example">F first(r:Range, predicate:Fun) {
+				<pre class="example">F first(r:NumRange, predicate:Fun) {
 	finish = Return()
 	r.each(F(i) {
 		predicate(i) throws finish(i)

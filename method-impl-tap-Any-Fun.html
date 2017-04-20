@@ -13,14 +13,14 @@
 			<h3 class="method-impl-header">tap(val:<a class="type-details-link" href="type-Any.html">Any</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)</h3>
 				<section class="method-impl-content">
 				Call cb with val
-				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/794cbf6f1a24b20396c76369dc9dedbb9c836630/lib/stdlib.ngs#L362" style="source-link">stdlib.ngs:362</a></section>
+				<section class="method-source">Source: <a href="https://github.com/ilyash/ngs/blob/10b1097c57903bfcd974b41accbbc7479c671144/lib/stdlib.ngs#L376" style="source-link">stdlib.ngs:376</a></section>
 				<h4 id="impl-tap-returns" class="returns-header">Returns</h4>
 				<section class="method-returns-content">
 				val
 				</section>
 				<h4 id="impl-tap-example" class="example-header">Example</h4>
 				<section class="method-example-content">
-				<pre class="example">h.mapv(only(Pfx, { "${A.val}*" })).map("Name=$X,Values=$Y").tap(F(x) echo("DEBUG: $x")).map_true(['--filters'] + X)</pre>
+				<pre class="example">long_computation_part1().tap(F(x) echo("DEBUG: $x")).long_computation_part2()</pre>
 				</section>
 				</section>
 			</section>

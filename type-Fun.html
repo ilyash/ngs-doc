@@ -96,7 +96,7 @@
 							<a class="method-impl-details-link" href="method-impl-each-HashLike-Fun.html">each</a>(hl:<a class="type-details-link" href="type-HashLike.html">HashLike</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-each-Range-Fun.html">each</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<a class="method-impl-details-link" href="method-impl-each-NumRange-Fun.html">each</a>(r:<a class="type-details-link" href="type-NumRange.html">NumRange</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Iterates over the elements of r, passing each in turn to cb.
 							</section>
@@ -147,6 +147,15 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-each-ResDef-Fun.html">each</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-each-Iter-Fun.html">each</a>(i:<a class="type-details-link" href="type-Iter.html">Iter</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Calls cb with each element from i
+							</section>
+							</section>
+							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-each-Table-Fun.html">each</a>(t:<a class="type-details-link" href="type-Table.html">Table</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							</section>
 							<section class="type-method-impl">
@@ -168,19 +177,6 @@
 							<a class="method-impl-details-link" href="method-impl-finally-Fun-Fun.html">finally</a>(body:<a class="type-details-link" href="type-Fun.html">Fun</a>, cleanup:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							TODO: make sure cleanup() is not run twice in case of exception in cleanup() itself
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-first-Range-Fun.html">first</a>(r:<a class="type-details-link" href="type-Range.html">Range</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
-							<section class="type-method-impl-desc">
-							The predicate is called with each one of the elements plus the args: predicate(i)
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-first-Arr-Fun.html">first</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
-							<section class="type-method-impl-desc">
-							Find first value that satisfies the predicate.
-							TODO: Make it work on anything with each() method
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -263,24 +259,10 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-map_false-Any-Fun.html">map_false</a>(val:<a class="type-details-link" href="type-Any.html">Any</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
-							<section class="type-method-impl-desc">
-							EXPERIMENTAL! Do not use!
-							Map val only when val is false in boolean context. Otherwise return the original val.
-							</section>
-							</section>
-							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-map_idx_val-Arr-Fun.html">map_idx_val</a>(arr:<a class="type-details-link" href="type-Arr.html">Arr</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Map an Arr to an Arr (array) of values using mapper
 							mapper is called as mapper(INDEX, ITEM)
-							</section>
-							</section>
-							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-map_true-Any-Fun.html">map_true</a>(val:<a class="type-details-link" href="type-Any.html">Any</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
-							<section class="type-method-impl-desc">
-							EXPERIMENTAL! Do not use!
-							Map val only when val is true in boolean context. Otherwise return the original val.
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -322,13 +304,19 @@
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-none-Eachable1-Fun.html">none</a>(e:<a class="type-details-link" href="type-Eachable1.html">Eachable1</a>, predicate:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
-							Check that there is no element in e that satisfies the given predicate. Exactly same as not(any(arr, predicate)) .
+							Check that there is no element in e that satisfies the given predicate. Exactly same as not(any(e, predicate)) .
 							</section>
 							</section>
 							<section class="type-method-impl">
 							<a class="method-impl-details-link" href="method-impl-only-Any-Fun.html">only</a>(predicate:<a class="type-details-link" href="type-Any.html">Any</a>, mapper:<a class="type-details-link" href="type-Fun.html">Fun</a>)
 							<section class="type-method-impl-desc">
 							Transform mapper to handle only items matching predicate. Non-matching items will be returned as is.
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-opt_prop-ResDef-Str-Hash-Fun.html">opt_prop</a>(rd:<a class="type-details-link" href="type-ResDef.html">ResDef</a>, name:<a class="type-details-link" href="type-Str.html">Str</a>, props:<a class="type-details-link" href="type-Hash.html">Hash</a>, cb:<a class="type-details-link" href="type-Fun.html">Fun</a>)
+							<section class="type-method-impl-desc">
+							Run cb with optional resource property if it exists, uses opt_prop(ResDef, Str, Hash)
 							</section>
 							</section>
 							<section class="type-method-impl">
@@ -374,7 +362,7 @@
 							</section>
 							</section>
 							<section class="type-method-impl">
-							<a class="method-impl-details-link" href="method-impl-retry-Int-Any-Fun-Any-Any-Any-Fun-Fun-Any-Fun.html">retry</a>(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Any.html">Any</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>='&lt;retry&gt;', progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
+							<a class="method-impl-details-link" href="method-impl-retry-Int-Any-Fun-Any-Bool-Any-Fun-Fun-Any-Fun.html">retry</a>(times:<a class="type-details-link" href="type-Int.html">Int</a>=60, sleep:<a class="type-details-link" href="type-Any.html">Any</a>=1, logger:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_predicate:<a class="type-details-link" href="type-Any.html">Any</a>=<em>(a function)</em>, catch_exceptions:<a class="type-details-link" href="type-Bool.html">Bool</a>=true, title:<a class="type-details-link" href="type-Any.html">Any</a>=&lt;retry&gt;, progress_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, success_cb:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>, fail_cb:<a class="type-details-link" href="type-Any.html">Any</a>=null, body:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Retry. Executes given "body" "times" times. Throws RetryFail if all calls fail and fail_cb is not provided.
 							</section>
@@ -389,6 +377,12 @@
 							<a class="method-impl-details-link" href="method-impl-sort-Arr-Str-Fun.html">sort</a>(a:<a class="type-details-link" href="type-Arr.html">Arr</a>, attr:<a class="type-details-link" href="type-Str.html">Str</a>, lte:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
 							<section class="type-method-impl-desc">
 							Sort an array based on attribute value
+							</section>
+							</section>
+							<section class="type-method-impl">
+							<a class="method-impl-details-link" href="method-impl-sort-Hash-Fun.html">sort</a>(h:<a class="type-details-link" href="type-Hash.html">Hash</a>, lte:<a class="type-details-link" href="type-Fun.html">Fun</a>=<em>(a function)</em>)
+							<section class="type-method-impl-desc">
+							Sort a Hash.
 							</section>
 							</section>
 							<section class="type-method-impl">
